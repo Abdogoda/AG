@@ -1,11 +1,11 @@
-import React from "react";
+HashRouterimport React from "react";
 import ReactDOM from "react-dom/client";
-import { BrowserRouter } from "react-router-dom";
+import { HashRouter } from "react-router-dom";
 import Layout from "./components/Layout";
 import "./sass/index.scss";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <BrowserRouter>
+  <HashRouter>
     <Layout />
-  </BrowserRouter>
+  </HashRouter>
 );
