@@ -1,0 +1,126 @@
+//--------------------- start home section --------------------
+.home__section {
+  padding: 0;
+  .home__container {
+    justify-content: space-between;
+    height: 100vh;
+    h1 {
+      font-size: 5rem;
+      margin: 0;
+      font-family: "Coolvetica";
+      font-weight: 400;
+    }
+    @media (max-width: 400px) {
+      h1 {
+        font-size: 4rem;
+      }
+    }
+    h2 {
+      color: var(--fourth-color);
+      margin-top: 1rem;
+      font-family: "sans-serif";
+      letter-spacing: 3px;
+      animation: fadeInLeft 1s 1.5s backwards;
+    }
+  }
+  .dynamic__texts {
+    font-size: 3rem;
+    font-family: "sans-serif";
+    letter-spacing: 3px;
+    span:nth-child(3) {
+      margin-left: 1rem;
+      color: var(--main-color);
+    }
+  }
+  @media (max-width: 400px) {
+    .dynamic__texts {
+      font-size: 2rem;
+    }
+  }
+  //
+  .box-spinner {
+    position: relative;
+    animation: fadeInRight 1.5s 1.8s backwards;
+    margin-right: 5%;
+  }
+  @media (max-width: 772px) {
+    .box-spinner {
+      margin-right: 0;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+  .spinner {
+    position: relative;
+    width: 14rem;
+    height: 14rem;
+    animation: loaderAnimation 24s steps(12) infinite;
+  }
+  @keyframes loaderAnimation {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  .box-spinner h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: 300;
+    text-transform: uppercase;
+    font-weight: 500;
+    p {
+      color: var(--main-color);
+      font-size: 5rem;
+      margin: -1rem 0;
+      text-shadow: 0 0 10px var(--main-color), 0 0 20px var(--main-color),
+        0 0 30px var(--main-color), 0 0 40px var(--main-color),
+        0 0 50px var(--main-color);
+    }
+  }
+
+  .spinner span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: rotate(calc(30deg * var(--j)));
+  }
+  .spinner span::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 2rem;
+    height: 2rem;
+    background-color: rgba(255, 255, 255, 0.15);
+  }
+  .spinner span:nth-child(3n + 3):before {
+    content: "";
+    background-color: var(--main-color);
+    box-shadow: 0 0 10px var(--main-color), 0 0 20px var(--main-color),
+      0 0 30px var(--main-color), 0 0 40px var(--main-color),
+      0 0 50px var(--main-color);
+    animation: animationSquare 2s linear infinite;
+    transform-origin: 7rem;
+    opacity: 0.7;
+  }
+  @keyframes animationSquare {
+    0%,
+    25% {
+      transform: rotate(0deg);
+    }
+    75%,
+    90%,
+    100% {
+      transform: rotate(180deg);
+    }
+  }
+}
+//--------------------- end home section ----------------------
