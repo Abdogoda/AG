@@ -1,0 +1,39 @@
+{
+  "files": {
+    "main.css": "/AG/static/css/main.5d9017f5.css",
+    "main.js": "/AG/static/js/main.2c9dd242.js",
+    "static/media/project7.png": "/AG/static/media/project7.a4c705a574c2f5f34f30.png",
+    "static/media/project3_mobile.png": "/AG/static/media/project3_mobile.c1f59eec6cfe4e2f4d20.png",
+    "static/media/cv.pdf": "/AG/static/media/cv.1676dcdc83730930d888.pdf",
+    "static/media/project3.png": "/AG/static/media/project3.d883dfdbc98faefd76e3.png",
+    "static/media/project7_mobile.png": "/AG/static/media/project7_mobile.0818e3b82f3bb295d6a0.png",
+    "static/media/project8.png": "/AG/static/media/project8.f11ee30910b25bb985c2.png",
+    "static/media/project11.png": "/AG/static/media/project11.2c3fd864cd62ad412681.png",
+    "static/media/project8_mobile.png": "/AG/static/media/project8_mobile.80a67bd3b7ba65c5e126.png",
+    "static/media/project11_mobile.png": "/AG/static/media/project11_mobile.ad42638ebec0a7827bc1.png",
+    "static/media/project4_mobile.png": "/AG/static/media/project4_mobile.fb62ba6e80711e2d97a4.png",
+    "static/media/project5_mobile.png": "/AG/static/media/project5_mobile.1610e41f6146f3574c6c.png",
+    "static/media/project6_mobile.png": "/AG/static/media/project6_mobile.2faccf62394225001f22.png",
+    "static/media/project2_mobile.png": "/AG/static/media/project2_mobile.d4bec414d5b0464b7580.png",
+    "static/media/project9_mobile.png": "/AG/static/media/project9_mobile.135d8848d52b81d10af4.png",
+    "static/media/project1_mobile.png": "/AG/static/media/project1_mobile.cbd60755fdd34f158cea.png",
+    "static/media/project5.png": "/AG/static/media/project5.a46343519705381205ba.png",
+    "static/media/project10_mobile.png": "/AG/static/media/project10_mobile.1307083aa65b7ac03711.png",
+    "static/media/project6.png": "/AG/static/media/project6.ce66f8014ac7cddde7c4.png",
+    "static/media/BlackOpsOne-Regular.ttf": "/AG/static/media/BlackOpsOne-Regular.b8437be32fe8faca71ed.ttf",
+    "static/media/project4.png": "/AG/static/media/project4.b77a6a1c6241b940cd03.png",
+    "static/media/project2.png": "/AG/static/media/project2.5aeb0c76b048e1df3838.png",
+    "static/media/project9.png": "/AG/static/media/project9.7b9db94960ac939c2176.png",
+    "static/media/project1.png": "/AG/static/media/project1.de097d249e820be9e051.png",
+    "static/media/project10.png": "/AG/static/media/project10.3499adba57f1ebb3158d.png",
+    "static/media/helvetica-neu.ttf": "/AG/static/media/helvetica-neu.8a19678078a6b21c8057.ttf",
+    "static/media/CoolveticaRg-Regular.woff2": "/AG/static/media/CoolveticaRg-Regular.7d1f3b1dd46ad6557a17.woff2",
+    "index.html": "/AG/index.html",
+    "main.5d9017f5.css.map": "/AG/static/css/main.5d9017f5.css.map",
+    "main.2c9dd242.js.map": "/AG/static/js/main.2c9dd242.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5d9017f5.css",
+    "static/js/main.2c9dd242.js"
+  ]
+}
