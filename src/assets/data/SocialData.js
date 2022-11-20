@@ -4,6 +4,7 @@ import {
   faLinkedin,
   faWhatsapp,
 } from "@fortawesome/free-brands-svg-icons";
+import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 const SocailData = [
   {
     icon: faLinkedin,
@@ -20,17 +21,17 @@ const SocailData = [
     color: "#333",
   },
   {
-    icon: faFacebookMessenger,
-    name: "Messenger",
-    class: "messenger",
-    link: "https://m.me/abdo.goda.7169",
-    color: "#00B2FF",
+    icon: faEnvelope,
+    name: "Gmail",
+    class: "gmail",
+    link: "mailto:abdogoda0a@gmail.com",
+    color: "#BB001B",
   },
   {
     icon: faWhatsapp,
     name: "Whatsapp",
     class: "whatsapp",
-    link: "http://wa.me/+2001142366716",
+    link: "http://wa.me/+2001019135059",
     color: "#25D366",
   },
 ];

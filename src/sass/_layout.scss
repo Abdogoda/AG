@@ -1,175 +1,174 @@
 .whole__page {
-  width: 100%;
-  min-height: 100vh;
-  scroll-behavior: smooth;
+ width: 100%;
+ min-height: 100vh;
+ scroll-behavior: smooth;
 }
 .section {
-  padding-top: 8rem;
-  padding-bottom: 2rem;
-  width: 100%;
-  position: relative;
-  overflow:hidden;
+ padding-top: 6rem;
+ padding-bottom: 2rem;
+ width: 100%;
+ position: relative;
+ overflow: hidden;
 }
 @media (max-width: 772px) {
-  .section {
-    padding-top: 2rem;
-  }
+ .section {
+  padding-top: 0rem !important;
+ }
 }
 
 .container {
-  width: var(--container-width);
-  margin: auto;
+ width: var(--container-width);
+ margin: auto;
 }
 .container__flex {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
 }
 .container__flex__column {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
 }
 .section__title {
-  font-size: 4rem;
-  margin: 0;
-  margin-bottom: 2rem;
-  font-family: "Coolvetica";
-  font-weight: 400;
-  color: var(--main-color);
-  .text-animate-hover {
-    &:hover {
-      color: #fff !important;
-    }
+ font-size: 3.5rem;
+ margin: 0;
+ margin-bottom: 1rem;
+ font-family: "Coolvetica";
+ font-weight: 400;
+ color: var(--main-color);
+ .text-animate-hover {
+  &:hover {
+   color: #fff !important;
   }
+ }
 }
 @media (max-width: 772px) {
-  .container__flex {
-    flex-direction: column;
-    justify-content: flex-start !important;
-    align-items: flex-start;
-    gap: 8rem;
-  }
+ .container__flex {
+  flex-direction: column;
+  justify-content: flex-start !important;
+  align-items: flex-start;
+  gap: 4rem;
+ }
 }
 .main__button {
-  color: var(--main-color);
-  font-size: 1.5rem;
-  font-weight: 600;
-  letter-spacing: 2px;
-  padding: 1.1rem 1.7rem;
-  border-radius: 0.5rem;
-  box-shadow: -2px -2px 2px rgba(255, 255, 255, 0.3),
-    5px 5px 5px rgba(0, 0, 0, 0.2), 15px 15px 15px rgba(0, 0, 0, 0.2);
-  margin-top: 2rem;
-  float: left;
-  animation: fadeInUp 1.5s 1.8s backwards;
-  font-family: "sans-serif";
-  white-space: nowrap;
-  transition: all 0.4s ease-out;
-  cursor: default;
-  &:hover {
-    color: #333;
-    background-color: var(--main-color);
-  }
+ color: var(--main-color);
+ font-size: 1.5rem;
+ font-weight: 600;
+ letter-spacing: 2px;
+ padding: 1.1rem 1.7rem;
+ border-radius: 0.5rem;
+ box-shadow: -2px -2px 2px rgba(255, 255, 255, 0.3),
+  5px 5px 5px rgba(0, 0, 0, 0.2), 15px 15px 15px rgba(0, 0, 0, 0.2);
+ margin-top: 2rem;
+ float: left;
+ animation: fadeInUp 1.5s 1.8s backwards;
+ font-family: "sans-serif";
+ white-space: nowrap;
+ transition: all 0.4s ease-out;
+ cursor: default;
+ &:hover {
+  color: #333;
+  background-color: var(--main-color);
+ }
 }
 .a__text {
-  color: var(--main-color);
-  text-shadow: -1px 1px 1px var(--fourth-color),
-    -1px 2px 1px var(--fourth-color);
-  margin-left: 10px;
-  font-family: "BlackOpsOne";
+ color: var(--main-color);
+ text-shadow: -1px 1px 1px var(--fourth-color), -1px 2px 1px var(--fourth-color);
+ margin-left: 10px;
+ font-family: "BlackOpsOne";
 }
 .loading__layout {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  gap: 5rem;
-  animation: fadeOut 0.8s 1.5s;
-  animation-fill-mode: forwards;
-  svg {
-    width: 15rem;
-    height: 15rem;
+ position: fixed;
+ top: 50%;
+ left: 50%;
+ transform: translate(-50%, -50%);
+ width: 100%;
+ height: 100vh;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ flex-direction: column;
+ gap: 5rem;
+ animation: fadeOut 0.8s 1.5s;
+ animation-fill-mode: forwards;
+ svg {
+  width: 15rem;
+  height: 15rem;
+ }
+ .text {
+  text-transform: uppercase;
+  font-size: 10rem;
+  font-weight: bold;
+  fill: rgba(0, 0, 0, 0);
+  stroke-width: 1px;
+  stroke-dasharray: 80;
+  stroke-dashoffset: 0;
+  font-family: "BlackOpsOne";
+ }
+ .text:nth-child(3n + 1) {
+  stroke: var(--main-color);
+  animation: stroke 1.5s ease-in-out forwards;
+ }
+ .text:nth-child(3n + 2) {
+  stroke: #fff;
+  animation: stroke1 1.5s ease-in-out forwards;
+ }
+ .text:nth-child(3n + 3) {
+  stroke: #fff;
+  animation: stroke2 1.5s ease-in-out forwards;
+ }
+ @keyframes stroke {
+  100% {
+   stroke-dashoffset: 1080;
   }
-  .text {
-    text-transform: uppercase;
-    font-size: 10rem;
-    font-weight: bold;
-    fill: rgba(0, 0, 0, 0);
-    stroke-width: 1px;
-    stroke-dasharray: 80;
-    stroke-dashoffset: 0;
-    font-family: "BlackOpsOne";
+ }
+ @keyframes stroke1 {
+  100% {
+   stroke-dashoffset: 1160;
   }
-  .text:nth-child(3n + 1) {
-    stroke: var(--main-color);
-    animation: stroke 1.5s ease-in-out forwards;
+ }
+ @keyframes stroke2 {
+  100% {
+   stroke-dashoffset: 1160;
   }
-  .text:nth-child(3n + 2) {
-    stroke: #fff;
-    animation: stroke1 1.5s ease-in-out forwards;
-  }
-  .text:nth-child(3n + 3) {
-    stroke: #fff;
-    animation: stroke2 1.5s ease-in-out forwards;
-  }
-  @keyframes stroke {
-    100% {
-      stroke-dashoffset: 1080;
-    }
-  }
-  @keyframes stroke1 {
-    100% {
-      stroke-dashoffset: 1160;
-    }
-  }
-  @keyframes stroke2 {
-    100% {
-      stroke-dashoffset: 1160;
-    }
-  }
+ }
 }
 // tablet style
 
 @media (max-width: 992px) {
-  html {
-    font-size: 90%;
-  }
-  .container {
-    width: var(--tablet-container-width);
-  }
+ html {
+  font-size: 90%;
+ }
+ .container {
+  width: var(--tablet-container-width);
+ }
 }
 // mobile style
 @media (max-width: 772px) {
-  html {
-    font-size: 80%;
-  }
-  .whole__page {
-    width: 100%;
-    margin-left: 0;
-  }
-  .section {
-    .container {
-      padding-top: var(--sidebar-width);
-    }
-  }
+ html {
+  font-size: 80%;
+ }
+ .whole__page {
+  width: 100%;
+  margin-left: 0;
+ }
+ .section {
   .container {
-    width: var(--mobile-container-width);
+   padding-top: calc(var(--sidebar-width) - 1rem);
   }
+ }
+ .container {
+  width: var(--mobile-container-width);
+ }
 }
 @media (max-width: 600px) {
-  html {
-    font-size: 70%;
-  }
+ html {
+  font-size: 70%;
+ }
 }
 @media (max-width: 400px) {
-  html {
-    font-size: 60%;
-  }
+ html {
+  font-size: 60%;
+ }
 }

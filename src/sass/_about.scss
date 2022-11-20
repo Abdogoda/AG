@@ -1,39 +1,52 @@
 //--------------------- start about section -------------------
 .about__section {
-  .about__container {
-    .about__info {
-      p {
-        max-width: 500px;
-        margin: 0.5rem 0;
-        line-height: 1.6;
-        letter-spacing: 1px;
-        font-family: sans-serif;
-      }
-      p.description:nth-child(2) {
-        animation: zoomInLeft 1.5s 1.4s backwards;
-      }
-      p.description:nth-child(3) {
-        animation: zoomInLeft 1.5s 1.5s backwards;
-      }
-      p.description:nth-child(4) {
-        animation: zoomInLeft 1.5s 1.6s backwards;
-      }
+ .about__container {
+  .about__info {
+   p {
+    max-width: 600px;
+    margin: 0.5rem 0;
+    line-height: 1.6;
+    letter-spacing: 1.5px;
+    font-size: 1.3rem;
+    color: var(--fourth-color);
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    a {
+     color: var(--main-color);
     }
-    .skills-zone {
-      position: relative;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      animation: zoomInRight 1.5s 1.5s backwards;
-      a {
-        cursor: default;
-      }
-    }
-    @media (max-width: 772px) {
-      .skills-zone {
-        width: 100%;
-      }
-    }
+   }
+   p.description:nth-child(even) {
+    animation: zoomInLeft 1.5s 1.4s backwards;
+   }
+   p.description:nth-child(odd) {
+    animation: zoomInRight 1.5s 1.5s backwards;
+   }
   }
+  .skills-zone {
+   position: relative;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   animation: zoomInRight 1.5s 1.5s backwards;
+   a {
+    cursor: none !important;
+    user-select: none !important;
+    pointer-events: none !important;
+    font-size: 1.2rem;
+   }
+  }
+ }
+}
+@media (max-width: 992px) {
+ .about__container {
+  flex-direction: column;
+  justify-content: flex-start !important;
+  align-items: flex-start;
+ }
+ .skills-zone {
+  width: 100%;
+ }
+}
+.ml-1 {
+ margin-left: 1rem;
 }
 //--------------------- end about section ---------------------
