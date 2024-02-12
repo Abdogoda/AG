@@ -5,6 +5,14 @@ import CONTENT_CREATOR_3 from "../images/content_creator_3.jpg";
 import CONTENT_CREATOR_4 from "../images/content_creator_4.jpg";
 import CONTENT_CREATOR_5 from "../images/content_creator_5.jpg";
 import CONTENT_CREATOR_MOBILE from "../images/content_creator_mobile.jpg";
+import LARAVEL_CHOOL_1 from "../images/laravel_school_1.jpg";
+import LARAVEL_CHOOL_2 from "../images/laravel_school_2.jpg";
+import LARAVEL_CHOOL_3 from "../images/laravel_school_3.jpg";
+import LARAVEL_CHOOL_4 from "../images/laravel_school_4.jpg";
+import LARAVEL_CHOOL_5 from "../images/laravel_school_5.jpg";
+import LARAVEL_CHOOL_6 from "../images/laravel_school_6.jpg";
+import LARAVEL_CHOOL_7 from "../images/laravel_school_7.jpg";
+import LARAVEL_CHOOL_MOBILE from "../images/laravel_school_mobile.jpg";
 import PROJECTIMG1 from "../images/project1.png";
 import PROJECTMOBILEIMG1 from "../images/project1_mobile.png";
 import PROJECTIMG2 from "../images/project2.png";
@@ -95,13 +103,29 @@ const ProjectsData = [
    CONTENT_CREATOR_5,
   ],
   mobileImg: CONTENT_CREATOR_MOBILE,
-  languages: [HTML, CSS, JS, PHP, DB],
+  languages: [HTML, CSS, JS, LARAVEL, DB],
   title: "Content Creator",
   slug: "content-creator",
   description:
    "Content Creator is a website portfolio for a content-creator company. The company provides several services with a greate portfolio for these services. The website contains portfolio and admin dashboard for controlling this portfolio. The Website is also multilangual [Arabic, English].",
 
   githubLink: "https://github.com/Abdogoda/content-creator",
+  liveDemoLink: null,
+  type: "Laravel",
+ },
+ {
+  images: [
+   LARAVEL_SCHOOL_1,
+   LARAVEL_SCHOOL_2,
+   LARAVEL_SCHOOL_3,
+   LARAVEL_SCHOOL_4,
+   LARAVEL_SCHOOL_5,],
+  mobileImg: LARAVEL_SCHOOL_MOBILE,
+  languages: [HTML, CSS, JS, LARAVEL, DB],
+  title: "School Management System",
+  slug: "school-management-system",
+  description: "This is a web application with expressive, elegant syntax. Features: Multi Authentication (Student - Teacher - Gardian - Admin), Multi Langual (Arabic - English - As many languages as we want), Multi Dashboard, User Permissions, Real Time Actions using Livewire, Integration With Zoom Meeting",
+  githubLink: "https://github.com/Abdogoda/laravel_school",
   liveDemoLink: null,
   type: "Laravel",
  },
