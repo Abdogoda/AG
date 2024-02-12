@@ -103,7 +103,7 @@ const ProjectsData = [
    CONTENT_CREATOR_5,
   ],
   mobileImg: CONTENT_CREATOR_MOBILE,
-  languages: [HTML, CSS, JS, LARAVEL, DB],
+  languages: [HTML, CSS, BOOTSTRAP, JS, LARAVEL, DB],
   title: "Content Creator",
   slug: "content-creator",
   description:
@@ -121,7 +121,7 @@ const ProjectsData = [
    LARAVEL_SCHOOL_4,
    LARAVEL_SCHOOL_5,],
   mobileImg: LARAVEL_SCHOOL_MOBILE,
-  languages: [HTML, CSS, JS, LARAVEL, DB],
+  languages: [HTML, CSS, BOOTSTRAP, JS, LARAVEL, DB],
   title: "School Management System",
   slug: "school-management-system",
   description: "This is a web application with expressive, elegant syntax. Features: Multi Authentication (Student - Teacher - Gardian - Admin), Multi Langual (Arabic - English - As many languages as we want), Multi Dashboard, User Permissions, Real Time Actions using Livewire, Integration With Zoom Meeting",
@@ -132,7 +132,7 @@ const ProjectsData = [
  {
   images: [DASHBOARD_1],
   mobileImg: DASHBOARD_MOBILE,
-  languages: [HTML, CSS, JS, PHP, DB],
+  languages: [HTML, CSS, BOOTSTRAP, JS, PHP, DB],
   title: "Admin Dashboard",
   slug: "admin-dashboard",
   description:
@@ -145,7 +145,7 @@ const ProjectsData = [
  {
   images: [PROJECTIMG13],
   mobileImg: PROJECTMOBILEIMG13,
-  languages: [HTML, CSS, JS, PHP, DB],
+  languages: [HTML, CSS, BOOTSTRAP, JS, PHP, DB],
   title: "Book Store",
   slug: "book-store",
   description:
@@ -169,7 +169,7 @@ const ProjectsData = [
  {
   images: [PROJECTIMG15],
   mobileImg: PROJECTMOBILEIMG15,
-  languages: [HTML, CSS, JS],
+  languages: [HTML, CSS, BOOTSTRAP, JS],
   title: "Ramadanak",
   slug: "ramadanak",
   description:
@@ -193,7 +193,7 @@ const ProjectsData = [
  {
   images: [PROJECTIMG4],
   mobileImg: PROJECTMOBILEIMG4,
-  languages: [HTML, CSS, SASS, JS, REACT],
+  languages: [HTML, CSS, BOOTSTRAP, SASS, JS, REACT],
   title: "YOLO Store",
   slug: "yolo-store",
   description:
@@ -205,7 +205,7 @@ const ProjectsData = [
  {
   images: [PROJECTIMG6],
   mobileImg: PROJECTMOBILEIMG6,
-  languages: [HTML, CSS, SASS, JS, REACT],
+  languages: [HTML, CSS, BOOTSTRAP, SASS, JS, REACT],
   title: "CALA Store",
   slug: "cala-store",
   description:
