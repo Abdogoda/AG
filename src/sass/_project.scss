@@ -90,6 +90,7 @@
  .languages__list {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   gap: 15px;
   margin-top: 20px;
   li {
@@ -112,6 +113,7 @@
  .d__flex {
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
   gap: 15px;
   a {
    display: flex;
