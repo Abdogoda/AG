@@ -1,0 +1,168 @@
+.whole__page {
+ width: 100%;
+ min-height: 100vh;
+ scroll-behavior: smooth;
+}
+.section {
+ padding-top: 6rem;
+ padding-bottom: 2rem;
+ width: 100%;
+ position: relative;
+ overflow: hidden;
+ animation: fadeIn 1s 1s backwards;
+}
+@media (max-width: 772px) {
+ .section {
+  padding-top: 0rem !important;
+  padding-bottom: 100px;
+ }
+}
+
+.container {
+ width: var(--container-width);
+ margin: auto;
+}
+.container__flex {
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+}
+.container__flex__column {
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+}
+.section__title {
+ font-size: 3.5rem;
+ margin: 0;
+ margin-bottom: 1rem;
+ font-family: "BlackOpsOne";
+ font-weight: 400;
+ color: var(--main-color);
+ user-select: none;
+ text-shadow: 0 0 1px #fff, 0 0 2px #fff;
+
+ .text-animate-hover {
+  &:hover {
+   color: #fff !important;
+  }
+ }
+}
+@media (max-width: 772px) {
+ .container__flex {
+  flex-direction: column;
+  justify-content: flex-start !important;
+  align-items: flex-start;
+  gap: 4rem;
+ }
+}
+.main__button {
+ color: var(--main-color);
+ background-color: transparent;
+ font-size: 18px;
+ font-weight: 600;
+ letter-spacing: 2px;
+ padding: 15px 25px;
+ border-radius: 0.5rem;
+ margin-top: 2rem;
+ float: left;
+ animation: fadeInUp 1.5s 1.8s backwards;
+ font-family: "sans-serif";
+ white-space: nowrap;
+ cursor: default;
+ box-shadow: inset 0px 0px 5px rgba(255, 255, 255, 0.3);
+ backdrop-filter: blur(5px);
+ -webkit-backdrop-filter: blur(3px);
+ transition: all 0.2s ease-out;
+ -webkit-transition: all 0.2s ease-out;
+ -moz-transition: all 0.2s ease-out;
+ -ms-transition: all 0.2s ease-out;
+ -o-transition: all 0.2s ease-out;
+ &:hover {
+  color: #333;
+  background-color: var(--main-color);
+  transform: translateY(2px);
+  -webkit-transform: translateY(2px);
+  -moz-transform: translateY(2px);
+  -ms-transform: translateY(2px);
+  -o-transform: translateY(2px);
+ }
+}
+.a__text {
+ color: var(--main-color);
+ text-shadow: -1px 1px 1px var(--fourth-color), -1px 2px 1px var(--fourth-color);
+ margin-left: 10px;
+ font-family: "BlackOpsOne";
+}
+.loading__layout {
+ position: fixed;
+ top: 50%;
+ left: 50%;
+ transform: translate(-50%, -50%);
+ width: 100%;
+ height: 100vh;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ flex-direction: column;
+ gap: 5rem;
+ animation: fadeOut 0.8s 1.5s;
+ animation-fill-mode: forwards;
+ svg {
+  width: 16rem;
+  height: 16rem;
+ }
+ .text {
+  text-transform: uppercase;
+  font-size: 11rem;
+  font-weight: bold;
+  fill: rgba(0, 0, 0, 0);
+  stroke-width: 2px;
+  stroke-dasharray: 80;
+  stroke-dashoffset: 0;
+  font-family: "BlackOpsOne";
+ }
+ .text:nth-child(3n + 1) {
+  stroke: var(--main-color);
+  animation: stroke 1.5s ease-in-out forwards;
+ }
+ .text:nth-child(3n + 2) {
+  stroke: #fff;
+  animation: stroke1 1.5s ease-in-out forwards;
+ }
+ .text:nth-child(3n + 3) {
+  stroke: #fff;
+  animation: stroke2 1.5s ease-in-out forwards;
+ }
+ @keyframes stroke {
+  100% {
+   stroke-dashoffset: 1080;
+  }
+ }
+ @keyframes stroke1 {
+  100% {
+   stroke-dashoffset: 1160;
+  }
+ }
+ @keyframes stroke2 {
+  100% {
+   stroke-dashoffset: 1160;
+  }
+ }
+}
+
+// mobile style
+@media (max-width: 772px) {
+ .whole__page {
+  width: 100%;
+  margin-left: 0;
+ }
+ .section {
+  .container {
+   padding-top: calc(var(--sidebar-width) - 1rem);
+  }
+ }
+ .container {
+  width: var(--mobile-container-width);
+ }
+}

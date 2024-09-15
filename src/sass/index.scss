@@ -1,0 +1,72 @@
+@import "./layout";
+@import "./header";
+@import "./sidebar";
+@import "./home";
+@import "./about";
+@import "./portfolio";
+@import "./project";
+@import "./contact";
+@import "./animatedLetters";
+@import "animate.css";
+* {
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+ outline: none;
+ border: none;
+ text-decoration: none;
+ list-style: none;
+}
+:root {
+ --main-color: #45f3ff;
+ --second-color: #022c43;
+ --third-color: #4d4d4e;
+ --fourth-color: #f2f2f2;
+ --fifth-color: #999;
+ --main-bg: #1c1c1c;
+ --second-bg: #181818;
+ --third-bg: #23242a;
+ --container-width: 80%;
+ --tablet-container-width: 90%;
+ --mobile-container-width: 93%;
+ --sidebar-width: 80px;
+}
+@font-face {
+ font-family: "Helvetiva Neue";
+ src: url("../assets/fonts/helvetica-neu.ttf") format("ttf");
+}
+@font-face {
+ font-family: "Coolvetica";
+ src: url("../assets/fonts/CoolveticaRg-Regular.woff2") format("woff2");
+}
+@font-face {
+ font-family: "BlackOpsOne";
+ src: url("../assets/fonts/BlackOpsOne-Regular.ttf");
+}
+::-webkit-scrollbar {
+ width: 0;
+}
+html {
+ scroll-behavior: smooth;
+}
+html {
+ font-size: 95%;
+}
+body {
+ font: 300 calc(11px / 1.4) "Helvetiva Neue", "sans-serif";
+ color: var(--fourth-color);
+ background-color: var(--main-bg);
+ overflow-x: hidden;
+ scroll-behavior: smooth;
+}
+input,
+textarea {
+ font-family: "Helvetiva Neue";
+}
+img {
+ max-width: 100%;
+ object-fit: cover;
+}
+.text__space {
+ margin-right: 5px;
+}

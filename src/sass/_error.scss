@@ -1,0 +1,236 @@
+@font-face {
+ font-family: "Helvetiva Neue";
+ src: url("../assets//fonts/helvetica-neu.ttf") format("ttf");
+}
+
+@font-face {
+ font-family: "Coolvetica";
+ src: url("../assets/fonts/CoolveticaRg-Regular.woff2") format("woff2");
+}
+@font-face {
+ font-family: "BlackOpsOne";
+ src: url("../assets/fonts/BlackOpsOne-Regular.ttf");
+}
+:root {
+ --m-color: #007054;
+}
+* {
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+ text-decoration: none;
+}
+
+.con {
+ position: relative;
+ width: fit-content;
+ margin: 5rem auto 0 auto;
+ width: 400px;
+ max-width: 100%;
+ padding: 0.5rem;
+}
+.con .character {
+ width: 135px;
+ margin: 0 auto;
+ margin-bottom: 20px;
+ height: 150px;
+ animation: topDown 4s linear infinite alternate-reverse !important;
+}
+@keyframes topDown {
+ 0%,
+ 100% {
+  transform: translateY(0);
+ }
+ 25% {
+  transform: translateY(10px);
+ }
+ 75% {
+  transform: translateY(-10);
+ }
+}
+.con .character .body {
+ position: relative;
+ background-color: var(--m-color);
+ width: 100%;
+ margin: 0 auto;
+ height: 100%;
+ border-radius: 100% 100% 0 0;
+}
+.con .character .body::after {
+ content: "";
+ position: absolute;
+ left: 0;
+ right: 0;
+ top: 100%;
+ display: block;
+ height: 15px;
+ background-size: 15px 100%;
+ background-image: linear-gradient(135deg, var(--m-color) 25%, transparent 25%),
+  linear-gradient(225deg, var(--m-color) 25%, transparent 25%);
+ background-position: 0 0;
+}
+.character .body .eyes {
+ position: absolute;
+ display: flex;
+ align-items: center;
+ justify-content: space-around;
+ padding: 10px;
+ top: 50px;
+ width: 100%;
+}
+.character .body .eyes div {
+ position: relative;
+ width: 30px;
+ height: 30px;
+ border-radius: 50%;
+}
+.character .body .eyes div p {
+ background-color: #fff;
+ overflow: hidden !important;
+ position: relative;
+ width: 100%;
+ height: 100%;
+ border-radius: 50%;
+}
+.character .body .eyes div::before {
+ content: "";
+ position: absolute;
+ width: 90%;
+ height: 4px;
+ background-color: #111;
+ top: 0px;
+ right: -4px;
+ transform: rotate(30deg);
+ z-index: 100;
+}
+.character .body .eyes div.right::before {
+ right: auto;
+ left: -4px;
+ transform: rotate(-30deg);
+}
+.character .body .eyes div span {
+ width: 50%;
+ aspect-ratio: 1/1;
+ border-radius: 50%;
+ position: absolute;
+ top: 50%;
+ left: 50%;
+ transform: translate(-50%, -50%);
+ background-color: #111;
+ transition: 0.1s linear;
+}
+.character .body .mouse {
+ position: absolute;
+ bottom: 30px;
+ left: 50%;
+ transform: translateX(-50%);
+ width: 40px;
+ height: 20px;
+ border-radius: 90%;
+ background-color: #111;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ overflow: hidden;
+}
+.character .body .mouse span {
+ margin-top: -12px;
+ width: 10px;
+ height: 10px;
+ background-color: #fff;
+ clip-path: polygon(0 0, 50% 80%, 100% 0);
+}
+.con .text-con {
+ padding: 5px;
+ width: 100%;
+}
+.text-con .text {
+ width: 100%;
+ height: 100%;
+ padding: 1rem;
+ border: 2px solid var(--m-color);
+ text-align: center;
+}
+.text-con .text h1.error-number {
+ font-size: 60px;
+ color: var(--m-color);
+ font-style: italic;
+ font-family: "BlackOpsOne";
+ letter-spacing: 5px;
+ animation: textanimation 0.25s linear infinite;
+}
+@keyframes textanimation {
+ 0%,
+ 100% {
+  opacity: 0.8;
+ }
+ 50% {
+  opacity: 0;
+ }
+}
+.text-con .text h4 {
+ font-size: 15px;
+ color: #f1f1f1;
+ letter-spacing: 1px;
+ margin: 10px 0;
+ font-family: "Helvetiva Neue";
+}
+.text-con .text h4 span {
+ margin: 0 2px;
+}
+.text-con .text .error-text {
+ padding: 2px;
+ border-radius: 20px;
+ background-color: orange;
+ width: fit-content;
+ margin: 10px auto;
+ font-size: 16px;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ color: #f1f1f1;
+ letter-spacing: 2px;
+ font-family: "Coolvetica";
+}
+.text-con .text .error-text span {
+ width: 100%;
+ height: 100%;
+ border-radius: 20px;
+ padding: 5px 10px;
+ border: 1px solid #fff;
+}
+.text-con .text .error-btn {
+ padding: 2px;
+ border-radius: 20px;
+ background-color: #b80e65;
+ width: fit-content;
+ margin: 10px auto;
+ font-size: 12px;
+ letter-spacing: 2px;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ font-family: "Coolvetica";
+ transition: 0.3s linear;
+}
+.text-con .text .error-btn a {
+ color: #fff;
+ width: 100%;
+ height: 100%;
+ border-radius: 20px;
+ padding: 5px 10px;
+ border: 1px solid #fff;
+}
+.text-con .text .error-btn:hover {
+ background-color: #f25;
+}
+@media (max-width: 772px) {
+ html {
+  font-size: 70% !important;
+ }
+}
+@media (max-width: 500px) {
+ html {
+  font-size: 50% !important;
+ }
+}

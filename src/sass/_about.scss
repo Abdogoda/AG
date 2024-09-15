@@ -1,0 +1,206 @@
+//--------------------- start about section -------------------
+.about__section {
+ .about__container {
+  .about__info {
+   p {
+    max-width: 750px;
+    margin: 0.5rem 0;
+    line-height: 1.6;
+    letter-spacing: 1.5px;
+    font-size: 17px;
+    color: var(--fourth-color);
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    a {
+     color: var(--main-color);
+    }
+   }
+   p.description:nth-child(even) {
+    animation: zoomInLeft 1.5s 1.4s backwards;
+   }
+   p.description:nth-child(odd) {
+    animation: zoomInRight 1.5s 1.5s backwards;
+   }
+   ul.about-list-items li{
+    max-width: 750px;
+    margin: 0.5rem 0;
+    line-height: 1.6;
+    letter-spacing: 1.5px;
+    font-size: 17px;
+    color: var(--fourth-color);
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    list-style-type: circle;
+    margin-left: 25px;
+    animation: fadeInLeft 1.8s 1.8s backwards;
+    -webkit-animation: fadeInLeft 1.8s 1.8s backwards;
+}
+   ul.about-list-items li::marker{
+    color: var(--main-color);
+   }
+  }
+  .skills-zone {
+   position: relative;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   height: 400px;
+   width: 400px;
+   perspective: 1000px;
+   animation: zoomInRight 1.5s 1.5s backwards;
+   .box {
+    height: 200px;
+    width: 200px;
+    position: relative;
+    transform-style: preserve-3d;
+    animation: animate 7s infinite;
+   }
+   @keyframes animate {
+    0% {
+     transform: rotateX(50deg) rotateY(-50deg);
+    }
+    25% {
+     transform: rotateX(-50deg) rotateY(-50deg);
+    }
+    50% {
+     transform: rotateX(50deg) rotateY(50deg);
+    }
+    75% {
+     transform: rotateX(-50deg) rotateY(50deg);
+    }
+    100% {
+     transform: rotateX(50deg) rotateY(-50deg);
+    }
+   }
+   .card {
+    height: 200px;
+    width: 200px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid var(--main-color);
+    font-size: 32px;
+    position: absolute;
+    transition: all 1s;
+   }
+   .box .card img {
+    width: 100px;
+   }
+   #front {
+    transform: translateZ(100px);
+   }
+   #back {
+    transform: translateZ(-100px);
+   }
+   #left {
+    right: 100px;
+    transform: rotateY(-90deg);
+   }
+   #right {
+    left: 100px;
+    transform: rotateY(90deg);
+   }
+   #top {
+    bottom: 100px;
+    transform: rotateX(90deg);
+   }
+   #bottom {
+    top: 100px;
+    transform: rotateX(-90deg);
+   }
+   .box:hover #front {
+    transform: translateZ(130px) rotateY(360deg);
+   }
+   .box:hover #back {
+    transform: translateZ(-130px) rotateY(360deg);
+   }
+   .box:hover #left {
+    right: 130px;
+   }
+   .box:hover #right {
+    left: 130px;
+   }
+   .box:hover #top {
+    bottom: 130px;
+   }
+   .box:hover #bottom {
+    top: 130px;
+   }
+  }
+ }
+}
+@media (max-width: 992px) {
+ .about__section {
+  .about__container {
+   flex-direction: column;
+   justify-content: flex-start !important;
+   align-items: flex-start;
+   .skills-zone {
+    width: 100%;
+   }
+  }
+ }
+}
+@media (max-width: 600px) {
+ .about__section {
+  .about__container {
+   .skills-zone {
+    height: 350px;
+    .box {
+     height: 150px;
+     width: 150px;
+    }
+    .card {
+     height: 150px;
+     width: 150px;
+    }
+    .box .card img {
+     width: 75px;
+    }
+    #front {
+     transform: translateZ(75px);
+    }
+    #back {
+     transform: translateZ(-75px);
+    }
+    #left {
+     right: 75px;
+     transform: rotateY(-90deg);
+    }
+    #right {
+     left: 75px;
+     transform: rotateY(90deg);
+    }
+    #top {
+     bottom: 75px;
+     transform: rotateX(90deg);
+    }
+    #bottom {
+     top: 75px;
+     transform: rotateX(-90deg);
+    }
+    .box:hover #front {
+     transform: translateZ(100px) rotateY(360deg);
+    }
+    .box:hover #back {
+     transform: translateZ(-100px) rotateY(360deg);
+    }
+    .box:hover #left {
+     right: 100px;
+    }
+    .box:hover #right {
+     left: 100px;
+    }
+    .box:hover #top {
+     bottom: 100px;
+    }
+    .box:hover #bottom {
+     top: 100px;
+    }
+   }
+  }
+ }
+}
+.ml-1 {
+ margin-left: 1rem;
+}
+//--------------------- end about section ---------------------
