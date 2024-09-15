@@ -1,0 +1,35 @@
+{
+  "files": {
+    "main.css": "/AG/static/css/main.2f49d306.css",
+    "main.js": "/AG/static/js/main.a58d918d.js",
+    "static/media/1.png": "/AG/static/media/1.e090a5d7ca07b63308d5.png",
+    "static/media/2.png": "/AG/static/media/2.29c81bbf7431a3729130.png",
+    "static/media/3.png": "/AG/static/media/3.05ae5eea6227a8a6e37b.png",
+    "static/media/5.png": "/AG/static/media/5.6f35f0cac93e71a6b8aa.png",
+    "static/media/4.png": "/AG/static/media/4.fbd5bbc2d16f4e02f175.png",
+    "static/media/4.jpg": "/AG/static/media/4.f879afa5046399b86900.jpg",
+    "static/media/1.jpg": "/AG/static/media/1.1609e8fae4c9c8122b3d.jpg",
+    "static/media/2.jpg": "/AG/static/media/2.e8e61afc67e6b65e2182.jpg",
+    "static/media/3.jpg": "/AG/static/media/3.fef829427afdec354855.jpg",
+    "static/media/5.jpg": "/AG/static/media/5.94a9a428c6672c90368a.jpg",
+    "static/media/BlackOpsOne-Regular.ttf": "/AG/static/media/BlackOpsOne-Regular.b8437be32fe8faca71ed.ttf",
+    "static/media/swagger.png": "/AG/static/media/swagger.8d5bbd64f679757c8c34.png",
+    "static/media/6.png": "/AG/static/media/6.4c508c4af14d91a2018b.png",
+    "static/media/abdogoda-resume.pdf": "/AG/static/media/abdogoda-resume.3ca424dfd81d1f1817d7.pdf",
+    "static/media/6.jpg": "/AG/static/media/6.ff13e92834898d14edd3.jpg",
+    "static/media/livewire.png": "/AG/static/media/livewire.d8deb9af195559e61e36.png",
+    "static/media/jquery.png": "/AG/static/media/jquery.284102a0e81f5b24404b.png",
+    "static/media/opencv.png": "/AG/static/media/opencv.a0be3fd456409bdc0cd5.png",
+    "static/media/helvetica-neu.ttf": "/AG/static/media/helvetica-neu.8a19678078a6b21c8057.ttf",
+    "static/media/ai.png": "/AG/static/media/ai.2073c5bb4a4e85edefe5.png",
+    "static/media/postman.jpeg": "/AG/static/media/postman.e3b02980280f6887bb82.jpeg",
+    "static/media/CoolveticaRg-Regular.woff2": "/AG/static/media/CoolveticaRg-Regular.7d1f3b1dd46ad6557a17.woff2",
+    "index.html": "/AG/index.html",
+    "main.2f49d306.css.map": "/AG/static/css/main.2f49d306.css.map",
+    "main.a58d918d.js.map": "/AG/static/js/main.a58d918d.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2f49d306.css",
+    "static/js/main.a58d918d.js"
+  ]
+}
