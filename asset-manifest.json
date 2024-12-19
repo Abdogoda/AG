@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/AG/static/css/main.be447f7a.css",
-    "main.js": "/AG/static/js/main.1337f830.js",
+    "main.js": "/AG/static/js/main.ed05bbf1.js",
     "static/media/1.png": "/AG/static/media/1.e090a5d7ca07b63308d5.png",
     "static/media/2.png": "/AG/static/media/2.29c81bbf7431a3729130.png",
     "static/media/3.png": "/AG/static/media/3.05ae5eea6227a8a6e37b.png",
@@ -15,7 +15,7 @@
     "static/media/BlackOpsOne-Regular.ttf": "/AG/static/media/BlackOpsOne-Regular.b8437be32fe8faca71ed.ttf",
     "static/media/swagger.png": "/AG/static/media/swagger.8d5bbd64f679757c8c34.png",
     "static/media/6.png": "/AG/static/media/6.4c508c4af14d91a2018b.png",
-    "static/media/abdogoda-resume.pdf": "/AG/static/media/abdogoda-resume.3ca424dfd81d1f1817d7.pdf",
+    "static/media/abdogoda-resume.pdf": "/AG/static/media/abdogoda-resume.0731507a27741fd7946a.pdf",
     "static/media/6.jpg": "/AG/static/media/6.ff13e92834898d14edd3.jpg",
     "static/media/livewire.png": "/AG/static/media/livewire.d8deb9af195559e61e36.png",
     "static/media/jquery.png": "/AG/static/media/jquery.284102a0e81f5b24404b.png",
@@ -26,10 +26,10 @@
     "static/media/CoolveticaRg-Regular.woff2": "/AG/static/media/CoolveticaRg-Regular.7d1f3b1dd46ad6557a17.woff2",
     "index.html": "/AG/index.html",
     "main.be447f7a.css.map": "/AG/static/css/main.be447f7a.css.map",
-    "main.1337f830.js.map": "/AG/static/js/main.1337f830.js.map"
+    "main.ed05bbf1.js.map": "/AG/static/js/main.ed05bbf1.js.map"
   },
   "entrypoints": [
     "static/css/main.be447f7a.css",
-    "static/js/main.1337f830.js"
+    "static/js/main.ed05bbf1.js"
   ]
 }
