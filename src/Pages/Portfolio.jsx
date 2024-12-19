@@ -70,7 +70,7 @@ function Portfolio() {
   }
   setProjectsList([]);
   filterProject();
- }, [activeCategory]);
+ }, [activeCategory, filterProject]);
  const filterProject = () => {
   if (activeCategory === 0) {
    setProjectsList(ProjectsData);
