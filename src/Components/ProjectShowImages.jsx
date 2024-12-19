@@ -5,7 +5,7 @@ function ProjectShowImages({ projectImages }) {
  const [activeImage, setActiveImage] = useState(0);
  const handleNavigator = (orient) => {
   if (orient === "left") {
-   if (activeImage != 0) {
+   if (activeImage !== 0) {
     setActiveImage((prev) => prev - 1);
    }
   } else {
