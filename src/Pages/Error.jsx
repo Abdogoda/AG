@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import "../sass/_error.scss";
 const Error = () => {
+  document.title = "AG | ERROR";
  useEffect(() => {
   let eyes = document.querySelectorAll(".eyes div span");
   document.body.addEventListener("mousemove", (e) => {
