@@ -9,7 +9,7 @@ function ProjectShowImages({ projectImages }) {
     setActiveImage((prev) => prev - 1);
    }
   } else {
-   if (activeImage != projectImages.length - 1) {
+   if (activeImage !== projectImages.length - 1) {
     setActiveImage((prev) => prev + 1);
    }
   }
