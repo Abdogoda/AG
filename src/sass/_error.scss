@@ -12,7 +12,7 @@
  src: url("../assets/fonts/BlackOpsOne-Regular.ttf");
 }
 :root {
- --m-color: #880808;
+ --m-color: #D2042D;
 }
 * {
  margin: 0;
@@ -202,7 +202,7 @@
 .text-con .text .error-btn {
  padding: 2px;
  border-radius: 20px;
- background-color: var(--main-color);
+ background-color: var(--m-color);
  width: fit-content;
  margin: 10px auto;
  font-size: 12px;
@@ -222,7 +222,7 @@
  border: 1px solid #fff;
 }
 .text-con .text .error-btn:hover {
- background-color: var(--m-color);
+ background-color: #880808;
 }
 @media (max-width: 772px) {
  html {
