@@ -19,7 +19,7 @@ function Project() {
   } else {
    navigate("/projects");
   }
- }, [projectSlug]);
+ }, [projectSlug, navigate]);
  useEffect(() => {
   // letter animation
   setTimeout(() => {
