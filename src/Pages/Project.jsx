@@ -13,19 +13,20 @@ function Project() {
  const navigate = useNavigate();
  const [projectData, setProjectData] = useState(null);
  const [letterClass, setLetterClass] = useState("text-animate");
+ 
  useEffect(() => {
-  if (projectSlug) {
-   setProjectData(ProjectsData.find((project) => project.slug === projectSlug));
-  } else {
-   navigate("/projects");
-  }
- }, [projectSlug, navigate]);
+  const foundProject = ProjectsData.find((project) => project.slug === projectSlug);
+  foundProject ? setProjectData(foundProject) : navigate("/projects");
+}, [projectSlug, navigate]);
+
  useEffect(() => {
   // letter animation
   setTimeout(() => {
    setLetterClass("text-animate-hover");
   }, 3000);
  }, [projectData]);
+
+ 
  return (
   <>
    <LoadingLayout />
