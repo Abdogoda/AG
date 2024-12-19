@@ -13,6 +13,20 @@ function Portfolio() {
  const [categoryActiveChange, setCategoryActiveChange] = useState(false);
  // letter animation
  const [letterClass, setLetterClass] = useState("text-animate");
+
+ const filterProject = () => {
+  if (activeCategory === 0) {
+   setProjectsList(ProjectsData);
+  } else {
+   if (projectCategories.length > activeCategory && activeCategory !== 0) {
+    var newList = ProjectsData.filter(
+     (obj) => obj.type === projectCategories[activeCategory]
+    );
+    setProjectsList(newList);
+   }
+  }
+ };
+ 
  useEffect(() => {
   setTimeout(() => {
    setLetterClass("text-animate-hover");
@@ -71,18 +85,6 @@ function Portfolio() {
   setProjectsList([]);
   filterProject();
  }, [activeCategory, filterProject]);
- const filterProject = () => {
-  if (activeCategory === 0) {
-   setProjectsList(ProjectsData);
-  } else {
-   if (projectCategories.length > activeCategory && activeCategory !== 0) {
-    var newList = ProjectsData.filter(
-     (obj) => obj.type === projectCategories[activeCategory]
-    );
-    setProjectsList(newList);
-   }
-  }
- };
  return (
   <>
    <LoadingLayout />
