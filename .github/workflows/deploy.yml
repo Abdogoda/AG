@@ -34,4 +34,4 @@ jobs:
         run: |
           npm run deploy
         env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # GitHub automatically provides this token
+          GH_TOKEN: ${{ secrets.GH_PAT }}  # Use your personal access token instead of the default token
