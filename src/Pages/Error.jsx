@@ -39,12 +39,7 @@ const Error = () => {
    <div className="text-con">
     <div className="text">
      <h1 className="error-number">404</h1>
-     <h4>
-      <span>GUH..</span> <span>Maybe..</span> <span>We Have</span>
-     </h4>
-     <h2 className="error-text">
-      <span>PROBLEMS HERE</span>
-     </h2>
+     <h4>Seems like we have a problem here...</h4>
      <h4>This Page Could't Be Found!</h4>
      <div className="error-btn">
       <Link to="/">RETURN HOME</Link>
