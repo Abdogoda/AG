@@ -107,6 +107,7 @@ import LIVEWIRE from "../images/icons/livewire.png";
 import POSTMAN from "../images/icons/postman.jpeg";
 import SWAGGER from "../images/icons/swagger.png";
 import JQUERY from "../images/icons/jquery.png";
+import ANGULAR from "../images/icons/angular.png";
 
 import { FaGithub, FaLinkedin, FaWhatsapp, FaEnvelope } from "react-icons/fa6";
 
@@ -395,7 +396,7 @@ const ProjectsData = [
 const AboutSkills = [
  { side: "front", img: HTML },
  { side: "back", img: JS },
- { side: "left", img: PHP },
+ { side: "left", img: ANGULAR },
  { side: "right", img: PYTHON },
  { side: "top", img: DB },
  { side: "bottom", img: LARAVEL },
