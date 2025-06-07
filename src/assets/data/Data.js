@@ -67,6 +67,12 @@ import RAMADANAK_3 from "../images/projects/ramadanak/3.jpg";
 import RAMADANAK_4 from "../images/projects/ramadanak/4.jpg";
 import RAMADANAK_5 from "../images/projects/ramadanak/5.jpg";
 
+// EID ADHA IMAGES
+import EID_ADHA_1 from "../images/projects/eid-adha/1.png";
+import EID_ADHA_2 from "../images/projects/eid-adha/2.png";
+import EID_ADHA_3 from "../images/projects/eid-adha/3.png";
+import EID_ADHA_4 from "../images/projects/eid-adha/4.png";
+
 // FRONTEND STORE IMAGES
 import STORE_1 from "../images/projects/store/1.png";
 import STORE_2 from "../images/projects/store/2.png";
@@ -332,6 +338,24 @@ const ProjectsData = [
    "It's a frontend website about the month of ramadan, which display hadiths, Quranic verses, prayer times, and gifts to friends. the website gives you random resourse whenever you try to load any page. the website also support api for the whole quran to read. the website also provide a gift page which you can send your friend a customized congratulations on the advent of Ramadan.",
   githubLink: "https://github.com/Abdogoda/Ramadanak",
   liveDemoLink: "https://abdogoda.github.io/Ramadanak/",
+  type: "JavaScript",
+ },
+
+ // eid adha project
+ {
+  images: [
+   EID_ADHA_1,
+   EID_ADHA_2,
+   EID_ADHA_3,
+   EID_ADHA_4
+  ],
+  languages: [HTML, CSS, BOOTSTRAP, JS],
+  title: "Eid Adha Card Generator",
+  slug: "eid-adha",
+  description:
+   "Eid Al-Adha Greeting Cards Generator is a web app that lets you create beautiful Islamic-themed Eid cards in seconds. Featuring authentic Arabic calligraphy and traditional designs, it allows full personalization with recipient names, photos, and custom messages.",
+  githubLink: "https://github.com/Abdogoda/eid-adha",
+  liveDemoLink: "https://abdogoda.github.io/eid-adha/",
   type: "JavaScript",
  },
 
