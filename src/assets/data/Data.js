@@ -93,6 +93,12 @@ import TOOLBOX_3 from "../images/projects/toolbox/3.jpg";
 import TOOLBOX_4 from "../images/projects/toolbox/4.jpg";
 import TOOLBOX_5 from "../images/projects/toolbox/5.jpg";
 
+// TALEB IMAGES
+import TALEB_1 from "../images/projects/taleb/1.jpg";
+import TALEB_2 from "../images/projects/taleb/2.jpg";
+import TALEB_3 from "../images/projects/taleb/3.jpg";
+import TALEB_4 from "../images/projects/taleb/4.jpg";
+import TALEB_5 from "../images/projects/taleb/5.jpg";
 
 // import skills icons
 import HTML from "../images/icons/html.png";
