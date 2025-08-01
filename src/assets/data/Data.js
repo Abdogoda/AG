@@ -226,6 +226,25 @@ const ProjectsData = [
   liveDemoLink: null,
   type: "Laravel",
  },
+ 
+// taleb project
+ {
+  images: [
+   TALEB_1,
+   TALEB_2,
+   TALEB_3,
+   TALEB_4,
+   TALEB_5,
+   TALEB_6,
+  ],
+  languages: [LARAVEL, PHP, DB, HTML, CSS, JS, BOOTSTRAP, JQUERY],
+  title: "Taleb Management",
+  slug: "taleb-mamagement",
+  description:"A smart web-based platform for managing student attendance in schools. Admins control schools and settings, schools manage students and teachers, and teachers track attendance easily. Students can view their own records, while parents monitor attendance in real time. The system enhances communication, ensures transparency, and simplifies the entire attendance process with an intuitive interface and role-based access.",
+  githubLink: null,
+  liveDemoLink: "https://taleb.sitevip.org/taleb_development/public/login",
+  type: "Laravel",
+ },
 
  // dentist project
  {
