@@ -99,6 +99,7 @@ import TALEB_2 from "../images/projects/taleb/2.jpg";
 import TALEB_3 from "../images/projects/taleb/3.jpg";
 import TALEB_4 from "../images/projects/taleb/4.jpg";
 import TALEB_5 from "../images/projects/taleb/5.jpg";
+import TALEB_6 from "../images/projects/taleb/6.jpg";
 
 // import skills icons
 import HTML from "../images/icons/html.png";
