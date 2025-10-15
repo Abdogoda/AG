@@ -2,14 +2,13 @@ import React, { useEffect, useState } from "react";
 import Header from "../Components/Header";
 import Sidebar from "../Components/Sidebar";
 import AnimatedLetters from "../Components/AnimatedLetters";
+import SEO from "../Components/SEO";
 import LoadingLayout from "../Components/LoadingLayout";
 import { ProjectsData, projectCategories } from "../assets/data/Data";
 import ProjectBox from "../Components/ProjectBox";
 import ProjectsFilter from "../Components/ProjectsFilter";
 
 function Portfolio() {
-  document.title = "AG | PROJECTS";
-
   const [activeCategory, setActiveCategory] = useState(0);
   const [projectsList, setProjectsList] = useState(ProjectsData);
   const [categoryActiveChange, setCategoryActiveChange] = useState(false);
@@ -21,6 +20,24 @@ function Portfolio() {
       setLetterClass("text-animate-hover");
     }, 3000);
   }, []);
+
+  const portfolioJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "CreativeWork",
+    "name": "AG Portfolio - Web Development Projects",
+    "description": "Collection of web development projects by Abdulrhman Goda including Laravel applications, React projects, and eCommerce solutions",
+    "url": "https://Abdogoda.github.io/AG/projects",
+    "author": {
+      "@type": "Person",
+      "name": "Abdulrhman Goda"
+    },
+    "workExample": ProjectsData.slice(0, 5).map(project => ({
+      "@type": "CreativeWork",
+      "name": project.title,
+      "description": project.description,
+      "url": `https://Abdogoda.github.io/AG/projects/${project.slug}`
+    }))
+  };
 
   // projects effect
   useEffect(() => {
@@ -89,10 +106,17 @@ function Portfolio() {
 
   return (
     <>
+      <SEO 
+        title="Portfolio - Web Development Projects by Abdulrhman Goda"
+        description="Explore 40+ web development projects by Abdulrhman Goda including Laravel applications, React projects, eCommerce solutions, and more. Filter by technology: Laravel, PHP, React, JavaScript."
+        keywords="Web Development Portfolio, Laravel Projects, React Projects, PHP Development, JavaScript Projects, eCommerce Development, Full Stack Projects"
+        url="https://Abdogoda.github.io/AG/projects"
+        jsonLd={portfolioJsonLd}
+      />
       <LoadingLayout />
       <Header />
       <Sidebar />
-      <section className="section portfolio__section" id="portfolio">
+      <main className="section portfolio__section" id="portfolio">
         <div className="container portfolio__container container__flex__column">
           <h1 className="section__title">
             <AnimatedLetters
@@ -133,7 +157,7 @@ function Portfolio() {
             })}
           </div>
         </div>
-      </section>
+      </main>
     </>
   );
 }

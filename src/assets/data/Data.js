@@ -454,14 +454,17 @@ const AboutSkills = [
 
 // about paragraphs
 const AboutParagraphs = [
- "Hellooooo! My name is Abdulrhman Goda, i'm a Dedicated and skilled PHP Laravel Web Developer with a passion for creating dynamic and user-friendly web applications. Committed to delivering high-quality code, meeting deadlines, and continuously expanding my technical skills to stay at the forefront of industry trends.",
+    "👋 Hey there, internet traveler!",
+    "I'm Abdulrhman Goda — a Software Engineer who loves turning caffeine, creativity, and clean code into smooth, high-performing web experiences.",
+    "Over the years, I’ve built 40+ diverse web projects 🚀, from full-scale applications to sleek, tailored solutions that make both clients and servers happy.",
+    "My goal? To write code so clean that future me actually thanks present me (hasn’t happened yet, but I’m working on it 🙂).",
+    "I also run a YouTube channel 🎥 where I share cool web dev stuff, Laravel tricks, and real-world coding adventures — explained the way we actually talk, not like a textbook."
 ];
 
 const AboutListItems = [
- "Crafted over 40 diverse web projects, including comprehensive applications, and bespoke task solutions.",
- "Leveraged Laravel and PHP to build robust, scalable solutions tailored to client needs.",
- "Excelled in managing end-to-end project development, from initial concept to deployment, ensuring high client satisfaction.",
- "Demonstrated strong problem-solving skills and effective communication, delivering results that consistently exceeded client expectations."
+    "Building dynamic, scalable web applications.",
+    "Bringing ideas to life — from concept to deployment.",
+    "Solving problems before they even realize they exist.",
 ];
 
 export {

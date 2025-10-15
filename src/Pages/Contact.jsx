@@ -2,11 +2,12 @@ import React, { useEffect, useState } from "react";
 import Header from "../Components/Header.jsx";
 import Sidebar from "../Components/Sidebar.jsx";
 import AnimatedLetters from "../Components/AnimatedLetters.jsx";
+import SEO from "../Components/SEO.jsx";
 import LoadingLayout from "../Components/LoadingLayout.jsx";
 import emailjs from "@emailjs/browser";
 import { SocailData } from "../assets/data/Data";
+
 function Contact() {
- document.title = "AG | CONTACT";
  // letter animation
  const [letterClass, setLetterClass] = useState("text-animate");
  useEffect(() => {
@@ -14,6 +15,24 @@ function Contact() {
    setLetterClass("text-animate-hover");
   }, 3000);
  }, []);
+
+ const contactJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "ContactPage",
+  "name": "Contact Abdulrhman Goda",
+  "description": "Get in touch with Abdulrhman Goda for web development projects, Laravel development, React development, or any freelance work",
+  "url": "https://Abdogoda.github.io/AG/contact",
+  "mainEntity": {
+    "@type": "Person",
+    "name": "Abdulrhman Goda",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "customer service",
+      "email": "abdogoda0a@gmail.com",
+      "telephone": "+2001019135059"
+    }
+  }
+ };
  // email js contact
  const sendEmail = (e) => {
   e.preventDefault();
@@ -36,10 +55,17 @@ function Contact() {
  };
  return (
   <>
+   <SEO 
+     title="Contact Abdulrhman Goda - Hire Full Stack Developer"
+     description="Get in touch with Abdulrhman Goda for your web development needs. Specializing in Laravel, PHP, React, and JavaScript development. Available for freelance projects and consulting."
+     keywords="Hire Full Stack Developer, Contact Abdulrhman Goda, Laravel Developer for Hire, Web Development Services, Freelance Web Developer"
+     url="https://Abdogoda.github.io/AG/contact"
+     jsonLd={contactJsonLd}
+   />
    <LoadingLayout />
    <Header />
    <Sidebar />
-   <section className="section contact__section" id="contact">
+   <main className="section contact__section" id="contact">
     <div className="container contact__container container__flex__column">
      <h1 className="section__title">
       <AnimatedLetters
@@ -114,7 +140,7 @@ function Contact() {
       </div>
      </div>
     </div>
-   </section>
+   </main>
   </>
  );
 }

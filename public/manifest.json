@@ -1,0 +1,41 @@
+{
+  "short_name": "AG Portfolio",
+  "name": "Abdulrhman Goda - Full Stack Developer Portfolio",
+  "description": "Portfolio of Abdulrhman Goda, a Software Engineer specializing in Laravel, PHP, React, and JavaScript",
+  "icons": [
+    {
+      "src": "favicon.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    }
+  ],
+  "id": "/?source=pwa",
+  "start_url": "/?source=pwa",
+  "background_color": "#000000",
+  "display": "standalone",
+  "scope": "/",
+  "theme_color": "#ffd700",
+  "shortcuts": [
+    {
+      "name": "About Me",
+      "short_name": "About",
+      "description": "Learn more about Abdulrhman Goda",
+      "url": "/about?source=pwa"
+    },
+    {
+      "name": "My Projects",
+      "short_name": "Projects", 
+      "description": "View my portfolio projects",
+      "url": "/projects?source=pwa"
+    },
+    {
+      "name": "Contact Me",
+      "short_name": "Contact",
+      "description": "Get in touch with me",
+      "url": "/contact?source=pwa"
+    }
+  ],
+  "categories": ["portfolio", "developer", "business", "productivity"],
+  "lang": "en",
+  "orientation": "portrait-primary"
+}

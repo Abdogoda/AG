@@ -28,14 +28,14 @@ function ProjectShowImages({ projectImages }) {
          animationDelay: `${0.2 * index + 1.5}s`,
         }}
        >
-        <img src={projectImage} alt={`Project_image_${index}`} />
+        <img src={projectImage} alt={`Project screenshot ${index + 1}`} />
        </li>
       );
      })}
     </ul>
    )}
    <div className="project__images__card">
-    <img src={projectImages[activeImage]} alt="project__active__image" />
+    <img src={projectImages[activeImage]} alt="Main project screenshot" />
     {projectImages.length > 1 && (
      <div className="project__images__navigator">
       <span

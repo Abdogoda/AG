@@ -1,5 +1,6 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
+import { HelmetProvider } from "react-helmet-async";
 import Home from "./Pages/Home";
 import About from "./Pages/About";
 import Portfolio from "./Pages/Portfolio";
@@ -8,9 +9,10 @@ import Contact from "./Pages/Contact";
 import Login from "./Pages/Login";
 import Error from "./Pages/Error";
 import Particle from "./Components/Particle";
+
 function App() {
  return (
-  <>
+  <HelmetProvider>
    <Particle />
    <Routes>
     <Route path="/">
@@ -25,7 +27,7 @@ function App() {
      <Route path="*" element={<Error />} />
     </Route>
    </Routes>
-  </>
+  </HelmetProvider>
  );
 }
 
