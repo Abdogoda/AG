@@ -5,7 +5,7 @@ import Sidebar from "../Components/Sidebar";
 import AnimatedLetters from "../Components/AnimatedLetters";
 import SEO from "../Components/SEO";
 import LoadingLayout from "../Components/LoadingLayout";
-import { ProjectsData } from "../assets/data/Data";
+import { ProjectsData } from "../assets/data/ProjectsData";
 import ProjectShowImages from "../Components/ProjectShowImages";
 import { FaGithub, FaLink } from "react-icons/fa6";
 

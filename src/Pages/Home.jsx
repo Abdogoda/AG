@@ -40,7 +40,7 @@ function Home() {
  return (
   <>
    <SEO 
-     title="Abdulrhman Goda (AG) - Software Engineer"
+     title="AG | Software Engineer"
      description="Welcome to AG Portfolio! I'm Abdulrhman Goda, a dedicated Full Stack Developer with expertise in Laravel, PHP, React, and JavaScript. Explore my 40+ web development projects and get in touch for your next project."
      keywords="Abdulrhman Goda, AG Portfolio, Full Stack Developer, Laravel Developer, PHP Developer, React Developer, JavaScript, Web Development, eCommerce, Freelancer"
      url="https://Abdogoda.github.io/AG/"
@@ -59,7 +59,7 @@ function Home() {
         index={18}
        />
        <br />
-       <span className={`${letterClass} _20 text__space`}> I</span>
+       <span className={`${letterClass} _20 text__space`}> I'm</span>
        <span className={`${letterClass} _21 a__text`}>A</span>
        <AnimatedLetters
         letterClass={letterClass}
@@ -113,9 +113,7 @@ function Home() {
        <span style={{ "--j": "12" }}></span>
       </div>
       <h2 aria-label="Code Icon">
-       <p>
         <FaCode />
-       </p>
       </h2>
      </div>
     </div>

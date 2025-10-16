@@ -56,7 +56,7 @@ function Contact() {
  return (
   <>
    <SEO 
-     title="Contact Abdulrhman Goda - Hire Full Stack Developer"
+     title="AG | Contact Abdulrhman Goda"
      description="Get in touch with Abdulrhman Goda for your web development needs. Specializing in Laravel, PHP, React, and JavaScript development. Available for freelance projects and consulting."
      keywords="Hire Full Stack Developer, Contact Abdulrhman Goda, Laravel Developer for Hire, Web Development Services, Freelance Web Developer"
      url="https://Abdogoda.github.io/AG/contact"

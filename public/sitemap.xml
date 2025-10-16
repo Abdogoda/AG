@@ -25,7 +25,36 @@
   </url>
   
   <url>
+    <loc>https://Abdogoda.github.io/AG/youtube</loc>
+    <lastmod>2024-10-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <url>
     <loc>https://Abdogoda.github.io/AG/contact</loc>
+    <lastmod>2024-10-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- YouTube Playlist Pages -->
+  <url>
+    <loc>https://Abdogoda.github.io/AG/youtube/laravel-development-tutorials</loc>
+    <lastmod>2024-10-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://Abdogoda.github.io/AG/youtube/react-js-complete-guide</loc>
+    <lastmod>2024-10-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <url>
+    <loc>https://Abdogoda.github.io/AG/youtube/full-stack-development-tips</loc>
     <lastmod>2024-10-15</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>

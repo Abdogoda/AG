@@ -6,7 +6,7 @@ import SEO from "../Components/SEO";
 import CV from "../assets/data/abdogoda-resume.pdf";
 import LoadingLayout from "../Components/LoadingLayout";
 import { Link } from "react-router-dom";
-import { AboutSkills, AboutParagraphs, AboutListItems } from "../assets/data/Data";
+import { AboutSkills, AboutParagraphs, AboutListItems } from "../assets/data/AboutData";
 
 function About() {
  // letter animation
@@ -42,7 +42,7 @@ function About() {
  return (
   <>
    <SEO 
-     title="About Abdulrhman Goda - Full Stack Developer"
+     title="AG | About Abdulrhman Goda"
      description="Learn about Abdulrhman Goda (AG), a dedicated Software Engineer with expertise in Laravel, PHP, React, and JavaScript. Discover my skills, experience with 40+ projects, and technical background."
      keywords="About Abdulrhman Goda, Full Stack Developer Background, Laravel Expert, PHP Developer Skills, React Developer Experience, Web Developer Portfolio"
      url="https://Abdogoda.github.io/AG/about"

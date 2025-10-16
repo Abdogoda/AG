@@ -93,7 +93,6 @@
   justify-content: center;
   margin-top: 3rem;
   height: 100px;
-  gap: 1rem;
  }
  @media (max-width: 600px) {
   .icons-effect {
@@ -191,6 +190,11 @@
  .icons-effect .github:hover .tooltip,
  .icons-effect .github:hover .tooltip::before {
   background-color: #333;
+ }
+ .icons-effect .youtube:hover a,
+ .icons-effect .youtube:hover .tooltip,
+ .icons-effect .youtube:hover .tooltip::before {
+  background-color: #FF0000;
  }
 }
 

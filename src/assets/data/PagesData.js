@@ -1,4 +1,4 @@
-import { FaEnvelope, FaEye, FaHome, FaUser } from "react-icons/fa";
+import { FaEnvelope, FaEye, FaHome, FaUser, FaYoutube } from "react-icons/fa";
 const PagesData = [
  {
   pageName: "HOME",
@@ -17,6 +17,12 @@ const PagesData = [
   pageID: "projects",
   pagePath: "/projects",
   pageIcon: <FaEye />,
+ },
+ {
+  pageName: "YOUTUBE",
+  pageID: "youtube",
+  pagePath: "/youtube",
+  pageIcon: <FaYoutube />,
  },
  {
   pageName: "CONTACT",

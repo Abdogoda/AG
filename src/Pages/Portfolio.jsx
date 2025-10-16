@@ -4,7 +4,7 @@ import Sidebar from "../Components/Sidebar";
 import AnimatedLetters from "../Components/AnimatedLetters";
 import SEO from "../Components/SEO";
 import LoadingLayout from "../Components/LoadingLayout";
-import { ProjectsData, projectCategories } from "../assets/data/Data";
+import { ProjectsData, projectCategories } from "../assets/data/ProjectsData";
 import ProjectBox from "../Components/ProjectBox";
 import ProjectsFilter from "../Components/ProjectsFilter";
 
@@ -107,7 +107,7 @@ function Portfolio() {
   return (
     <>
       <SEO 
-        title="Portfolio - Web Development Projects by Abdulrhman Goda"
+        title="AG | Portfolio Projects"
         description="Explore 40+ web development projects by Abdulrhman Goda including Laravel applications, React projects, eCommerce solutions, and more. Filter by technology: Laravel, PHP, React, JavaScript."
         keywords="Web Development Portfolio, Laravel Projects, React Projects, PHP Development, JavaScript Projects, eCommerce Development, Full Stack Projects"
         url="https://Abdogoda.github.io/AG/projects"

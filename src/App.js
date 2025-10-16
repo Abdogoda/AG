@@ -5,6 +5,8 @@ import Home from "./Pages/Home";
 import About from "./Pages/About";
 import Portfolio from "./Pages/Portfolio";
 import Project from "./Pages/Project";
+import YouTube from "./Pages/YouTube";
+import PlaylistDetail from "./Pages/PlaylistDetail";
 import Contact from "./Pages/Contact";
 import Login from "./Pages/Login";
 import Error from "./Pages/Error";
@@ -21,6 +23,10 @@ function App() {
      <Route path="projects">
       <Route index element={<Portfolio />} />
       <Route path=":projectSlug" element={<Project />} />
+     </Route>
+     <Route path="youtube">
+      <Route index element={<YouTube />} />
+      <Route path=":playlistSlug" element={<PlaylistDetail />} />
      </Route>
      <Route path="contact" element={<Contact />} />
      <Route path="login" element={<Login />} />

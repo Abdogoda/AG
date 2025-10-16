@@ -1,4 +1,4 @@
-import { projectCategories } from "../assets/data/Data";
+import { projectCategories } from "../assets/data/ProjectsData";
 function ProjectsFilter({ activeCategory, setActiveCategory }) {
  return (
   <ul className="projects__filter">
