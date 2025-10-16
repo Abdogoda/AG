@@ -1,6 +1,6 @@
 // YouTube API Configuration and Services
-const YOUTUBE_API_KEY = process.env.REACT_APP_YOUTUBE_API_KEY || "AIzaSyD5eOkoK_uJ53fy9jMvwxwUQ4Vtf7MG6aU";
-const CHANNEL_ID = process.env.REACT_APP_YOUTUBE_CHANNEL_ID || "UCmGfAOZOAgYZZ_fj_GgzB2Q";
+const YOUTUBE_API_KEY = "AIzaSyD5eOkoK_uJ53fy9jMvwxwUQ4Vtf7MG6aU";
+const CHANNEL_ID = "UCmGfAOZOAgYZZ_fj_GgzB2Q";
 const BASE_URL = "https://www.googleapis.com/youtube/v3";
 
 // Helper function to make API requests
