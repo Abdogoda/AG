@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import PagesData from "../assets/data/PagesData";
 import { SocailData } from "../assets/data/Data";

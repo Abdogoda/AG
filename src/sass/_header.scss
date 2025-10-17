@@ -137,7 +137,7 @@ header.header {
  align-items: center;
  justify-content: center;
  flex-direction: column;
- gap: 5rem;
+ gap: 4rem;
  position: fixed;
  top: 0;
  left: 0;
@@ -156,7 +156,7 @@ header.header {
  li {
   a {
    color: #fff;
-   font-size: 3rem;
+   font-size: 2rem;
    font-weight: bold;
    transition: all 0.4s ease;
    transition-delay: calc(var(--adelay) * 0.1s);

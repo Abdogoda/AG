@@ -11,12 +11,14 @@ function Sidebar() {
   <nav className="sidebar">
    <div className="container sidebar__container">
     {PagesData.map((pageData, index) => {
+     const pagePath = pageData.pagePath.slice(1); // Remove leading slash
+     const isActive = pagePath === "" ? location === "" : location.startsWith(pagePath);
      return (
       <Link
        key={index}
        to={pageData.pagePath}
        title={pageData.pageName}
-       className={`${location === pageData.pagePath.slice(1) ? "active" : ""}`}
+       className={`${isActive ? "active" : ""}`}
       >
        {pageData.pageIcon}
       </Link>

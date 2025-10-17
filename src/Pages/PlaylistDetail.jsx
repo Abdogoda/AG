@@ -32,6 +32,8 @@ function PlaylistDetail() {
     }
     
     setPlaylistData(foundPlaylist);
+    console.log(foundPlaylist);
+    
     
     // Then fetch videos for this playlist
     const playlistVideos = await getPlaylistVideos(foundPlaylist.id);
