@@ -1,10 +1,13 @@
 {
   "files": {
     "main.css": "/AG/static/css/main.7f7f9eb7.css",
-    "main.js": "/AG/static/js/main.a6bb6872.js",
+    "main.js": "/AG/static/js/main.aceb3026.js",
     "static/media/4.png": "/AG/static/media/4.fbd5bbc2d16f4e02f175.png",
     "static/media/1.png": "/AG/static/media/1.e090a5d7ca07b63308d5.png",
+    "static/media/6.png": "/AG/static/media/6.4c508c4af14d91a2018b.png",
     "static/media/2.png": "/AG/static/media/2.29c81bbf7431a3729130.png",
+    "static/media/8.png": "/AG/static/media/8.4ef1b9983f14213bd465.png",
+    "static/media/7.png": "/AG/static/media/7.3477b369c9058f16a4a4.png",
     "static/media/3.png": "/AG/static/media/3.05ae5eea6227a8a6e37b.png",
     "static/media/5.png": "/AG/static/media/5.6f35f0cac93e71a6b8aa.png",
     "static/media/1.jpg": "/AG/static/media/1.0221676fbde8492c2a42.jpg",
@@ -14,7 +17,6 @@
     "static/media/4.jpg": "/AG/static/media/4.f879afa5046399b86900.jpg",
     "static/media/BlackOpsOne-Regular.ttf": "/AG/static/media/BlackOpsOne-Regular.b8437be32fe8faca71ed.ttf",
     "static/media/swagger.png": "/AG/static/media/swagger.8d5bbd64f679757c8c34.png",
-    "static/media/6.png": "/AG/static/media/6.4c508c4af14d91a2018b.png",
     "static/media/6.jpg": "/AG/static/media/6.ff13e92834898d14edd3.jpg",
     "static/media/abdogoda-resume.pdf": "/AG/static/media/abdogoda-resume.0731507a27741fd7946a.pdf",
     "static/media/livewire.png": "/AG/static/media/livewire.d8deb9af195559e61e36.png",
@@ -27,10 +29,10 @@
     "static/media/CoolveticaRg-Regular.woff2": "/AG/static/media/CoolveticaRg-Regular.7d1f3b1dd46ad6557a17.woff2",
     "index.html": "/AG/index.html",
     "main.7f7f9eb7.css.map": "/AG/static/css/main.7f7f9eb7.css.map",
-    "main.a6bb6872.js.map": "/AG/static/js/main.a6bb6872.js.map"
+    "main.aceb3026.js.map": "/AG/static/js/main.aceb3026.js.map"
   },
   "entrypoints": [
     "static/css/main.7f7f9eb7.css",
-    "static/js/main.a6bb6872.js"
+    "static/js/main.aceb3026.js"
   ]
 }
