@@ -165,7 +165,6 @@ const ProjectsData = [
         AUTH_SYSTEM_4,
         AUTH_SYSTEM_5,
         AUTH_SYSTEM_6,
-        AUTH_SYSTEM_7,
         AUTH_SYSTEM_8,
         AUTH_SYSTEM_9,
     ],
