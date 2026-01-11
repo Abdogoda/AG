@@ -169,7 +169,7 @@ const ProjectsData = [
         AUTH_SYSTEM_8,
         AUTH_SYSTEM_9,
     ],
-    languages: [LARAVEL, PHP, DB, HTML, CSS, JS, BOOTSTRAP, JQUERY],
+    languages: [LARAVEL, PHP, DB, HTML, CSS, JS, TailwindCSS, JQUERY],
     title: "Authentication System", 
     slug: "authentication-system",
     description: "A comprehensive authentication system built with Laravel, featuring secure login, registration, password reset, and user management functionalities. The system employs best practices in security, including hashed passwords, email verification, and role-based access control to ensure robust protection of user data. The intuitive user interface is designed with Bootstrap for responsiveness and ease of use across devices. Administrators have access to a powerful dashboard for managing users, monitoring login activity, and configuring security settings. This project serves as a solid foundation for any web application requiring reliable user authentication and management capabilities.",
