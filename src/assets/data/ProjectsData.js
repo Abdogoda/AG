@@ -111,6 +111,17 @@ import GAME_HUB_6 from "../images/projects/game-hub/6.png";
 import GAME_HUB_7 from "../images/projects/game-hub/7.png";
 import GAME_HUB_8 from "../images/projects/game-hub/8.png";
 
+// AUTHENTICATION SYSTEM IMAGES
+import AUTH_SYSTEM_1 from "../images/projects/authentication-system/1.jpg";
+import AUTH_SYSTEM_2 from "../images/projects/authentication-system/2.jpg";
+import AUTH_SYSTEM_3 from "../images/projects/authentication-system/3.jpg";
+import AUTH_SYSTEM_4 from "../images/projects/authentication-system/4.jpg";
+import AUTH_SYSTEM_5 from "../images/projects/authentication-system/5.jpg";
+import AUTH_SYSTEM_6 from "../images/projects/authentication-system/6.jpg";
+import AUTH_SYSTEM_7 from "../images/projects/authentication-system/7.jpg";
+import AUTH_SYSTEM_8 from "../images/projects/authentication-system/8.jpg";
+import AUTH_SYSTEM_9 from "../images/projects/authentication-system/9.jpg";
+
 // import skills icons
 import HTML from "../images/icons/html.png";
 import CSS from "../images/icons/css.png";
@@ -145,6 +156,27 @@ const projectCategories = [
 
 // projects data
 const ProjectsData = [
+ // authentication system project
+ {
+    images: [
+        AUTH_SYSTEM_1,
+        AUTH_SYSTEM_2,
+        AUTH_SYSTEM_3,
+        AUTH_SYSTEM_4,
+        AUTH_SYSTEM_5,
+        AUTH_SYSTEM_6,
+        AUTH_SYSTEM_7,
+        AUTH_SYSTEM_8,
+        AUTH_SYSTEM_9,
+    ],
+    languages: [LARAVEL, PHP, DB, HTML, CSS, JS, BOOTSTRAP, JQUERY],
+    title: "Authentication System", 
+    slug: "authentication-system",
+    description: "A comprehensive authentication system built with Laravel, featuring secure login, registration, password reset, and user management functionalities. The system employs best practices in security, including hashed passwords, email verification, and role-based access control to ensure robust protection of user data. The intuitive user interface is designed with Bootstrap for responsiveness and ease of use across devices. Administrators have access to a powerful dashboard for managing users, monitoring login activity, and configuring security settings. This project serves as a solid foundation for any web application requiring reliable user authentication and management capabilities.",
+    githubLink: "https://github.com/Abdogoda/Laravel-Authentication",
+    liveDemoLink: null,
+    type: "Laravel",
+ },
  // ecommerce api project
  {
   images: [
