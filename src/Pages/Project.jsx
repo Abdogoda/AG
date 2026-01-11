@@ -7,7 +7,7 @@ import SEO from "../Components/SEO";
 import LoadingLayout from "../Components/LoadingLayout";
 import { ProjectsData } from "../assets/data/ProjectsData";
 import ProjectShowImages from "../Components/ProjectShowImages";
-import { FaGithub, FaLink } from "react-icons/fa6";
+import { FaGithub, FaLink, FaYoutube } from "react-icons/fa6";
 
 function Project() {
  const { projectSlug } = useParams();
@@ -105,6 +105,16 @@ function Project() {
           className="main__button"
          >
           Live Demo <FaLink />
+         </a>
+        )}
+        {projectData.youtubeLink && (
+         <a
+          href={projectData.youtubeLink}
+          target="_blank"
+          rel="noreferrer"
+          className="main__button"
+         >
+          YouTube <FaYoutube />
          </a>
         )}
        </div>

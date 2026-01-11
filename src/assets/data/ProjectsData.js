@@ -175,6 +175,7 @@ const ProjectsData = [
     description: "A comprehensive authentication system built with Laravel, featuring secure login, registration, password reset, and user management functionalities. The system employs best practices in security, including hashed passwords, email verification, and role-based access control to ensure robust protection of user data. The intuitive user interface is designed with Bootstrap for responsiveness and ease of use across devices. Administrators have access to a powerful dashboard for managing users, monitoring login activity, and configuring security settings. This project serves as a solid foundation for any web application requiring reliable user authentication and management capabilities.",
     githubLink: "https://github.com/Abdogoda/Laravel-Authentication",
     liveDemoLink: null,
+    youtubeLink: "https://youtube.com/playlist?list=PLBy71Vfd0SzVaLjezaxqjnSsK8_p_aTcp&si=QPHa-33NdV-MqIIe",
     type: "Laravel",
  },
  // ecommerce api project
@@ -192,6 +193,7 @@ const ProjectsData = [
   description: "The Laravel Multi-Vendor eCommerce API represents a cutting-edge, enterprise-grade platform specifically engineered to handle complex multi-vendor marketplace operations. This comprehensive solution implements secure OAuth JWT authentication coupled with seamless Google OAuth integration, providing robust security layers for all user interactions. The platform integrates Paymob payment gateway, enabling secure and versatile payment processing options for customers worldwide. Vendors benefit from an intuitive dashboard where they can effortlessly manage their product catalogs, track orders in real-time, process payments, and monitor their business performance through detailed analytics. Customers experience a streamlined shopping journey with advanced product browsing, intelligent search capabilities, wishlist management, and a secure checkout process protected by OTP verification. The API architecture supports sophisticated multi-role access control, ensuring appropriate permissions for administrators, vendors, and customers. Built with scalability in mind, it features multi-language functionality to cater to global audiences, implements Redis caching for lightning-fast performance, and includes rate limiting to prevent abuse. The entire system is meticulously documented using Swagger, providing developers with clear, interactive API documentation that accelerates integration and reduces development time. This makes it an ideal foundation for launching modern, scalable eCommerce marketplaces.",
   githubLink: "https://github.com/Abdogoda/Multi-vendor-Ecommerce-API",
   liveDemoLink: null,
+  youtubeLink: null,
   type: "Laravel",
  },
 
@@ -213,6 +215,7 @@ const ProjectsData = [
 
   githubLink: "https://github.com/Abdogoda/kashier",
   liveDemoLink: null,
+  youtubeLink: null,
   type: "Laravel",
  },
 
@@ -234,6 +237,7 @@ const ProjectsData = [
 
   githubLink: "https://github.com/Abdogoda/btd",
   liveDemoLink: null,
+  youtubeLink: null,
   type: "Laravel",
  },
  
@@ -253,6 +257,7 @@ const ProjectsData = [
   description:"Taleb Management is an innovative educational technology solution designed to transform how schools handle student attendance and academic monitoring. This intelligent web-based platform addresses the common challenges faced by educational institutions in tracking student presence, managing absences, and maintaining communication with parents. The system employs a sophisticated multi-tier architecture where super administrators oversee multiple schools and configure system-wide settings, school administrators manage their institutional data including student enrollments and teacher assignments, and teachers efficiently record daily attendance with intuitive interfaces that minimize administrative burden. Students gain autonomy by accessing their personal attendance records, viewing their academic standing, and understanding their attendance patterns. Parents receive real-time notifications about their children's attendance status, can review historical data, and communicate directly with teachers regarding attendance concerns. The platform features automated reporting that generates insightful analytics on attendance trends, identifies at-risk students, and helps administrators make data-driven decisions. Built with Laravel and enhanced with modern frontend technologies, the system provides role-based access control ensuring data privacy and security. The responsive design ensures accessibility from any device, while the intuitive interface reduces training requirements. By digitizing and streamlining attendance management, Taleb Management enhances transparency, improves parent-school communication, and allows educators to focus more on teaching rather than administrative tasks.",
   githubLink: null,
   liveDemoLink: "https://taleb.sitevip.org/taleb_development/public/login",
+  youtubeLink: null,
   type: "Laravel",
  },
 
@@ -273,6 +278,7 @@ const ProjectsData = [
 
   githubLink: "https://github.com/Abdogoda",
   liveDemoLink: "http://dr-mohammed-alkholy.kesug.com/",
+  youtubeLink: null,
   type: "Laravel",
  },
 
@@ -293,6 +299,7 @@ const ProjectsData = [
 
   githubLink: "https://github.com/Abdogoda/content-creator",
   liveDemoLink: null,
+  youtubeLink: null,
   type: "Laravel",
  },
 
@@ -312,6 +319,7 @@ const ProjectsData = [
   description: "This comprehensive School Management System represents a complete digital transformation solution for educational institutions, streamlining every aspect of school operations from student enrollment to graduation. Built with Laravel and enhanced with Livewire for real-time interactivity, the platform provides an integrated ecosystem where students, teachers, guardians, and administrators can collaborate efficiently. The system implements sophisticated multi-authentication mechanisms with role-specific dashboards tailored to each user type's needs. Students access their grades, assignments, attendance records, and class schedules while communicating with teachers. Teachers manage their classes, grade assignments, record attendance, and track student progress through intuitive interfaces. Guardians monitor their children's academic performance, attendance, communicate with teachers, and receive instant notifications about important school events. Administrators wield comprehensive control over school operations including student enrollment management, teacher assignments, curriculum planning, fee collection, and generating detailed analytical reports. The platform's multilingual architecture supports Arabic and English with easy extensibility for additional languages, making it adaptable to diverse educational environments. Integration with Zoom enables seamless virtual classroom management, particularly valuable for hybrid learning scenarios. The granular permission system ensures data security while allowing flexible access control. Real-time features powered by Livewire provide instant updates without page refreshes, creating a modern, responsive user experience that enhances productivity and engagement across the entire school community.",
   githubLink: "https://github.com/Abdogoda/laravel_school",
   liveDemoLink: null,
+  youtubeLink: null,
   type: "Laravel",
  },
 
@@ -333,6 +341,7 @@ const ProjectsData = [
 
   githubLink: "https://github.com/Abdogoda/Books",
   liveDemoLink: null,
+  youtubeLink: null,
   type: "PHP",
  },
 
@@ -353,6 +362,7 @@ const ProjectsData = [
    "Nature is a comprehensive full-stack eCommerce solution built with Java EE technologies, specifically designed for online grocery retail operations. This enterprise-grade application delivers both a customer-facing storefront and a powerful administrative backend, creating a complete ecosystem for modern grocery shopping experiences. The customer platform features an intuitive interface where shoppers can browse through categorized product catalogs including fresh produce, dairy, meats, pantry staples, and household items. Advanced search and filtering capabilities help customers quickly find products, while detailed product pages display nutritional information, pricing, availability, and customer reviews. The shopping cart system supports promotional codes, calculates dynamic shipping costs, and processes secure payments. Customers can create accounts to save delivery addresses, track order history, create shopping lists, and set up recurring orders for frequently purchased items. The robust admin dashboard provides store managers with comprehensive control over all operations including product catalog management with bulk upload capabilities, real-time inventory tracking with low-stock alerts, order processing and fulfillment workflows, customer management tools, and detailed sales analytics. The system generates insightful reports on bestselling products, revenue trends, customer behavior patterns, and operational efficiency metrics. Built using Java EE framework with JSP for dynamic content rendering, MySQL for reliable data storage, and responsive frontend technologies, Nature demonstrates enterprise-level architecture with scalability, security, and performance optimization suitable for high-traffic grocery retail operations.",
   githubLink: "https://github.com/Abdogoda/Nature",
   liveDemoLink: null,
+  youtubeLink: null,
   type: "Others",
  },
 
@@ -373,6 +383,7 @@ const ProjectsData = [
    "Ramadanak is a beautifully crafted Islamic web application designed to enhance the spiritual experience during the holy month of Ramadan. This engaging platform serves as a comprehensive companion for Muslims worldwide, offering rich Islamic content, practical tools, and social features that foster community and religious observance. Each visit provides fresh inspiration through randomly selected authentic Hadiths, meaningful Quranic verses with translations, and thoughtful Islamic reminders that encourage reflection and spiritual growth. The application integrates with multiple APIs to deliver accurate prayer times based on user location, ensuring Muslims never miss their daily prayers during this sacred month. A standout feature is the complete Quran reader, providing access to all 114 chapters with Arabic text, translations in multiple languages, and audio recitations from renowned Qaris, making it easy to complete or progress through Quran reading during Ramadan. The innovative gift page allows users to create personalized Ramadan greeting cards with customizable messages, beautiful Islamic designs, and warm wishes that can be shared via social media or direct links, helping maintain connections with friends and family worldwide. Built entirely with vanilla JavaScript, HTML, and CSS with Bootstrap for responsive design, the application loads quickly, works seamlessly across devices, and requires no backend infrastructure. The elegant interface combines traditional Islamic aesthetics with modern web design principles, creating a user experience that respects religious values while embracing contemporary technology.",
   githubLink: "https://github.com/Abdogoda/Ramadanak",
   liveDemoLink: "https://abdogoda.github.io/Ramadanak/",
+  youtubeLink: null,
   type: "JavaScript",
  },
 
@@ -391,6 +402,7 @@ const ProjectsData = [
    "The Eid Al-Adha Greeting Cards Generator is an innovative web application that brings the joy of traditional Eid greetings into the digital age, making it effortless to create and share beautiful, personalized cards for the blessed occasion of Eid Al-Adha. This creative tool addresses the modern need for quick, meaningful digital communication while preserving the cultural and religious significance of personal greetings. The application features an extensive library of professionally designed templates incorporating authentic Arabic calligraphy, traditional Islamic geometric patterns, elegant color schemes, and symbolic imagery associated with Eid Al-Adha including mosques, minarets, crescents, and decorative elements. Users can personalize their cards through an intuitive interface by adding recipient names with various font options, uploading personal photos to create truly unique greetings, composing heartfelt messages in Arabic or English, and selecting from multiple design themes. The real-time preview functionality allows users to see their card taking shape, making adjustments until achieving the perfect design. Once completed, cards can be instantly downloaded in high resolution suitable for social media sharing, WhatsApp distribution, email sending, or even printing. Built with vanilla JavaScript for smooth interactivity, HTML5 Canvas API for image manipulation, and CSS3 for beautiful styling, the application runs entirely in the browser without requiring server-side processing, ensuring user privacy and instant generation. This tool has become particularly valuable for Muslims worldwide seeking to maintain cultural traditions while embracing digital convenience during festive celebrations.",
   githubLink: "https://github.com/Abdogoda/eid-adha",
   liveDemoLink: "https://abdogoda.github.io/eid-adha/",
+  youtubeLink: null,
   type: "JavaScript",
  },
 
@@ -409,6 +421,7 @@ const ProjectsData = [
    "URTV is a sophisticated, cinema-quality React application that transforms the way users discover and explore movies and television shows. Leveraging the extensive TMDB (The Movie Database) API, this entertainment hub provides access to comprehensive information about hundreds of thousands of films and TV series from around the world. The application showcases trending content, popular releases, top-rated productions, and upcoming titles through an elegantly designed interface that rivals professional streaming services. Users can search for specific titles, filter by genres, explore detailed information including cast members, crew details, plot summaries, ratings, release dates, and runtime. The integration of high-quality poster images, backdrop photos, and trailer videos creates an immersive browsing experience. Built with modern React best practices, the application utilizes React Router for seamless navigation between different sections without page reloads, Axios for efficient API communication with proper error handling and loading states, Framer Motion for buttery-smooth animations and transitions that enhance user engagement, and custom responsive CSS that ensures perfect display across desktops, tablets, and mobile devices. The component-based architecture promotes code reusability and maintainability, while React Hooks manage application state effectively. Performance optimization techniques including lazy loading, image optimization, and API response caching ensure fast load times even on slower connections. URTV demonstrates how modern frontend technologies can create engaging, professional-grade entertainment discovery platforms that provide exceptional user experiences comparable to industry-leading streaming services.",
   githubLink: "https://github.com/Abdogoda/URTV",
   liveDemoLink: "https://abdogoda.github.io/URTV/",
+  youtubeLink: null,
   type: "React",
  },
 
@@ -431,6 +444,7 @@ const ProjectsData = [
         "Game Hub is a cutting-edge gaming discovery platform that serves as a comprehensive database and exploration tool for video game enthusiasts worldwide. This dynamic web application provides gamers with instant access to an extensive library of video games spanning all platforms, genres, and eras, from classic arcade titles to the latest AAA releases. The platform delivers rich, detailed information about each game including official descriptions, gameplay screenshots, trailer videos, user and critic ratings, release dates, supported platforms, and genre classifications. Advanced filtering and sorting capabilities allow users to narrow down games by platform (PlayStation, Xbox, Nintendo, PC), genre (action, RPG, strategy, sports), release year, and rating scores. The powerful real-time search functionality provides instant results as users type, making game discovery effortless and intuitive. Built with vanilla JavaScript for robust functionality, styled with Tailwind CSS for a modern, visually appealing interface, and structured with semantic HTML5, the application demonstrates excellent performance and code organization. The responsive design adapts flawlessly to any screen size, providing optimal experiences whether users browse on desktop monitors, tablets, or smartphones. API integration with gaming databases ensures up-to-date information, while intelligent data caching reduces load times for frequently accessed content. Game Hub exemplifies modern web development practices, combining clean code architecture, user-centered design, and performance optimization to create an engaging platform that helps gamers discover their next favorite title with ease and enjoyment.",
     githubLink: "https://github.com/Abdogoda/game-hub",
     liveDemoLink: "https://abdogoda.github.io/game-hub/",
+    youtubeLink: null,
     type: "JavaScript",
  },
 
@@ -450,6 +464,7 @@ const ProjectsData = [
    "Yolo Store is an exceptionally designed eCommerce platform specializing in fashionable clothing and accessories, delivering a premium online shopping experience that rivals high-end fashion retailers. This React-based application showcases modern web development techniques combined with sophisticated design aesthetics to create a visually stunning and highly functional storefront. The platform features a carefully curated product catalog displaying clothing items with high-resolution images, detailed descriptions, size guides, color options, and customer reviews that help shoppers make informed purchasing decisions. The intuitive navigation system organizes products by categories including men's wear, women's fashion, accessories, and seasonal collections, while advanced filtering options allow sorting by size, color, price range, brand, and style. The seamless shopping cart implementation provides real-time price calculations, applies promotional discounts, estimates shipping costs, and guides customers through a streamlined checkout process. Built with React for dynamic interactivity and component reusability, styled with Sass for maintainable and organized CSS with variables and mixins, and enhanced with Bootstrap for responsive grid layouts, the application ensures pixel-perfect display across all devices. The component architecture includes reusable product cards, a persistent shopping cart, wishlist functionality, and user authentication. Smooth transitions and micro-interactions enhance user engagement, while optimized images and lazy loading ensure fast performance. This project demonstrates proficiency in modern frontend development, combining technical excellence with design sensibility to create an eCommerce experience that delights users and drives conversions.",
   githubLink: "https://github.com/Abdogoda/Yolo_Store",
   liveDemoLink: "https://abdogoda.github.io/Yolo_Store/",
+  youtubeLink: null,
   type: "React",
  },
 
@@ -469,6 +484,7 @@ const ProjectsData = [
    "The Image Editor Toolbox is a powerful, feature-rich desktop application that combines traditional image manipulation capabilities with cutting-edge artificial intelligence, creating a comprehensive solution for photographers, designers, and computer vision enthusiasts. Built with Python and Tkinter for the graphical interface, and leveraging OpenCV for advanced image processing, this application provides professional-grade editing tools without requiring cloud services or subscriptions - all processing happens locally on your machine. The extensive editing toolkit includes drawing tools for annotations with customizable brushes, colors, and shapes, precise resizing algorithms maintaining aspect ratios and image quality, flexible cropping with preset dimensions and freeform selection, rotation and flipping in any direction, comprehensive color adjustments including brightness, contrast, saturation, and hue modifications, artistic filters and effects such as blur, sharpen, emboss, edge detection, and various Instagram-style filters. Beyond traditional editing, the application integrates sophisticated AI-powered features including real-time object detection that identifies and labels multiple objects within images using pre-trained deep learning models, object recognition that classifies detected items with confidence scores, and specialized vehicle license plate detection and recognition capabilities useful for parking management, traffic monitoring, and security applications. The intuitive interface organizes tools logically, provides real-time preview, supports undo/redo functionality, and handles multiple image formats including JPEG, PNG, BMP, and TIFF. This project demonstrates the powerful intersection of computer vision, machine learning, and practical software development, creating a valuable tool for both everyday users and professionals.",
   githubLink: "https://github.com/Abdogoda/Opencv-Toolbox",
   liveDemoLink: null,
+  youtubeLink: null,
   type: "Others",
  },
 ];

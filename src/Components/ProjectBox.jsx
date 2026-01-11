@@ -23,16 +23,18 @@ function ProjectBox({ project, index, delay }) {
      <div className="project__cover">
       <h2 className="title">{title}</h2>
       <div className="project__links">
-       <a
-        href={`${githubLink}`}
-        title={`Github ${title}`}
-        target="_blank"
-        rel="noreferrer"
-        className="project__link"
-        style={{ animationDelay: `0.6s` }}
-       >
-        Code <FaGithub />
-       </a>
+       {githubLink && (
+            <a
+            href={`${githubLink}`}
+            title={`Github ${title}`}
+            target="_blank"
+            rel="noreferrer"
+            className="project__link"
+            style={{ animationDelay: `0.6s` }}
+        >
+            Code <FaGithub />
+        </a>
+    )}
        <Link
         to={`/projects/${slug}`}
         title={`Show Details ${title}`}
