@@ -82,9 +82,9 @@ import STORE_5 from "../images/projects/store/5.png";
 
 // URTV IMAGES
 import URTV_1 from "../images/projects/urtv/1.png";
-import URTV_2 from "../images/projects/urtv/2.jpg";
-import URTV_3 from "../images/projects/urtv/3.jpg";
-import URTV_4 from "../images/projects/urtv/4.jpg";
+import URTV_2 from "../images/projects/urtv/2.png";
+import URTV_3 from "../images/projects/urtv/3.png";
+import URTV_4 from "../images/projects/urtv/4.png";
 
 // TOOLBOX IMAGES
 import TOOLBOX_1 from "../images/projects/toolbox/1.jpg";
@@ -351,7 +351,7 @@ const ProjectsData = [
   type: "JavaScript",
  },
 
- // ecommerce store project
+ // urtv project
  {
   images: [
    URTV_1,
@@ -363,7 +363,7 @@ const ProjectsData = [
   title: "URTV",
   slug: "urtv",
   description:
-   "URTV is using IMDB API to showing the diffrent categories of movies up to date.",
+   "A modern, responsive React application for browsing movies and TV shows using the TMDB (The Movie Database) API. Built with React Router, Axios, Framer Motion for animations, and responsive CSS.",
   githubLink: "https://github.com/Abdogoda/URTV",
   liveDemoLink: "https://abdogoda.github.io/URTV/",
   type: "React",
