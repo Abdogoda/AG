@@ -101,6 +101,16 @@ import TALEB_4 from "../images/projects/taleb/4.jpg";
 import TALEB_5 from "../images/projects/taleb/5.jpg";
 import TALEB_6 from "../images/projects/taleb/6.jpg";
 
+// GAME HUB IMAGES
+import GAME_HUB_1 from "../images/projects/game_hub/1.png";
+import GAME_HUB_2 from "../images/projects/game_hub/2.png";
+import GAME_HUB_3 from "../images/projects/game_hub/3.png";
+import GAME_HUB_4 from "../images/projects/game_hub/4.png";
+import GAME_HUB_5 from "../images/projects/game_hub/5.png";
+import GAME_HUB_6 from "../images/projects/game_hub/6.png";
+import GAME_HUB_7 from "../images/projects/game_hub/7.png";
+import GAME_HUB_8 from "../images/projects/game_hub/8.png";
+
 // import skills icons
 import HTML from "../images/icons/html.png";
 import CSS from "../images/icons/css.png";
@@ -111,6 +121,7 @@ import PHP from "../images/icons/php.png";
 import REACT from "../images/icons/react.png";
 import DB from "../images/icons/mysql.png";
 import BOOTSTRAP from "../images/icons/bootstrap.png";
+import TailwindCSS from "../images/icons/tailwind.png";
 import JAVA from "../images/icons/java.png";
 import OPENCV from "../images/icons/opencv.png";
 import PYTHON from "../images/icons/python.png";
@@ -367,6 +378,28 @@ const ProjectsData = [
   githubLink: "https://github.com/Abdogoda/URTV",
   liveDemoLink: "https://abdogoda.github.io/URTV/",
   type: "React",
+ },
+
+ // game hub project
+    {
+    images: [
+        GAME_HUB_1,
+        GAME_HUB_2,
+        GAME_HUB_3,
+        GAME_HUB_4,
+        GAME_HUB_5,
+        GAME_HUB_6,
+        GAME_HUB_7,
+        GAME_HUB_8
+    ],
+    languages: [JS, HTML, CSS, TailwindCSS], 
+    title: "Game Hub",
+    slug: "game-hub",
+    description:
+        "Game Hub is a dynamic web application that allows users to explore a vast collection of video games. Built with JavaScript, HTML, and Tailwind CSS, it features seamless navigation, real-time search, and detailed game information fetched from an external API. The responsive design ensures an optimal experience across all devices.",
+    githubLink: "https://github.com/Abdogoda/game-hub",
+    liveDemoLink: "https://abdogoda.github.io/game-hub/",
+    type: "JavaScript",
  },
 
  // ecommerce store project
