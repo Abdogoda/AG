@@ -1,10 +1,12 @@
 import { useState, useEffect } from 'react';
 import cacheService from '../utils/cacheService';
+import { getFallbackData } from '../utils/fallbackData';
 
 const useData = (dataFile) => {
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [isUsingFallback, setIsUsingFallback] = useState(false);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -15,6 +17,7 @@ const useData = (dataFile) => {
 
         if (cachedData) {
           setData(cachedData);
+          setIsUsingFallback(false);
           setLoading(false);
           return;
         }
@@ -30,9 +33,14 @@ const useData = (dataFile) => {
         cacheService.set(cacheKey, result, ttl);
 
         setData(result);
+        setIsUsingFallback(false);
       } catch (err) {
+        // Use fallback data instead of showing error
+        console.warn(`Error loading ${dataFile}, using fallback data:`, err.message);
+        const fallbackData = getFallbackData(dataFile);
+        setData(fallbackData);
         setError(err.message);
-        console.error(`Error loading data:`, err);
+        setIsUsingFallback(true);
       } finally {
         setLoading(false);
       }
@@ -41,7 +49,7 @@ const useData = (dataFile) => {
     fetchData();
   }, [dataFile]);
 
-  return { data, loading, error };
+  return { data, loading, error, isUsingFallback };
 };
 
 export default useData;

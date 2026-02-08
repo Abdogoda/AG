@@ -1,5 +1,6 @@
 // YouTube API Configuration and Services
 import cacheService from '../utils/cacheService';
+import { getYouTubeFallback } from '../utils/fallbackData';
 
 const YOUTUBE_API_KEY = "AIzaSyD5eOkoK_uJ53fy9jMvwxwUQ4Vtf7MG6aU";
 const CHANNEL_ID = "UCmGfAOZOAgYZZ_fj_GgzB2Q";
@@ -66,8 +67,8 @@ export const getChannelInfo = async () => {
     }
     return null;
   } catch (error) {
-    console.error("Error fetching channel info:", error);
-    return null;
+    console.warn("Error fetching channel info, using fallback data:", error.message);
+    return getYouTubeFallback('channelInfo');
   }
 };
 
@@ -96,8 +97,8 @@ export const getChannelPlaylists = async (maxResults = 10) => {
     }
     return [];
   } catch (error) {
-    console.error("Error fetching playlists:", error);
-    return [];
+    console.warn("Error fetching playlists, using fallback data:", error.message);
+    return getYouTubeFallback('playlists');
   }
 };
 
@@ -155,8 +156,8 @@ export const getChannelPlaylistsWithDuration = async (maxResults = 10) => {
     }
     return [];
   } catch (error) {
-    console.error("Error fetching playlists with duration:", error);
-    return [];
+    console.warn("Error fetching playlists with duration, using fallback data:", error.message);
+    return getYouTubeFallback('playlists');
   }
 };
 
@@ -203,8 +204,8 @@ export const getPlaylistVideos = async (playlistId, maxResults = 50) => {
     }
     return [];
   } catch (error) {
-    console.error("Error fetching playlist videos:", error);
-    return [];
+    console.warn("Error fetching playlist videos, using fallback data:", error.message);
+    return getYouTubeFallback('videos');
   }
 };
 
@@ -231,8 +232,8 @@ export const searchChannelVideos = async (query, maxResults = 10) => {
     }
     return [];
   } catch (error) {
-    console.error("Error searching videos:", error);
-    return [];
+    console.warn("Error searching videos, using fallback data:", error.message);
+    return getYouTubeFallback('videos');
   }
 };
 
@@ -259,8 +260,8 @@ export const getLatestVideos = async (maxResults = 10) => {
     }
     return [];
   } catch (error) {
-    console.error("Error fetching latest videos:", error);
-    return [];
+    console.warn("Error fetching latest videos, using fallback data:", error.message);
+    return getYouTubeFallback('videos');
   }
 };
 
