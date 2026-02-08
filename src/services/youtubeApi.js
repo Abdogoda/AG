@@ -13,12 +13,10 @@ const fetchFromYouTube = async (endpoint, params = {}, cacheTTL = 24 * 60 * 60 *
   // Check cache first
   const cachedData = cacheService.get(cacheKey);
   if (cachedData) {
-    console.log(`[Cache Hit] YouTube API: ${endpoint}`, params);
     return cachedData;
   }
 
   // Fetch from YouTube API if not cached
-  console.log(`[Cache Miss] Fetching from YouTube API: ${endpoint}`, params);
   const urlParams = new URLSearchParams({
     key: YOUTUBE_API_KEY,
     ...params

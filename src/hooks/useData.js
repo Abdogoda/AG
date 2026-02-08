@@ -14,14 +14,12 @@ const useData = (dataFile) => {
         const cachedData = cacheService.get(cacheKey);
 
         if (cachedData) {
-          console.log(`[Cache Hit] ${dataFile} loaded from cache`);
           setData(cachedData);
           setLoading(false);
           return;
         }
 
         // Fetch from server if not in cache
-        console.log(`[Cache Miss] Fetching ${dataFile} from server`);
         const basePath = process.env.PUBLIC_URL || '';
         const response = await fetch(`${basePath}/data/${dataFile}.json`);
         if (!response.ok) throw new Error(`Failed to load ${dataFile}`);
