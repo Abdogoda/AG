@@ -22,6 +22,7 @@ Visit the live portfolio: [https://Abdogoda.github.io/AG](https://Abdogoda.githu
 ## 🛠️ Technology Stack
 
 ### Frontend
+
 - **React 18** - UI library
 - **React Router DOM** - Client-side routing
 - **SASS/SCSS** - Styling
@@ -30,12 +31,14 @@ Visit the live portfolio: [https://Abdogoda.github.io/AG](https://Abdogoda.githu
 - **tsparticles** - Particle animations
 
 ### Features & Libraries
+
 - **react-simple-typewriter** - Typewriter text effect
 - **react-helmet-async** - Meta tags management
 - **@emailjs/browser** - Email functionality
 - **TagCanvas** - 3D text canvas visualization
 
 ### Build & Deployment
+
 - **Create React App** - Development setup
 - **GitHub Pages** - Hosting and deployment
 
@@ -63,23 +66,27 @@ Visit the live portfolio: [https://Abdogoda.github.io/AG](https://Abdogoda.githu
 ## 🚀 Getting Started
 
 ### Prerequisites
+
 - Node.js (v14 or higher)
 - npm or yarn
 
 ### Installation
 
 1. Clone the repository:
+
 ```bash
 git clone https://github.com/Abdogoda/AG.git
 cd AG
 ```
 
 2. Install dependencies:
+
 ```bash
 npm install
 ```
 
 3. Start the development server:
+
 ```bash
 npm start
 ```
@@ -89,15 +96,19 @@ The app will open at [http://localhost:3000](http://localhost:3000)
 ## 📜 Available Scripts
 
 ### `npm start`
+
 Runs the app in development mode with hot reloading.
 
 ### `npm run build`
+
 Builds the app for production to the `build` folder with optimizations.
 
 ### `npm run deploy`
+
 Deploys the built app to GitHub Pages.
 
 ### `npm test`
+
 Launches the test runner in interactive mode.
 
 ## 📊 Pages Overview
@@ -114,13 +125,17 @@ Launches the test runner in interactive mode.
 ## 🎨 Customization
 
 ### Update Personal Data
+
 Edit files in `public/data/`:
+
 - `about.json` - Update bio and skills
 - `projects.json` - Add or modify project listings
 - `social.json` - Update social media links
 
 ### Styling
+
 All styles are in `src/sass/` organized by page:
+
 - `_home.scss`
 - `_portfolio.scss`
 - `_project.scss`
