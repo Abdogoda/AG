@@ -5,20 +5,23 @@ import Sidebar from "../Components/Sidebar";
 import AnimatedLetters from "../Components/AnimatedLetters";
 import SEO from "../Components/SEO";
 import LoadingLayout from "../Components/LoadingLayout";
-import { ProjectsData } from "../assets/data/ProjectsData";
+import useData from "../hooks/useData";
+import languageIconMap from "../utils/languageIcons";
 import ProjectShowImages from "../Components/ProjectShowImages";
 import { FaGithub, FaLink, FaYoutube } from "react-icons/fa6";
 
 function Project() {
  const { projectSlug } = useParams();
  const navigate = useNavigate();
+ const { data: projectsData } = useData('projects');
  const [projectData, setProjectData] = useState(null);
  const [letterClass, setLetterClass] = useState("text-animate");
  
  useEffect(() => {
-  const foundProject = ProjectsData.find((project) => project.slug === projectSlug);
+  if (!projectsData?.projects) return;
+  const foundProject = projectsData.projects.find((project) => project.slug === projectSlug);
   foundProject ? setProjectData(foundProject) : navigate("/projects");
-}, [projectSlug, navigate]);
+ }, [projectSlug, navigate, projectsData]);
 
  useEffect(() => {
   // letter animation
@@ -83,7 +86,7 @@ function Project() {
             animationDelay: `${0.2 * index + 1.5}s`,
            }}
           >
-           <img src={language} alt={`Technology used in project: ${projectData.type}`} />
+           <img src={languageIconMap[language]} alt={`Technology used in project: ${language}`} />
           </li>
          );
         })}

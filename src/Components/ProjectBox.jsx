@@ -2,6 +2,7 @@ import React from "react";
 import { FaGithub } from "react-icons/fa6";
 import { TfiMore } from "react-icons/tfi";
 import { Link } from "react-router-dom";
+import { getImageUrl } from "../utils/imageUrl";
 
 function ProjectBox({ project, index, delay }) {
  const { images, title, slug, githubLink } = project;
@@ -17,7 +18,7 @@ function ProjectBox({ project, index, delay }) {
     <div
      className="box__img__overlay"
      style={{
-      backgroundImage: `url(${images[0]})`,
+      backgroundImage: `url(${getImageUrl(images[0])})`,
      }}
     >
      <div className="project__cover">

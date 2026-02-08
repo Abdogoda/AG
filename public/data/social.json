@@ -1,0 +1,39 @@
+{
+  "social": [
+    {
+      "name": "Linkedin",
+      "class": "linkedin",
+      "link": "https://www.linkedin.com/in/abdulrhman-goda-57a20b202/",
+      "color": "#0077b5",
+      "icon": "FaLinkedin"
+    },
+    {
+      "name": "Github",
+      "class": "github",
+      "link": "https://github.com/Abdogoda",
+      "color": "#333",
+      "icon": "FaGithub"
+    },
+    {
+      "name": "YouTube",
+      "class": "youtube",
+      "link": "https://www.youtube.com/@Abdulrhman-Goda",
+      "color": "#FF0000",
+      "icon": "FaYoutube"
+    },
+    {
+      "name": "Gmail",
+      "class": "gmail",
+      "link": "mailto:abdogoda0a@gmail.com",
+      "color": "#BB001B",
+      "icon": "FaEnvelope"
+    },
+    {
+      "name": "Whatsapp",
+      "class": "whatsapp",
+      "link": "http://wa.me/+2001019135059",
+      "color": "#25D366",
+      "icon": "FaWhatsapp"
+    }
+  ]
+}

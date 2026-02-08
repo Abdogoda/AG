@@ -3,12 +3,14 @@ import Header from "../Components/Header";
 import Sidebar from "../Components/Sidebar";
 import AnimatedLetters from "../Components/AnimatedLetters";
 import SEO from "../Components/SEO";
-import CV from "../assets/data/abdogoda-resume.pdf";
 import LoadingLayout from "../Components/LoadingLayout";
 import { Link } from "react-router-dom";
-import { AboutSkills, AboutParagraphs, AboutListItems } from "../assets/data/AboutData";
+import useData from "../hooks/useData";
+import languageIconMap from "../utils/languageIcons";
 
 function About() {
+ const { data: aboutData, loading, error } = useData('about');
+ 
  // letter animation
  const [letterClass, setLetterClass] = useState("text-animate");
  useEffect(() => {
@@ -16,6 +18,9 @@ function About() {
    setLetterClass("text-animate-hover");
   }, 3000);
  }, []);
+
+ if (loading) return <LoadingLayout />;
+ if (error) return <p>Error loading about data: {error}</p>;
 
  const aboutJsonLd = {
   "@context": "https://schema.org",
@@ -61,8 +66,8 @@ function About() {
         index={22}
        />
       </h1>
-      {AboutParagraphs &&
-       AboutParagraphs.map((text, index) => {
+      {aboutData?.paragraphs &&
+       aboutData.paragraphs.map((text, index) => {
         return (
          <p 
           className="description" 
@@ -76,8 +81,8 @@ function About() {
        <p className="description">💡 I’m all about:</p>
        
       <ul className="about-list-items">
-       {AboutListItems &&
-        AboutListItems.map((text, index) => {
+       {aboutData?.listItems &&
+        aboutData.listItems.map((text, index) => {
          return (
           <li 
            key={index}
@@ -91,7 +96,7 @@ function About() {
         })}
       </ul>
 
-      <a href={CV} download="abdo-goda-resume" className="main__button">
+      <a href={aboutData?.resumeLink} download="abdo-goda-resume" className="main__button">
        Download CV
       </a>
       <Link to="/contact" className="main__button ml-1">
@@ -100,10 +105,10 @@ function About() {
      </div>
      <div className="skills-zone">
       <div className="box">
-       {AboutSkills.map((skill, index) => {
+       {aboutData?.skills && aboutData.skills.map((skill, index) => {
         return (
          <div className="card" id={skill.side} key={index}>
-          <img src={skill.img} alt={`${skill.side} technology skill`} />
+          <img src={languageIconMap[skill.icon]} alt={`${skill.icon} technology skill`} />
          </div>
         );
        })}

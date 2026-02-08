@@ -1,0 +1,34 @@
+{
+  "pages": [
+    {
+      "pageName": "HOME",
+      "pageID": "home",
+      "pagePath": "/",
+      "icon": "FaHome"
+    },
+    {
+      "pageName": "ABOUT",
+      "pageID": "about",
+      "pagePath": "/about",
+      "icon": "FaUser"
+    },
+    {
+      "pageName": "PROJECTS",
+      "pageID": "projects",
+      "pagePath": "/projects",
+      "icon": "FaEye"
+    },
+    {
+      "pageName": "YOUTUBE",
+      "pageID": "youtube",
+      "pagePath": "/youtube",
+      "icon": "FaYoutube"
+    },
+    {
+      "pageName": "CONTACT",
+      "pageID": "contact",
+      "pagePath": "/contact",
+      "icon": "FaEnvelope"
+    }
+  ]
+}

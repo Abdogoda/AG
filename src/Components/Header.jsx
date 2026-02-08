@@ -1,8 +1,10 @@
 import { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import PagesData from "../assets/data/PagesData";
-import { SocailData } from "../assets/data/Data";
+import useData from "../hooks/useData";
+import { getIcon } from "../utils/iconMap";
 function Header() {
+ const { data: pagesData } = useData('pages');
+ const { data: socialData } = useData('social');
  const [activeLinks, setActiveLinks] = useState(false);
  const [location, setLocation] = useState("");
  const currentLocation = useLocation().pathname.slice(1);
@@ -31,7 +33,8 @@ function Header() {
         location === "contact" ? "active" : ""
        }`}
       >
-       {SocailData.map((social, index) => {
+       {socialData?.social?.map((social, index) => {
+        const IconComponent = getIcon(social.icon);
         return (
          <a
           key={index}
@@ -44,7 +47,7 @@ function Header() {
           }`}
           style={{ animationDelay: `${index * 0.1 + 1.8}s` }}
          >
-          {social.icon}
+          {IconComponent && <IconComponent />}
          </a>
         );
        })}
@@ -62,7 +65,7 @@ function Header() {
     </div>
    </header>
    <ul className={`header__nav__links ${activeLinks ? "active" : ""}`}>
-    {PagesData.map((pageData, index) => {
+    {pagesData?.pages?.map((pageData, index) => {
      return (
       <li key={index} style={{ animationDelay: `${0.1 * (0.5 + index)}s` }}>
        <Link

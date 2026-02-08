@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { useLocation, Link } from "react-router-dom";
-import PagesData from "../assets/data/PagesData";
+import useData from "../hooks/useData";
+import { getIcon } from "../utils/iconMap";
 function Sidebar() {
+ const { data: pagesData } = useData('pages');
  const [location, setLocation] = useState("");
  const currentLocation = useLocation().pathname.slice(1);
  useEffect(() => {
@@ -10,9 +12,10 @@ function Sidebar() {
  return (
   <nav className="sidebar">
    <div className="container sidebar__container">
-    {PagesData.map((pageData, index) => {
+    {pagesData?.pages?.map((pageData, index) => {
      const pagePath = pageData.pagePath.slice(1); // Remove leading slash
      const isActive = pagePath === "" ? location === "" : location.startsWith(pagePath);
+     const IconComponent = getIcon(pageData.icon);
      return (
       <Link
        key={index}
@@ -20,7 +23,7 @@ function Sidebar() {
        title={pageData.pageName}
        className={`${isActive ? "active" : ""}`}
       >
-       {pageData.pageIcon}
+       {IconComponent && <IconComponent />}
       </Link>
      );
     })}

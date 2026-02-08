@@ -5,9 +5,11 @@ import AnimatedLetters from "../Components/AnimatedLetters.jsx";
 import SEO from "../Components/SEO.jsx";
 import LoadingLayout from "../Components/LoadingLayout.jsx";
 import emailjs from "@emailjs/browser";
-import { SocailData } from "../assets/data/Data";
+import useData from "../hooks/useData";
+import { getIcon } from "../utils/iconMap";
 
 function Contact() {
+ const { data: socialData } = useData('social');
  // letter animation
  const [letterClass, setLetterClass] = useState("text-animate");
  useEffect(() => {
@@ -121,7 +123,8 @@ function Contact() {
         </ul>
         <input type="submit" value="Send Messsage" className="main__button" />
         <div className="container icons-effect ">
-         {SocailData.map((social, index) => {
+         {socialData?.social?.map((social, index) => {
+          const IconComponent = getIcon(social.icon);
           return (
            <div
             key={index}
@@ -130,7 +133,7 @@ function Contact() {
            >
             <div className="tooltip">{social.name}</div>
             <a href={social.link} target="_blank" rel="noopener noreferrer">
-             {social.icon}
+             {IconComponent && <IconComponent />}
             </a>
            </div>
           );

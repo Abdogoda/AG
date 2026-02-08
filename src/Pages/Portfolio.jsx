@@ -4,13 +4,14 @@ import Sidebar from "../Components/Sidebar";
 import AnimatedLetters from "../Components/AnimatedLetters";
 import SEO from "../Components/SEO";
 import LoadingLayout from "../Components/LoadingLayout";
-import { ProjectsData, projectCategories } from "../assets/data/ProjectsData";
+import useData from "../hooks/useData";
 import ProjectBox from "../Components/ProjectBox";
 import ProjectsFilter from "../Components/ProjectsFilter";
 
 function Portfolio() {
+  const { data: projectsData, loading, error } = useData('projects');
   const [activeCategory, setActiveCategory] = useState(0);
-  const [projectsList, setProjectsList] = useState(ProjectsData);
+  const [projectsList, setProjectsList] = useState([]);
   const [categoryActiveChange, setCategoryActiveChange] = useState(false);
 
   // letter animation
@@ -31,12 +32,12 @@ function Portfolio() {
       "@type": "Person",
       "name": "Abdulrhman Goda"
     },
-    "workExample": ProjectsData.slice(0, 5).map(project => ({
+    "workExample": projectsData?.projects?.slice(0, 5).map(project => ({
       "@type": "CreativeWork",
       "name": project.title,
       "description": project.description,
       "url": `https://Abdogoda.github.io/AG/projects/${project.slug}`
-    }))
+    })) || []
   };
 
   // projects effect
@@ -84,13 +85,15 @@ function Portfolio() {
 
   // filter projects
   useEffect(() => {
+    if (!projectsData?.projects) return;
+    
     const filterProject = () => {
       if (activeCategory === 0) {
-        setProjectsList(ProjectsData);
+        setProjectsList(projectsData.projects);
       } else {
-        if (projectCategories.length > activeCategory && activeCategory !== 0) {
-          var newList = ProjectsData.filter(
-            (obj) => obj.type === projectCategories[activeCategory]
+        if (projectsData.categories.length > activeCategory && activeCategory !== 0) {
+          var newList = projectsData.projects.filter(
+            (obj) => obj.type === projectsData.categories[activeCategory]
           );
           setProjectsList(newList);
         }
@@ -102,7 +105,10 @@ function Portfolio() {
     }
     setProjectsList([]);
     filterProject();
-  }, [activeCategory]);
+  }, [activeCategory, projectsData]);
+
+  if (loading) return <LoadingLayout />;
+  if (error) return <p>Error loading projects: {error}</p>;
 
   return (
     <>
@@ -141,6 +147,7 @@ function Portfolio() {
             />
           </h1>
           <ProjectsFilter
+            categories={projectsData?.categories || []}
             activeCategory={activeCategory}
             setActiveCategory={setActiveCategory}
           />

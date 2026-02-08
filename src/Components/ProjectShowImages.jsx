@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { SlArrowLeft, SlArrowRight } from "react-icons/sl";
+import { getImageUrl } from "../utils/imageUrl";
 
 function ProjectShowImages({ projectImages }) {
  const [activeImage, setActiveImage] = useState(0);
@@ -28,14 +29,14 @@ function ProjectShowImages({ projectImages }) {
          animationDelay: `${0.2 * index + 1.5}s`,
         }}
        >
-        <img src={projectImage} alt={`Project screenshot ${index + 1}`} />
+        <img src={getImageUrl(projectImage)} alt={`Project screenshot ${index + 1}`} />
        </li>
       );
      })}
     </ul>
    )}
    <div className="project__images__card">
-    <img src={projectImages[activeImage]} alt="Main project screenshot" />
+    <img src={getImageUrl(projectImages[activeImage])} alt="Main project screenshot" />
     {projectImages.length > 1 && (
      <div className="project__images__navigator">
       <span
