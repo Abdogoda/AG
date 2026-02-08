@@ -10,8 +10,8 @@ import { getChannelInfo, getChannelPlaylistsWithDuration } from "../services/you
 function YouTube() {
  // letter animation
  const [letterClass, setLetterClass] = useState("text-animate");
- const [playlists, setPlaylists] = useState([]);
  const [channelInfo, setChannelInfo] = useState(null);
+ const [playlists, setPlaylists] = useState([]);
  const [loading, setLoading] = useState(true);
  const [error, setError] = useState(null);
 
@@ -21,12 +21,14 @@ function YouTube() {
   }, 3000);
  }, []);
 
+ // Fetch YouTube data with automatic caching
  useEffect(() => {
   const fetchYouTubeData = async () => {
    try {
     setLoading(true);
+    setError(null);
     
-    // Fetch channel info and playlists in parallel
+    // Fetch channel info and playlists in parallel (both cached automatically)
     const [channelData, playlistsData] = await Promise.all([
      getChannelInfo(),
      getChannelPlaylistsWithDuration(20)

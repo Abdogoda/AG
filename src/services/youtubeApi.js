@@ -1,10 +1,24 @@
 // YouTube API Configuration and Services
+import cacheService from '../utils/cacheService';
+
 const YOUTUBE_API_KEY = "AIzaSyD5eOkoK_uJ53fy9jMvwxwUQ4Vtf7MG6aU";
 const CHANNEL_ID = "UCmGfAOZOAgYZZ_fj_GgzB2Q";
 const BASE_URL = "https://www.googleapis.com/youtube/v3";
 
-// Helper function to make API requests
-const fetchFromYouTube = async (endpoint, params = {}) => {
+// Helper function to make API requests with caching
+const fetchFromYouTube = async (endpoint, params = {}, cacheTTL = 24 * 60 * 60 * 1000) => {
+  // Create cache key from endpoint and params
+  const cacheKey = `yt-${endpoint}-${JSON.stringify(params)}`;
+  
+  // Check cache first
+  const cachedData = cacheService.get(cacheKey);
+  if (cachedData) {
+    console.log(`[Cache Hit] YouTube API: ${endpoint}`, params);
+    return cachedData;
+  }
+
+  // Fetch from YouTube API if not cached
+  console.log(`[Cache Miss] Fetching from YouTube API: ${endpoint}`, params);
   const urlParams = new URLSearchParams({
     key: YOUTUBE_API_KEY,
     ...params
@@ -15,7 +29,12 @@ const fetchFromYouTube = async (endpoint, params = {}) => {
     if (!response.ok) {
       throw new Error(`YouTube API Error: ${response.status}`);
     }
-    return await response.json();
+    const data = await response.json();
+    
+    // Cache the response
+    cacheService.set(cacheKey, data, cacheTTL);
+    
+    return data;
   } catch (error) {
     console.error("YouTube API fetch error:", error);
     throw error;

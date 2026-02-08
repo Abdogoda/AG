@@ -21,8 +21,10 @@ function PlaylistDetail() {
   const fetchPlaylistData = async () => {
    try {
     setLoading(true);
+    setError(null);
     
-    // First, get all playlists to find the one with matching slug
+    // Get all playlists to find the one with matching slug
+    // Both calls are cached automatically by the YouTube API service
     const playlists = await getChannelPlaylists(50);
     const foundPlaylist = playlists.find((playlist) => playlist.slug === playlistSlug);
     
@@ -32,10 +34,8 @@ function PlaylistDetail() {
     }
     
     setPlaylistData(foundPlaylist);
-    console.log(foundPlaylist);
     
-    
-    // Then fetch videos for this playlist
+    // Fetch videos for this playlist (cached automatically)
     const playlistVideos = await getPlaylistVideos(foundPlaylist.id);
     setVideos(playlistVideos);
     

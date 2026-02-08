@@ -1,5 +1,6 @@
 import { Route, Routes } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
+import { CacheProvider } from "./contexts/CacheContext";
 import Home from "./Pages/Home";
 import About from "./Pages/About";
 import Portfolio from "./Pages/Portfolio";
@@ -13,26 +14,28 @@ import Particle from "./Components/Particle";
 
 function App() {
  return (
-  <HelmetProvider>
-   <Particle />
-   <Routes>
-    <Route path="/">
-     <Route index element={<Home />} />
-     <Route path="about" element={<About />} />
-     <Route path="projects">
-      <Route index element={<Portfolio />} />
-      <Route path=":projectSlug" element={<Project />} />
+  <CacheProvider>
+   <HelmetProvider>
+    <Particle />
+    <Routes>
+     <Route path="/">
+      <Route index element={<Home />} />
+      <Route path="about" element={<About />} />
+      <Route path="projects">
+       <Route index element={<Portfolio />} />
+       <Route path=":projectSlug" element={<Project />} />
+      </Route>
+      <Route path="youtube">
+       <Route index element={<YouTube />} />
+       <Route path=":playlistSlug" element={<PlaylistDetail />} />
+      </Route>
+      <Route path="contact" element={<Contact />} />
+      <Route path="login" element={<Login />} />
+      <Route path="*" element={<Error />} />
      </Route>
-     <Route path="youtube">
-      <Route index element={<YouTube />} />
-      <Route path=":playlistSlug" element={<PlaylistDetail />} />
-     </Route>
-     <Route path="contact" element={<Contact />} />
-     <Route path="login" element={<Login />} />
-     <Route path="*" element={<Error />} />
-    </Route>
-   </Routes>
-  </HelmetProvider>
+    </Routes>
+   </HelmetProvider>
+  </CacheProvider>
  );
 }
 
