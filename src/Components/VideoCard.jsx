@@ -1,6 +1,7 @@
 import { FaPlay, FaClock } from "react-icons/fa6";
 import { FaExternalLinkAlt } from "react-icons/fa";
 import { getBestThumbnail, formatDuration } from "../services/youtubeApi";
+import { LazyImage } from "../hooks/useLazyImage";
 
 function VideoCard({ video, index, delay }) {
  const { 
@@ -36,7 +37,7 @@ function VideoCard({ video, index, delay }) {
    onClick={handleVideoClick}
   >
    <div className="video__thumbnail">
-    <img src={thumbnail} alt={`${title} video thumbnail`} />
+    <LazyImage src={thumbnail} alt={`${title} video thumbnail`} />
     <div className="video__overlay">
      <div className="video__play__icon">
       <FaPlay />

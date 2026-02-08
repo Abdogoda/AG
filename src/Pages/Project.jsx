@@ -8,6 +8,7 @@ import LoadingLayout from "../Components/LoadingLayout";
 import useData from "../hooks/useData";
 import languageIconMap from "../utils/languageIcons";
 import ProjectShowImages from "../Components/ProjectShowImages";
+import { LazyImage } from "../hooks/useLazyImage";
 import { FaGithub, FaLink, FaYoutube } from "react-icons/fa6";
 
 function Project() {
@@ -86,7 +87,7 @@ function Project() {
             animationDelay: `${0.2 * index + 1.5}s`,
            }}
           >
-           <img src={languageIconMap[language]} alt={`Technology used in project: ${language}`} />
+           <LazyImage src={languageIconMap[language]} alt={`Technology used in project: ${language}`} />
           </li>
          );
         })}

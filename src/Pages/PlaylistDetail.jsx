@@ -6,6 +6,7 @@ import SEO from "../Components/SEO";
 import LoadingLayout from "../Components/LoadingLayout";
 import VideoCard from "../Components/VideoCard";
 import { getChannelPlaylists, getPlaylistVideos, getBestThumbnail, calculatePlaylistDuration } from "../services/youtubeApi";
+import { LazyImage } from "../hooks/useLazyImage";
 import { FaArrowLeft, FaVideo, FaCalendar, FaClock } from "react-icons/fa6";
 import { FaExternalLinkAlt } from "react-icons/fa";
 
@@ -123,7 +124,7 @@ function PlaylistDetail() {
       <div className="playlist__info">
        <div className="playlist__banner__enhanced">
         <div className="playlist__banner__thumbnail">
-         <img 
+         <LazyImage 
           src={getBestThumbnail(playlistData.thumbnails)} 
           alt={`${playlistData.title} playlist banner`}
           className="playlist__banner__image"

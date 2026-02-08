@@ -7,6 +7,7 @@ import LoadingLayout from "../Components/LoadingLayout";
 import { Link } from "react-router-dom";
 import useData from "../hooks/useData";
 import languageIconMap from "../utils/languageIcons";
+import { LazyImage } from "../hooks/useLazyImage";
 
 function About() {
  const { data: aboutData, loading, error } = useData('about');
@@ -108,7 +109,7 @@ function About() {
        {aboutData?.skills && aboutData.skills.map((skill, index) => {
         return (
          <div className="card" id={skill.side} key={index}>
-          <img src={languageIconMap[skill.icon]} alt={`${skill.icon} technology skill`} />
+          <LazyImage src={languageIconMap[skill.icon]} alt={`${skill.icon} technology skill`} />
          </div>
         );
        })}

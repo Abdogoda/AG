@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { FaPlay, FaVideo, FaClock } from "react-icons/fa6";
 import { FaCalendarAlt } from "react-icons/fa";
 import { getBestThumbnail } from "../services/youtubeApi";
+import { LazyImage } from "../hooks/useLazyImage";
 
 function PlaylistCard({ playlist, index, delay }) {
  const { 
@@ -31,7 +32,7 @@ function PlaylistCard({ playlist, index, delay }) {
    }}
   >
    <div className="playlist__thumbnail">
-    <img src={thumbnail} alt={`${title} playlist thumbnail`} />
+    <LazyImage src={thumbnail} alt={`${title} playlist thumbnail`} />
     <div className="playlist__overlay">
      <div className="playlist__play__icon">
       <FaPlay />
