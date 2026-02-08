@@ -191,10 +191,10 @@
     {
       "images": [
         "/images/projects/ramadanak/1.png",
-        "/images/projects/ramadanak/2.png",
-        "/images/projects/ramadanak/3.png",
-        "/images/projects/ramadanak/4.png",
-        "/images/projects/ramadanak/5.png"
+        "/images/projects/ramadanak/2.jpg",
+        "/images/projects/ramadanak/3.jpg",
+        "/images/projects/ramadanak/4.jpg",
+        "/images/projects/ramadanak/5.jpg"
       ],
       "languages": ["HTML", "CSS", "Bootstrap", "JavaScript"],
       "title": "Ramadanak",
@@ -276,11 +276,11 @@
     },
     {
       "images": [
-        "/images/projects/toolbox/1.png",
-        "/images/projects/toolbox/2.png",
-        "/images/projects/toolbox/3.png",
-        "/images/projects/toolbox/4.png",
-        "/images/projects/toolbox/5.png"
+        "/images/projects/toolbox/1.jpg",
+        "/images/projects/toolbox/2.jpg",
+        "/images/projects/toolbox/3.jpg",
+        "/images/projects/toolbox/4.jpg",
+        "/images/projects/toolbox/5.jpg"
       ],
       "languages": ["Python", "OpenCV", "AI"],
       "title": "Image Editor",
