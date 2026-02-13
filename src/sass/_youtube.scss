@@ -1,4 +1,7 @@
-// YouTube Page Styles
+// ============================================
+// YOUTUBE SECTION STYLES (Optimized)
+// ============================================
+
 .youtube__section {
   .youtube__intro {
     margin-bottom: 3rem;
@@ -11,14 +14,13 @@
       color: var(--fourth-color);
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       animation: slideInFromLeft 1.2s 1.8s backwards;
-      -webkit-animation: slideInFromLeft 1.2s 1.8s backwards;
 
       a {
         color: var(--main-color);
         transition: color 0.3s ease;
 
         &:hover {
-          color: var(--primary-color);
+          color: var(--main-color);
         }
       }
     }
@@ -27,10 +29,9 @@
   .playlists__title {
     font-size: 2rem;
     text-align: center;
-    color: var(--primary-color);
-    animation: bounceInDown 1s 1.8s backwards;
-    -webkit-animation: bounceInDown 1s 2s backwards;
-    border-bottom: 2px solid var(--primary-color);
+    color: var(--main-color);
+    animation: bounceInDown 1s 2s backwards;
+    border-bottom: 2px solid var(--main-color);
     width: fit-content;
     margin: 2rem auto;
     position: relative;
@@ -42,7 +43,7 @@
       left: 0;
       width: 0;
       height: 2px;
-      background: var(--primary-color);
+      background: var(--main-color);
       animation: expandWidth 0.8s 2.8s forwards;
     }
   }
@@ -53,35 +54,21 @@
     gap: 2rem;
     margin-bottom: 3rem;
     animation: fadeInScale 0.8s 1.8s backwards;
-    -webkit-animation: fadeInScale 0.8s 1.8s backwards;
   }
 }
 
-// Playlist Card Styles
+// ============================================
+// PLAYLIST CARD
+// ============================================
+
 .playlist__card {
-  background: var(--bg-secondary);
+  background: var(--second-bg);
   border-radius: 15px;
   overflow: hidden;
   opacity: 0;
   animation: slideInUp 0.8s forwards;
   border: 2px solid transparent;
   transition:
-    transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275),
-    box-shadow 0.4s ease,
-    border-color 0.3s ease;
-  -webkit-transition:
-    transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275),
-    box-shadow 0.4s ease,
-    border-color 0.3s ease;
-  -moz-transition:
-    transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275),
-    box-shadow 0.4s ease,
-    border-color 0.3s ease;
-  -ms-transition:
-    transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275),
-    box-shadow 0.4s ease,
-    border-color 0.3s ease;
-  -o-transition:
     transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275),
     box-shadow 0.4s ease,
     border-color 0.3s ease;
@@ -97,18 +84,11 @@
       height: 100%;
       object-fit: cover;
       transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-      -webkit-transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-      -moz-transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-      -ms-transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-      -o-transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     }
 
     .playlist__overlay {
       position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
+      inset: 0;
       background: linear-gradient(
         135deg,
         rgba(0, 0, 0, 0.3),
@@ -124,7 +104,7 @@
       backdrop-filter: blur(2px);
 
       .playlist__play__icon {
-        background: linear-gradient(135deg, var(--primary-color), #ff6b6b);
+        background: linear-gradient(135deg, var(--main-color), #ff6b6b);
         color: white;
         width: 60px;
         height: 60px;
@@ -159,12 +139,8 @@
   }
 
   &:hover {
-    border-color: var(--primary-color);
+    border-color: var(--main-color);
     transform: translateY(-8px) scale(1.02);
-    -webkit-transform: translateY(-8px) scale(1.02);
-    -moz-transform: translateY(-8px) scale(1.02);
-    -ms-transform: translateY(-8px) scale(1.02);
-    -o-transform: translateY(-8px) scale(1.02);
 
     .playlist__overlay {
       opacity: 1;
@@ -187,7 +163,7 @@
       font-size: 1.3rem;
       font-weight: 600;
       margin-bottom: 1rem;
-      color: var(--primary-color);
+      color: var(--main-color);
       line-height: 1.3;
       transition: color 0.3s ease;
       direction: rtl;
@@ -205,22 +181,18 @@
         display: flex;
         align-items: center;
         gap: 5px;
-        color: var(--text-secondary);
+        color: var(--fourth-color);
         font-size: 0.9rem;
         transition: transform 0.3s ease;
         cursor: default;
 
         svg {
-          color: var(--primary-color);
+          color: var(--main-color);
           transition: transform 0.3s ease;
         }
 
         &:hover svg {
           transform: scale(1.2) rotate(360deg);
-          -webkit-transform: scale(1.2) rotate(360deg);
-          -moz-transform: scale(1.2) rotate(360deg);
-          -ms-transform: scale(1.2) rotate(360deg);
-          -o-transform: scale(1.2) rotate(360deg);
         }
       }
     }
@@ -265,12 +237,12 @@
         }
 
         &.primary {
-          background: linear-gradient(135deg, var(--primary-color), #ff6b6b);
+          background: linear-gradient(135deg, var(--main-color), #ff6b6b);
           color: white;
           box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 
           &:hover {
-            background: linear-gradient(135deg, #ff6b6b, var(--primary-color));
+            background: linear-gradient(135deg, #ff6b6b, var(--main-color));
             transform: translateY(-3px) scale(1.05);
             box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
           }
@@ -278,11 +250,11 @@
 
         &.secondary {
           background: transparent;
-          color: var(--primary-color);
-          border: 2px solid var(--primary-color);
+          color: var(--main-color);
+          border: 2px solid var(--main-color);
 
           &:hover {
-            background: var(--primary-color);
+            background: var(--main-color);
             color: var(--border-color);
             transform: translateY(-3px) scale(1.05);
             border-color: transparent;
@@ -293,14 +265,17 @@
   }
 }
 
-// Playlist Detail Page Styles
+// ============================================
+// PLAYLIST DETAIL PAGE
+// ============================================
+
 .playlist__detail__section {
   .playlist__header {
     margin-bottom: 2rem;
 
     .playlist__title {
       font-size: 2.5rem;
-      color: var(--primary-color);
+      color: var(--main-color);
       width: fit-content;
       position: relative;
       text-align: center;
@@ -308,8 +283,6 @@
       margin: 0 auto;
       animation: slideInFromTop 1.5s 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94)
         backwards;
-      -webkit-animation: slideInFromTop 1.5s 0.7s
-        cubic-bezier(0.25, 0.46, 0.45, 0.94) backwards;
 
       &::after {
         content: '';
@@ -318,32 +291,16 @@
         left: 0;
         width: 0;
         height: 3px;
-        background: linear-gradient(90deg, var(--primary-color), #ff6b6b);
+        background: linear-gradient(90deg, var(--main-color), #ff6b6b);
         animation: expandWidth 1s 1.8s forwards;
         border-radius: 2px;
-      }
-    }
-
-    .back__link {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      color: var(--primary-color);
-      text-decoration: none;
-      margin-bottom: 2rem;
-      transition: all 0.3s ease;
-      animation: slideInFromLeft 0.8s 0.8s backwards;
-
-      &:hover {
-        color: var(--primary-color-dark);
-        transform: translateX(-5px);
       }
     }
   }
 
   .playlist__banner__enhanced {
     display: flex;
-    background: var(--bg-secondary);
+    background: var(--second-bg);
     border-radius: 20px;
     overflow: hidden;
     margin-bottom: 3rem;
@@ -353,13 +310,9 @@
       transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275),
       box-shadow 0.5s ease;
     animation: slideInUp 1s 2s backwards;
-    -webkit-animation: slideInUp 1s 2s backwards;
+
     &:hover {
       transform: translateY(-2px) scale(1.01);
-      -webkit-transform: translateY(-2px) scale(1.01);
-      -moz-transform: translateY(-2px) scale(1.01);
-      -ms-transform: translateY(-2px) scale(1.01);
-      -o-transform: translateY(-2px) scale(1.01);
     }
 
     .playlist__banner__thumbnail {
@@ -377,10 +330,7 @@
 
       .playlist__banner__overlay {
         position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
+        inset: 0;
         background: linear-gradient(
           135deg,
           rgba(0, 0, 0, 0.3),
@@ -396,7 +346,7 @@
         backdrop-filter: blur(2px);
 
         .playlist__play__icon {
-          background: linear-gradient(135deg, var(--primary-color), #ff6b6b);
+          background: linear-gradient(135deg, var(--main-color), #ff6b6b);
           color: white;
           width: 80px;
           height: 80px;
@@ -421,12 +371,11 @@
 
       .playlist__banner__details {
         .playlist__subtitle {
-          color: var(--primary-color);
+          color: var(--main-color);
           margin-bottom: 1rem;
           font-size: 1.5rem;
           font-weight: 600;
           animation: slideInFromRight 0.8s 1.8s backwards;
-          -webkit-animation: slideInFromRight 0.8s 1.8s backwards;
         }
 
         .playlist__stats {
@@ -439,7 +388,7 @@
             display: flex;
             align-items: center;
             gap: 10px;
-            color: var(--text-secondary);
+            color: var(--fourth-color);
             font-weight: 500;
             font-size: 1rem;
             opacity: 0;
@@ -450,25 +399,19 @@
               color 0.3s ease;
             cursor: default;
 
-            &:nth-child(1) {
-              animation-delay: 1.6s;
-            }
-
-            &:nth-child(2) {
-              animation-delay: 1.8s;
-            }
-
-            &:nth-child(3) {
-              animation-delay: 2s;
+            @for $i from 1 through 3 {
+              &:nth-child(#{$i}) {
+                animation-delay: #{1.4 + ($i * 0.2)}s;
+              }
             }
 
             &:hover {
               transform: translateX(10px);
-              color: var(--primary-color);
+              color: var(--main-color);
             }
 
             svg {
-              color: var(--primary-color);
+              color: var(--main-color);
               font-size: 1.1rem;
               transition: transform 0.3s ease;
             }
@@ -494,7 +437,6 @@
             justify-content: center;
             gap: 8px;
             animation: slideInUp 0.8s 2.2s forwards;
-            -webkit-animation: slideInUp 0.8s 2.2s forwards;
           }
         }
       }
@@ -504,14 +446,12 @@
   .playlist__description__section {
     margin-bottom: 3rem;
     animation: slideInFromBottom 0.8s 2.8s backwards;
-    -webkit-animation: slideInFromBottom 0.8s 2.8s backwards;
 
     h3 {
-      color: var(--primary-color);
+      color: var(--main-color);
       margin-bottom: 1rem;
       font-size: 1.5rem;
       animation: typeWriter 1s 1.8s backwards;
-      -webkit-animation: typeWriter 1s 1.8s backwards;
     }
 
     .playlist__description {
@@ -522,9 +462,9 @@
       color: var(--fourth-color);
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       animation: fadeInScale 1s 2s backwards;
-      -webkit-animation: fadeInScale 1s 2s backwards;
       transition: color 0.3s ease;
       white-space: pre-line;
+
       &:hover {
         color: var(--text-primary);
       }
@@ -533,11 +473,10 @@
 
   .videos__section {
     .videos__title {
-      color: var(--primary-color);
+      color: var(--main-color);
       margin-bottom: 1rem;
       font-size: 1.5rem;
       animation: slideInFromLeft 0.8s 2.8s backwards;
-      -webkit-animation: slideInFromLeft 0.8s 2.8s backwards;
     }
 
     .videos__grid {
@@ -546,7 +485,6 @@
       gap: 2rem;
       margin-bottom: 3rem;
       animation: staggerFadeIn 1s 3s backwards;
-      -webkit-animation: staggerFadeIn 1s 3s backwards;
     }
   }
 
@@ -557,12 +495,12 @@
 
     .footer__cta {
       h3 {
-        color: var(--primary-color);
+        color: var(--main-color);
         margin-bottom: 1rem;
       }
 
       p {
-        color: var(--text-secondary);
+        color: var(--fourth-color);
         margin-bottom: 2rem;
       }
 
@@ -578,9 +516,12 @@
   }
 }
 
-// Video Card Styles
+// ============================================
+// VIDEO CARD
+// ============================================
+
 .video__card {
-  background: var(--bg-secondary);
+  background: var(--second-bg);
   border-radius: 15px;
   overflow: hidden;
   cursor: pointer;
@@ -593,10 +534,7 @@
   &::before {
     content: '';
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
+    inset: 0;
     background: linear-gradient(
       45deg,
       transparent,
@@ -614,10 +552,7 @@
     height: 180px;
     overflow: hidden;
     border-radius: 15px 15px 0 0;
-    -webkit-border-radius: 15px 15px 0 0;
-    -moz-border-radius: 15px 15px 0 0;
-    -ms-border-radius: 15px 15px 0 0;
-    -o-border-radius: 15px 15px 0 0;
+
     img {
       width: 100%;
       height: 100%;
@@ -627,10 +562,7 @@
 
     .video__overlay {
       position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
+      inset: 0;
       background: linear-gradient(
         135deg,
         rgba(0, 0, 0, 0.3),
@@ -644,7 +576,7 @@
       backdrop-filter: blur(2px);
 
       .video__play__icon {
-        background: linear-gradient(135deg, var(--primary-color), #ff6b6b);
+        background: linear-gradient(135deg, var(--main-color), #ff6b6b);
         color: white;
         width: 50px;
         height: 50px;
@@ -686,12 +618,12 @@
       font-size: 1.1rem;
       font-weight: 600;
       margin-bottom: 0.5rem;
-      color: var(--primary-color);
+      color: var(--main-color);
       line-height: 1.3;
     }
 
     .video__description {
-      color: var(--text-secondary);
+      color: var(--fourth-color);
       line-height: 1.4;
       margin-bottom: 1rem;
       font-size: 0.9rem;
@@ -709,12 +641,12 @@
       }
 
       .video__date {
-        color: var(--text-secondary);
+        color: var(--fourth-color);
         font-size: 0.8rem;
       }
 
       .video__views {
-        color: var(--text-secondary);
+        color: var(--fourth-color);
         font-size: 0.8rem;
         display: flex;
         align-items: center;
@@ -722,13 +654,13 @@
         transition: all 0.3s ease;
 
         &:hover {
-          color: var(--primary-color);
+          color: var(--main-color);
           transform: scale(1.05);
         }
       }
 
       .video__external__link {
-        color: var(--primary-color);
+        color: var(--main-color);
         font-size: 1rem;
         transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
         padding: 8px;
@@ -737,7 +669,7 @@
 
         &:hover {
           color: white;
-          background: var(--primary-color);
+          background: var(--main-color);
           transform: scale(1.2) rotate(360deg);
         }
       }
@@ -747,7 +679,7 @@
   &:hover {
     transform: translateY(-8px) scale(1.03) rotateX(5deg);
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
-    border-color: var(--primary-color);
+    border-color: var(--main-color);
     overflow: hidden;
 
     &::before {
@@ -769,7 +701,139 @@
   }
 }
 
-// Responsive Design
+// ============================================
+// ANIMATIONS
+// ============================================
+
+@keyframes slideInFromLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInFromRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInFromTop {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInFromBottom {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px) scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes bounceInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-100px) scale(0.3);
+  }
+  50% {
+    opacity: 0.8;
+    transform: translateY(30px) scale(1.05);
+  }
+  70% {
+    opacity: 1;
+    transform: translateY(-15px) scale(0.98);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes expandWidth {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes flipInY {
+  from {
+    opacity: 0;
+    transform: perspective(400px) rotateY(90deg) scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: perspective(400px) rotateY(0deg) scale(1);
+  }
+}
+
+@keyframes typeWriter {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes staggerFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px) scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+// ============================================
+// RESPONSIVE DESIGN
+// ============================================
+
 @media (max-width: 768px) {
   .playlists__grid {
     grid-template-columns: 1fr;
@@ -779,19 +843,6 @@
   .videos__grid {
     grid-template-columns: 1fr;
     gap: 1.5rem;
-  }
-
-  .playlist__banner {
-    height: 200px !important;
-
-    .playlist__banner__overlay {
-      padding: 1rem !important;
-
-      .playlist__stats {
-        gap: 1rem !important;
-        font-size: 0.9rem;
-      }
-    }
   }
 
   .playlist__banner__enhanced {
@@ -822,186 +873,6 @@
           }
         }
       }
-
-      .playlist__description__section {
-        .playlist__description {
-          -webkit-line-clamp: 6 !important;
-          line-clamp: 6 !important;
-        }
-      }
     }
-  }
-}
-
-// Animation Keyframes
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes slideInFromLeft {
-  from {
-    opacity: 0;
-    transform: translateX(-50px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-@keyframes slideInFromRight {
-  from {
-    opacity: 0;
-    transform: translateX(50px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-@keyframes slideInFromTop {
-  from {
-    opacity: 0;
-    transform: translateY(-50px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes slideInFromBottom {
-  from {
-    opacity: 0;
-    transform: translateY(50px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-@keyframes slideInUp {
-  from {
-    opacity: 0;
-    transform: translateY(40px) scale(0.9);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0) scale(1);
-  }
-}
-
-@keyframes bounceInDown {
-  0% {
-    opacity: 0;
-    transform: translateY(-100px) scale(0.3);
-  }
-
-  50% {
-    opacity: 0.8;
-    transform: translateY(30px) scale(1.05);
-  }
-
-  70% {
-    opacity: 1;
-    transform: translateY(-15px) scale(0.98);
-  }
-
-  100% {
-    opacity: 1;
-    transform: translateY(0) scale(1);
-  }
-}
-
-@keyframes fadeInScale {
-  from {
-    opacity: 0;
-    transform: scale(0.8);
-  }
-
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-
-@keyframes expandWidth {
-  from {
-    width: 0;
-  }
-
-  to {
-    width: 100%;
-  }
-}
-
-@keyframes expandHeight {
-  from {
-    height: 0;
-  }
-
-  to {
-    height: 100%;
-  }
-}
-
-@keyframes flipInY {
-  from {
-    opacity: 0;
-    transform: perspective(400px) rotateY(90deg) scale(0.8);
-  }
-
-  to {
-    opacity: 1;
-    transform: perspective(400px) rotateY(0deg) scale(1);
-  }
-}
-
-@keyframes typeWriter {
-  from {
-    width: 0;
-  }
-
-  to {
-    width: 100%;
-  }
-}
-
-@keyframes blink {
-  0%,
-  50% {
-    opacity: 1;
-  }
-
-  51%,
-  100% {
-    opacity: 0;
-  }
-}
-
-@keyframes staggerFadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(30px) scale(0.9);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0) scale(1);
   }
 }

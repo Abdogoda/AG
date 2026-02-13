@@ -1,3 +1,7 @@
+// ============================================
+// IMPORTS
+// ============================================
+@use './mixins';
 @use './layout';
 @use './header';
 @use './sidebar';
@@ -9,59 +13,78 @@
 @use './youtube';
 @use './animatedLetters';
 @import 'animate.css';
+
+// ============================================
+// GLOBAL RESET & VARIABLES
+// ============================================
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  outline: none;
-  border: none;
+  @include mixins.focus-outline;
   text-decoration: none;
   list-style: none;
 }
+
 :root {
+  /* Primary Colors */
   --main-color: #45f3ff;
   --second-color: #022c43;
   --third-color: #4d4d4e;
+
+  /* Text Colors */
+  --white-coolor: #fff;
+  --dark-color: #333;
   --fourth-color: #f2f2f2;
   --fifth-color: #999;
+
+  /* Background Colors */
   --main-bg: #1c1c1c;
   --second-bg: #181818;
   --third-bg: #23242a;
+
+  /* Border Colors */
+  --border-color: #333;
+
+  /* Container Widths */
   --container-width: 80%;
   --tablet-container-width: 90%;
   --mobile-container-width: 93%;
-  --sidebar-width: 80px;
 
-  /* New YouTube-specific variables */
-  --primary-color: #45f3ff;
-  --primary-color-dark: #37c9d4;
-  --bg-primary: #1c1c1c;
-  --bg-secondary: #181818;
-  --text-primary: #f2f2f2;
-  --text-secondary: #999;
-  --border-color: #333;
+  /* Component Sizes */
+  --sidebar-width: 80px;
 }
+
+// ============================================
+// FONTS
+// ============================================
 @font-face {
   font-family: 'Helvetiva Neue';
   src: url('../assets/fonts/helvetica-neu.ttf') format('ttf');
 }
+
 @font-face {
   font-family: 'Coolvetica';
   src: url('../assets/fonts/CoolveticaRg-Regular.woff2') format('woff2');
 }
+
 @font-face {
   font-family: 'BlackOpsOne';
   src: url('../assets/fonts/BlackOpsOne-Regular.ttf');
 }
+
+// ============================================
+// BASE STYLES
+// ============================================
 ::-webkit-scrollbar {
   width: 0;
 }
+
 html {
   scroll-behavior: smooth;
-}
-html {
   font-size: 95%;
 }
+
 body {
   font:
     300 calc(11px / 1.4) 'Helvetiva Neue',
@@ -71,14 +94,20 @@ body {
   overflow-x: hidden;
   scroll-behavior: smooth;
 }
+
 input,
 textarea {
   font-family: 'Helvetiva Neue';
 }
+
 img {
   max-width: 100%;
   object-fit: cover;
 }
+
+// ============================================
+// UTILITY CLASSES
+// ============================================
 .text__space {
   margin-right: 5px;
 }
