@@ -26,7 +26,9 @@
   "deploy": "gh-pages -d build",
   "build": "react-scripts build",
   "test": "react-scripts test",
-  "eject": "react-scripts eject"
+  "eject": "react-scripts eject",
+  "format": "prettier --write \"src/**/*.{js,jsx,scss,css,json}\" \"public/**/*.{html,json}\"",
+  "format:check": "prettier --check \"src/**/*.{js,jsx,scss,css,json}\" \"public/**/*.{html,json}\""
  },
  "browserslist": {
   "production": [
@@ -42,6 +44,7 @@
  },
  "devDependencies": {
   "gh-pages": "^6.1.1",
-  "sass": "^1.69.5"
+  "sass": "^1.69.5",
+  "prettier": "^3.0.0"
  }
 }
