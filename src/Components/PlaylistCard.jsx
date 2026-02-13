@@ -64,7 +64,7 @@ function PlaylistCard({ playlist, index, delay }) {
     
     <div className="playlist__actions">
      <Link to={`/youtube/${slug}`} className="playlist__button primary">
-      Watch Playlist
+      Open Playlist
      </Link>
      <a 
       href={playlistUrl} 
@@ -72,7 +72,7 @@ function PlaylistCard({ playlist, index, delay }) {
       rel="noopener noreferrer"
       className="playlist__button secondary"
      >
-      Open on YouTube
+      Watch on YouTube
      </a>
     </div>
    </div>

@@ -146,10 +146,6 @@ function PlaylistDetail() {
             <FaExternalLinkAlt />
             Watch on YouTube
            </a>
-           <Link to="/youtube" className="main__button secondary__button">
-            <FaArrowLeft />
-            Back to Playlists
-           </Link>
           </div>
          </div>
         </div>
