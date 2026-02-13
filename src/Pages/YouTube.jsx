@@ -53,26 +53,6 @@ function YouTube() {
   fetchYouTubeData();
  }, []);
 
- const youtubeJsonLd = {
-  "@context": "https://schema.org",
-  "@type": "VideoObject",
-  "name": channelInfo?.title || "AG | YouTube Channel",
-  "description": channelInfo?.description || "Educational content about web development, Laravel, React, and programming tutorials by Abdulrhman Goda",
-  "url": "https://Abdogoda.github.io/AG/youtube",
-  "author": {
-   "@type": "Person",
-   "name": "Abdulrhman Goda"
-  },
-  "publisher": {
-   "@type": "Organization", 
-   "name": "AG Developer",
-   "logo": {
-    "@type": "ImageObject",
-    "url": "https://Abdogoda.github.io/AG/og-image.jpg"
-   }
-  }
- };
-
  return (
   <>
    <SEO 
@@ -80,7 +60,6 @@ function YouTube() {
     description="Watch my YouTube channel featuring Laravel tutorials, React development guides, and full-stack web development tips. Learn modern web development with practical examples and real-world projects."
     keywords="YouTube Channel, Web Development Tutorials, Laravel Tutorials, React Tutorials, Programming Videos, Abdulrhman Goda YouTube"
     url="https://Abdogoda.github.io/AG/youtube"
-    jsonLd={youtubeJsonLd}
    />
    <LoadingLayout />
    <Header />

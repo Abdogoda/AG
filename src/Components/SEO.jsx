@@ -8,7 +8,6 @@ const SEO = ({
   url = "https://Abdogoda.github.io/AG/",
   image = "https://Abdogoda.github.io/AG/og-image.jpg",
   type = "website",
-  jsonLd = null
 }) => {
   const siteTitle = title === "AG Portfolio" ? title : `${title} | AG Portfolio`;
   
@@ -34,13 +33,6 @@ const SEO = ({
       <meta property="twitter:title" content={siteTitle} />
       <meta property="twitter:description" content={description} />
       <meta property="twitter:image" content={image} />
-
-      {/* JSON-LD Structured Data */}
-      {jsonLd && (
-        <script type="application/ld+json">
-          {JSON.stringify(jsonLd)}
-        </script>
-      )}
     </Helmet>
   );
 };

@@ -31,22 +31,6 @@ function Project() {
   }, 3000);
  }, [projectData]);
 
- // Generate JSON-LD for the specific project
- const projectJsonLd = projectData ? {
-  "@context": "https://schema.org",
-  "@type": "SoftwareApplication",
-  "name": projectData.title,
-  "description": projectData.description,
-  "url": `https://Abdogoda.github.io/AG/projects/${projectData.slug}`,
-  "author": {
-    "@type": "Person",
-    "name": "Abdulrhman Goda"
-  },
-  "programmingLanguage": projectData.type,
-  "applicationCategory": "WebApplication",
-  "operatingSystem": "Web Browser"
- } : null;
-
  return (
   <>
    {projectData && (
@@ -55,7 +39,6 @@ function Project() {
        description={`${projectData.description.substring(0, 150)}... Built with ${projectData.type} by Abdulrhman Goda.`}
        keywords={`${projectData.title}, ${projectData.type}, Web Development Project, Abdulrhman Goda, ${projectData.languages?.map(lang => lang.alt || '').join(', ')}`}
        url={`https://Abdogoda.github.io/AG/projects/${projectData.slug}`}
-       jsonLd={projectJsonLd}
      />
    )}
    <LoadingLayout />

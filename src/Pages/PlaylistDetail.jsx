@@ -60,21 +60,6 @@ function PlaylistDetail() {
   });
  };
 
- // Generate JSON-LD for the specific playlist
- const playlistJsonLd = playlistData ? {
-  "@context": "https://schema.org",
-  "@type": "VideoObject",
-  "name": playlistData.title,
-  "description": playlistData.description,
-  "url": `https://Abdogoda.github.io/AG/youtube/${playlistData.slug}`,
-  "author": {
-   "@type": "Person",
-   "name": "Abdulrhman Goda"
-  },
-  "dateCreated": playlistData.publishedAt,
-  "numberOfItems": playlistData.itemCount
- } : null;
-
  return (
   <>
    {playlistData && (
@@ -83,7 +68,6 @@ function PlaylistDetail() {
      description={`${playlistData.description} Watch ${playlistData.videoCount} videos covering ${playlistData.title.toLowerCase()} with practical examples and tutorials.`}
      keywords={`${playlistData.title}, YouTube Playlist, Web Development Tutorial, Programming Videos, ${playlistData.title.split(' ').join(', ')}`}
      url={`https://Abdogoda.github.io/AG/youtube/${playlistData.slug}`}
-     jsonLd={playlistJsonLd}
     />
    )}
    <LoadingLayout />

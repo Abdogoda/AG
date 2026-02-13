@@ -18,23 +18,6 @@ function Contact() {
   }, 3000);
  }, []);
 
- const contactJsonLd = {
-  "@context": "https://schema.org",
-  "@type": "ContactPage",
-  "name": "Contact Abdulrhman Goda",
-  "description": "Get in touch with Abdulrhman Goda for web development projects, Laravel development, React development, or any freelance work",
-  "url": "https://Abdogoda.github.io/AG/contact",
-  "mainEntity": {
-    "@type": "Person",
-    "name": "Abdulrhman Goda",
-    "contactPoint": {
-      "@type": "ContactPoint",
-      "contactType": "customer service",
-      "email": "abdogoda0a@gmail.com",
-      "telephone": "+2001019135059"
-    }
-  }
- };
  // email js contact
  const sendEmail = (e) => {
   e.preventDefault();
@@ -62,7 +45,6 @@ function Contact() {
      description="Get in touch with Abdulrhman Goda for your web development needs. Specializing in Laravel, PHP, React, and JavaScript development. Available for freelance projects and consulting."
      keywords="Hire Full Stack Developer, Contact Abdulrhman Goda, Laravel Developer for Hire, Web Development Services, Freelance Web Developer"
      url="https://Abdogoda.github.io/AG/contact"
-     jsonLd={contactJsonLd}
    />
    <LoadingLayout />
    <Header />

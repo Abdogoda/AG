@@ -22,24 +22,6 @@ function Portfolio() {
     }, 3000);
   }, []);
 
-  const portfolioJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "CreativeWork",
-    "name": "AG Portfolio - Web Development Projects",
-    "description": "Collection of web development projects by Abdulrhman Goda including Laravel applications, React projects, and eCommerce solutions",
-    "url": "https://Abdogoda.github.io/AG/projects",
-    "author": {
-      "@type": "Person",
-      "name": "Abdulrhman Goda"
-    },
-    "workExample": projectsData?.projects?.slice(0, 5).map(project => ({
-      "@type": "CreativeWork",
-      "name": project.title,
-      "description": project.description,
-      "url": `https://Abdogoda.github.io/AG/projects/${project.slug}`
-    })) || []
-  };
-
   // projects effect
   useEffect(() => {
     const mediaQuery = window.matchMedia("(max-width:552px)");
@@ -117,7 +99,6 @@ function Portfolio() {
         description="Explore 40+ web development projects by Abdulrhman Goda including Laravel applications, React projects, eCommerce solutions, and more. Filter by technology: Laravel, PHP, React, JavaScript."
         keywords="Web Development Portfolio, Laravel Projects, React Projects, PHP Development, JavaScript Projects, eCommerce Development, Full Stack Projects"
         url="https://Abdogoda.github.io/AG/projects"
-        jsonLd={portfolioJsonLd}
       />
       <LoadingLayout />
       <Header />

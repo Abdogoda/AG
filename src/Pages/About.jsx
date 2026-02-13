@@ -23,28 +23,6 @@ function About() {
  if (loading) return <LoadingLayout />;
  if (error) return <p>Error loading about data: {error}</p>;
 
- const aboutJsonLd = {
-  "@context": "https://schema.org",
-  "@type": "Person",
-  "name": "Abdulrhman Goda",
-  "alternateName": "AG",
-  "description": "Dedicated and skilled PHP Laravel Web Developer with a passion for creating dynamic and user-friendly web applications",
-  "url": "https://Abdogoda.github.io/AG/about",
-  "jobTitle": "Software Engineer",
-  "worksFor": {
-    "@type": "Organization",
-    "name": "Freelancer"
-  },
-  "knowsAbout": [
-    "Laravel", "PHP", "React", "JavaScript", "HTML", "CSS", "MySQL", 
-    "Bootstrap", "Sass", "Python", "Java", "Angular", "API Development"
-  ],
-  "hasOccupation": {
-    "@type": "Occupation",
-    "name": "Software Engineer",
-    "description": "Specialized in Laravel, PHP, React, and JavaScript development with over 40 completed projects"
-  }
- };
  return (
   <>
    <SEO 
@@ -52,7 +30,6 @@ function About() {
      description="Learn about Abdulrhman Goda (AG), a dedicated Software Engineer with expertise in Laravel, PHP, React, and JavaScript. Discover my skills, experience with 40+ projects, and technical background."
      keywords="About Abdulrhman Goda, Full Stack Developer Background, Laravel Expert, PHP Developer Skills, React Developer Experience, Web Developer Portfolio"
      url="https://Abdogoda.github.io/AG/about"
-     jsonLd={aboutJsonLd}
    />
    <LoadingLayout />
    <Header />

@@ -17,26 +17,6 @@ function Home() {
   }, 3000);
  }, []);
 
- const homeJsonLd = {
-  "@context": "https://schema.org",
-  "@type": "WebSite",
-  "name": "AG Portfolio - Abdulrhman Goda",
-  "alternateName": "Abdulrhman Goda Portfolio",
-  "url": "https://Abdogoda.github.io/AG/",
-  "description": "Portfolio website of Abdulrhman Goda, a Software Engineer specializing in Laravel, PHP, React, and JavaScript",
-  "author": {
-    "@type": "Person",
-    "name": "Abdulrhman Goda",
-    "jobTitle": "Software Engineer",
-    "url": "https://Abdogoda.github.io/AG/"
-  },
-  "potentialAction": {
-    "@type": "SearchAction",
-    "target": "https://Abdogoda.github.io/AG/projects",
-    "query-input": "required name=search_term_string"
-  }
- };
-
  return (
   <>
    <SEO 
@@ -44,7 +24,6 @@ function Home() {
      description="Welcome to AG Portfolio! I'm Abdulrhman Goda, a dedicated Full Stack Developer with expertise in Laravel, PHP, React, and JavaScript. Explore my 40+ web development projects and get in touch for your next project."
      keywords="Abdulrhman Goda, AG Portfolio, Full Stack Developer, Laravel Developer, PHP Developer, React Developer, JavaScript, Web Development, eCommerce, Freelancer"
      url="https://Abdogoda.github.io/AG/"
-     jsonLd={homeJsonLd}
    />
    <LoadingLayout />
    <Header />
