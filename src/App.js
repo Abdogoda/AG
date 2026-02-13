@@ -8,7 +8,6 @@ import Project from './Pages/Project';
 import YouTube from './Pages/YouTube';
 import PlaylistDetail from './Pages/PlaylistDetail';
 import Contact from './Pages/Contact';
-import Login from './Pages/Login';
 import Error from './Pages/Error';
 import Particle from './Components/Particle';
 
@@ -30,7 +29,6 @@ function App() {
               <Route path=":playlistSlug" element={<PlaylistDetail />} />
             </Route>
             <Route path="contact" element={<Contact />} />
-            <Route path="login" element={<Login />} />
             <Route path="*" element={<Error />} />
           </Route>
         </Routes>
