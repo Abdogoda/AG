@@ -20,6 +20,31 @@
   flex-direction: column;
 }
 
+@mixin flex-center-column {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+@mixin flex-gap($gap: 1rem) {
+  display: flex;
+  gap: $gap;
+}
+
+@mixin flex-between-gap($gap: 1rem) {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: $gap;
+}
+
+@mixin flex-column-gap($gap: 1rem) {
+  display: flex;
+  flex-direction: column;
+  gap: $gap;
+}
+
 // Transitions
 @mixin transition($props: all, $duration: 0.3s, $timing: ease) {
   transition: $props $duration $timing;
@@ -27,6 +52,18 @@
 
 @mixin smooth-transition($duration: 0.4s) {
   transition: all $duration ease-in-out;
+}
+
+@mixin transition-color($duration: 0.3s) {
+  transition: color $duration ease;
+}
+
+@mixin transition-transform($duration: 0.3s, $timing: ease) {
+  transition: transform $duration $timing;
+}
+
+@mixin transition-all-linear($duration: 0.3s) {
+  transition: all $duration linear;
 }
 
 // Transforms
@@ -41,19 +78,19 @@
 }
 
 @mixin fade-in-up {
-  @include animation(fadeInUp, 1.5s, 1.8s, backwards);
+  @include mixins.animation(fadeInUp, 1.5s, 1.8s, backwards);
 }
 
 @mixin fade-in-down {
-  @include animation(fadeInDown, 1s, 1s, backwards);
+  @include mixins.animation(fadeInDown, 1s, 1s, backwards);
 }
 
 @mixin fade-in-left {
-  @include animation(fadeInLeft, 1s, 1s, backwards);
+  @include mixins.animation(fadeInLeft, 1s, 1s, backwards);
 }
 
 @mixin zoom-in-right {
-  @include animation(zoomInRight, 1.5s, 1.5s, backwards);
+  @include mixins.animation(zoomInRight, 1.5s, 1.5s, backwards);
 }
 
 // Absolute/Relative positioning
@@ -96,6 +133,25 @@
   box-shadow: inset 0px 0px 5px rgba(255, 255, 255, 0.3);
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(3px);
+}
+
+// Text styles
+@mixin body-text {
+  line-height: 1.6;
+  letter-spacing: 1.5px;
+  font-size: 17px;
+  color: var(--fourth-color);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+@mixin glass-shadow {
+  box-shadow: inset 0px 0px 5px rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(3px);
+}
+
+@mixin glow-shadow($color: var(--main-color), $size: 5px) {
+  filter: drop-shadow(0 0 $size $color);
 }
 
 // Hover effects

@@ -1,4 +1,9 @@
 // ============================================
+// IMPORTS
+// ============================================
+@use './mixins';
+
+// ============================================
 // ABOUT SECTION STYLES
 // ============================================
 
@@ -8,11 +13,7 @@
       p {
         max-width: 750px;
         margin: 0.5rem 0;
-        line-height: 1.6;
-        letter-spacing: 1.5px;
-        font-size: 17px;
-        color: var(--fourth-color);
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        @include mixins.body-text;
 
         a {
           color: var(--main-color);
@@ -30,11 +31,7 @@
       ul.about-list-items li {
         max-width: 750px;
         margin: 0.5rem 0;
-        line-height: 1.6;
-        letter-spacing: 1.5px;
-        font-size: 17px;
-        color: var(--fourth-color);
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        @include mixins.body-text;
         list-style-type: circle;
         margin-left: 25px;
         animation: fadeInLeft 1.8s 1.8s backwards;
@@ -47,9 +44,7 @@
 
     .skills-zone {
       position: relative;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      @include mixins.flex-center;
       height: 400px;
       width: 400px;
       perspective: 1000px;
@@ -85,13 +80,11 @@
         height: 200px;
         width: 200px;
         text-align: center;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        @include mixins.flex-center;
         border: 2px solid var(--main-color);
         font-size: 32px;
         position: absolute;
-        transition: all 1s;
+        @include mixins.smooth-transition;
 
         img {
           width: 100px;

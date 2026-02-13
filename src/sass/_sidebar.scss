@@ -1,4 +1,9 @@
 // ============================================
+// IMPORTS
+// ============================================
+@use './mixins';
+
+// ============================================
 // SIDEBAR STYLES
 // ============================================
 
@@ -13,27 +18,23 @@ nav.sidebar {
   overflow-x: auto;
 
   .sidebar__container {
-    display: flex;
+    @include mixins.flex-column-gap(1.5rem);
     align-items: flex-start;
     justify-content: center;
-    flex-direction: column;
     width: 100%;
     position: relative;
-    gap: 1.5rem;
     animation: fadeInLeft 1s 1s backwards;
 
     a {
       width: 40px;
       height: 40px;
       font-size: 18px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      @include mixins.flex-center;
       text-align: center;
       border-radius: 50%;
       background-color: transparent;
       color: var(--fourth-color);
-      transition: all 0.2s linear;
+      @include mixins.transition-all-linear(0.2s);
 
       @media (max-width: 600px) {
         width: 35px;
@@ -45,7 +46,7 @@ nav.sidebar {
       &:hover {
         background-color: var(--main-color);
         color: var(--third-color);
-        filter: drop-shadow(0 0 5px var(--main-color));
+        @include mixins.glow-shadow;
       }
     }
   }

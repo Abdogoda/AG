@@ -1,4 +1,9 @@
 // ============================================
+// IMPORTS
+// ============================================
+@use './mixins';
+
+// ============================================
 // PORTFOLIO SECTION STYLES
 // ============================================
 
@@ -77,12 +82,9 @@
           background-color: rgba(0, 0, 0, 0.85);
           transform: translate(-50%, -50%) scale(0);
           opacity: 0;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          flex-direction: column;
+          @include mixins.flex-center-column;
           gap: 1rem;
-          transition: all 0.3s linear;
+          @include mixins.transition-all-linear(0.3s);
 
           h2 {
             color: var(--main-color);
@@ -93,9 +95,7 @@
           .project__links {
             transform: translateZ(-200px);
             margin-top: 1.5rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            @include mixins.flex-center;
             gap: 1rem;
 
             .project__link {
@@ -104,11 +104,9 @@
               border: 1px solid #fff;
               background-color: transparent;
               color: #fff;
-              display: flex;
-              align-items: center;
-              gap: 10px;
+              @include mixins.flex-gap(10px);
               cursor: default;
-              transition: all 0.2s linear;
+              @include mixins.transition-all-linear(0.2s);
               transform: translateZ(300px);
 
               &:hover {
@@ -169,9 +167,7 @@
     position: relative;
     width: 100%;
     height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    @include mixins.flex-between;
     flex-direction: column;
 
     .mobile__mic {
@@ -211,9 +207,7 @@
 .projects__filter {
   padding: 15px;
   margin-bottom: 15px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @include mixins.flex-center;
   flex-wrap: wrap;
   gap: 15px;
 
@@ -233,11 +227,9 @@
     border-radius: 10px;
     color: var(--fourth-color);
     cursor: pointer;
-    transition: 0.2s linear;
+    @include mixins.transition-all-linear(0.2s);
     animation: fadeInDown 1.5s 1s backwards;
-    box-shadow: inset 0px 0px 5px rgba(255, 255, 255, 0.3);
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(3px);
+    @include mixins.glass-shadow;
 
     &:hover,
     &.active {

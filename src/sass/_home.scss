@@ -1,4 +1,9 @@
 // ============================================
+// IMPORTS
+// ============================================
+@use './mixins';
+
+// ============================================
 // HOME SECTION STYLES
 // ============================================
 
@@ -66,16 +71,11 @@
     @media (max-width: 772px) {
       margin-right: 0;
       width: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      @include mixins.flex-center;
     }
 
     h2 {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
+      @include mixins.absolute-center;
       font-size: 6rem;
       margin: 0;
 
