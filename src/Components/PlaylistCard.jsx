@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { FaPlay, FaVideo, FaClock } from 'react-icons/fa6';
 import { FaCalendarAlt } from 'react-icons/fa';
-import { getBestThumbnail } from '../services/youtubeApi';
+import { getBestThumbnail } from '../utils/youtubeApi';
 import { LazyImage } from '../hooks/useLazyImage';
 
 function PlaylistCard({ playlist, index, delay }) {

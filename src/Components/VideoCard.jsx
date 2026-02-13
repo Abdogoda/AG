@@ -1,6 +1,6 @@
 import { FaPlay, FaClock } from 'react-icons/fa6';
 import { FaExternalLinkAlt } from 'react-icons/fa';
-import { getBestThumbnail, formatDuration } from '../services/youtubeApi';
+import { getBestThumbnail, formatDuration } from '../utils/youtubeApi';
 import { LazyImage } from '../hooks/useLazyImage';
 
 function VideoCard({ video, index, delay }) {

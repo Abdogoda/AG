@@ -8,7 +8,7 @@ import PlaylistCard from '../Components/PlaylistCard';
 import {
   getChannelInfo,
   getChannelPlaylistsWithDuration,
-} from '../services/youtubeApi';
+} from '../utils/youtubeApi';
 
 function YouTube() {
   // letter animation

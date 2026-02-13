@@ -1,6 +1,6 @@
 // YouTube API Configuration and Services
-import cacheService from '../utils/cacheService';
-import { getYouTubeFallback } from '../utils/fallbackData';
+import cacheService from './cacheService';
+import { getYouTubeFallback } from './fallbackData';
 
 const YOUTUBE_API_KEY = 'AIzaSyD5eOkoK_uJ53fy9jMvwxwUQ4Vtf7MG6aU';
 const CHANNEL_ID = 'UCmGfAOZOAgYZZ_fj_GgzB2Q';

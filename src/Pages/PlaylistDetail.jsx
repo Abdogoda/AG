@@ -10,7 +10,7 @@ import {
   getPlaylistVideos,
   getBestThumbnail,
   calculatePlaylistDuration,
-} from '../services/youtubeApi';
+} from '../utils/youtubeApi';
 import { LazyImage } from '../hooks/useLazyImage';
 import { FaArrowLeft, FaVideo, FaCalendar, FaClock } from 'react-icons/fa6';
 import { FaExternalLinkAlt } from 'react-icons/fa';
