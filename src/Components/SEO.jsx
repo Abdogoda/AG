@@ -1,16 +1,17 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
-const SEO = ({ 
-  title = "AG Portfolio", 
-  description = "Abdulrhman Goda - Software Engineer specializing in Laravel, PHP, React, and JavaScript with 40+ completed projects", 
-  keywords = "Full Stack Developer, Laravel Developer, PHP Developer, React Developer, JavaScript, Web Development",
-  url = "https://Abdogoda.github.io/AG/",
-  image = "https://Abdogoda.github.io/AG/og-image.jpg",
-  type = "website",
+const SEO = ({
+  title = 'AG Portfolio',
+  description = 'Abdulrhman Goda - Software Engineer specializing in Laravel, PHP, React, and JavaScript with 40+ completed projects',
+  keywords = 'Full Stack Developer, Laravel Developer, PHP Developer, React Developer, JavaScript, Web Development',
+  url = 'https://Abdogoda.github.io/AG/',
+  image = 'https://Abdogoda.github.io/AG/og-image.jpg',
+  type = 'website',
 }) => {
-  const siteTitle = title === "AG Portfolio" ? title : `${title} | AG Portfolio`;
-  
+  const siteTitle =
+    title === 'AG Portfolio' ? title : `${title} | AG Portfolio`;
+
   return (
     <Helmet>
       {/* Primary Meta Tags */}

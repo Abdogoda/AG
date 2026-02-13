@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 function LoadingLayout() {
   return (
     <div className="loading__layout">

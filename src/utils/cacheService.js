@@ -17,7 +17,7 @@ class CacheService {
       data,
       timestamp: Date.now(),
       ttl,
-      expiresAt: Date.now() + ttl
+      expiresAt: Date.now() + ttl,
     };
 
     // Store in memory cache
@@ -25,13 +25,13 @@ class CacheService {
 
     // Store in localStorage for persistence across page navigation
     try {
-      localStorage.setItem(
-        this.cachePrefix + key,
-        JSON.stringify(cacheEntry)
-      );
+      localStorage.setItem(this.cachePrefix + key, JSON.stringify(cacheEntry));
     } catch (error) {
       // localStorage might be full or disabled
-      console.warn('localStorage is unavailable, using memory cache only:', error);
+      console.warn(
+        'localStorage is unavailable, using memory cache only:',
+        error
+      );
     }
   }
 
@@ -100,7 +100,7 @@ class CacheService {
     this.memoryCache.clear();
     try {
       const keys = Object.keys(localStorage);
-      keys.forEach(key => {
+      keys.forEach((key) => {
         if (key.startsWith(this.cachePrefix)) {
           localStorage.removeItem(key);
         }
@@ -127,8 +127,11 @@ class CacheService {
     // Clear from localStorage
     try {
       const keys = Object.keys(localStorage);
-      keys.forEach(key => {
-        if (key.startsWith(this.cachePrefix) && regex.test(key.replace(this.cachePrefix, ''))) {
+      keys.forEach((key) => {
+        if (
+          key.startsWith(this.cachePrefix) &&
+          regex.test(key.replace(this.cachePrefix, ''))
+        ) {
           localStorage.removeItem(key);
         }
       });
@@ -147,7 +150,9 @@ class CacheService {
 
     try {
       const keys = Object.keys(localStorage);
-      localStorageCacheSize = keys.filter(key => key.startsWith(this.cachePrefix)).length;
+      localStorageCacheSize = keys.filter((key) =>
+        key.startsWith(this.cachePrefix)
+      ).length;
     } catch (error) {
       console.warn('Error getting localStorage stats:', error);
     }
@@ -155,7 +160,7 @@ class CacheService {
     return {
       memoryCacheSize,
       localStorageCacheSize,
-      totalCacheSize: memoryCacheSize + localStorageCacheSize
+      totalCacheSize: memoryCacheSize + localStorageCacheSize,
     };
   }
 }

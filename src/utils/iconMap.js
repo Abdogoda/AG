@@ -1,7 +1,13 @@
-import { 
-  FaHome, FaUser, FaEye, FaYoutube, FaEnvelope,
-  FaGithub, FaLinkedin, FaWhatsapp
-} from "react-icons/fa";
+import {
+  FaHome,
+  FaUser,
+  FaEye,
+  FaYoutube,
+  FaEnvelope,
+  FaGithub,
+  FaLinkedin,
+  FaWhatsapp,
+} from 'react-icons/fa';
 
 // Map icon names to icon components
 const iconMap = {

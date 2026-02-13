@@ -36,7 +36,10 @@ const useData = (dataFile) => {
         setIsUsingFallback(false);
       } catch (err) {
         // Use fallback data instead of showing error
-        console.warn(`Error loading ${dataFile}, using fallback data:`, err.message);
+        console.warn(
+          `Error loading ${dataFile}, using fallback data:`,
+          err.message
+        );
         const fallbackData = getFallbackData(dataFile);
         setData(fallbackData);
         setError(err.message);

@@ -3,10 +3,10 @@ import { useEffect, useRef, useState, useMemo } from 'react';
 
 /**
  * Custom hook for lazy loading images
- * 
+ *
  * Uses Intersection Observer API for performance
  * Automatically loads image when it's about to be visible
- * 
+ *
  * @param {string} src - Image source URL
  * @param {string} placeholder - Placeholder image (optional)
  * @param {Object} customOptions - Intersection Observer options
@@ -27,7 +27,7 @@ export const useLazyImage = (
     () => ({
       rootMargin: '50px',
       threshold: 0,
-      ...customOptions
+      ...customOptions,
     }),
     [customOptions]
   );
@@ -48,33 +48,30 @@ export const useLazyImage = (
     const currentRef = ref.current;
 
     // Create intersection observer
-    const observer = new IntersectionObserver(
-      entries => {
-        entries.forEach(entry => {
-          // Load image when element is about to be visible
-          if (entry.isIntersecting) {
-            const img = new Image();
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        // Load image when element is about to be visible
+        if (entry.isIntersecting) {
+          const img = new Image();
 
-            img.onload = () => {
-              setImageSrc(src);
-              setIsLoaded(true);
-              setError(null);
-              observer.unobserve(entry.target);
-            };
+          img.onload = () => {
+            setImageSrc(src);
+            setIsLoaded(true);
+            setError(null);
+            observer.unobserve(entry.target);
+          };
 
-            img.onerror = () => {
-              const err = new Error(`Failed to load image: ${src}`);
-              setError(err);
-              setIsLoaded(false);
-              observer.unobserve(entry.target);
-            };
+          img.onerror = () => {
+            const err = new Error(`Failed to load image: ${src}`);
+            setError(err);
+            setIsLoaded(false);
+            observer.unobserve(entry.target);
+          };
 
-            img.src = src;
-          }
-        });
-      },
-      observerOptions
-    );
+          img.src = src;
+        }
+      });
+    }, observerOptions);
 
     // Observe the ref element
     if (currentRef) {
@@ -95,7 +92,7 @@ export const useLazyImage = (
 
 /**
  * LazyImage Component - Easy-to-use lazy loading image component
- * 
+ *
  * @param {string} src - Image source URL
  * @param {string} alt - Alt text
  * @param {string} placeholder - Placeholder image
@@ -122,7 +119,7 @@ export const LazyImage = ({
       style={{
         opacity: isLoaded ? 1 : 0.5,
         transition: 'opacity 0.3s ease-in-out',
-        ...style
+        ...style,
       }}
       onLoad={() => {
         if (onLoad) onLoad();

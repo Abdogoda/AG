@@ -1,12 +1,5 @@
 {
-  "categories": [
-    "All",
-    "JavaScript",
-    "React",
-    "PHP",
-    "Laravel",
-    "Others"
-  ],
+  "categories": ["All", "JavaScript", "React", "PHP", "Laravel", "Others"],
   "projects": [
     {
       "images": [
@@ -19,7 +12,16 @@
         "/images/projects/authentication-system/7.jpg",
         "/images/projects/authentication-system/8.jpg"
       ],
-      "languages": ["Laravel", "PHP", "MySQL", "HTML", "CSS", "JavaScript", "Tailwind", "jQuery"],
+      "languages": [
+        "Laravel",
+        "PHP",
+        "MySQL",
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "Tailwind",
+        "jQuery"
+      ],
       "title": "Authentication System",
       "slug": "authentication-system",
       "description": "A comprehensive authentication system built with Laravel, featuring secure login, registration, password reset, and user management functionalities. The system employs best practices in security, including hashed passwords, email verification, and role-based access control to ensure robust protection of user data. The intuitive user interface is designed with Bootstrap for responsiveness and ease of use across devices. Administrators have access to a powerful dashboard for managing users, monitoring login activity, and configuring security settings. This project serves as a solid foundation for any web application requiring reliable user authentication and management capabilities.",
@@ -55,7 +57,17 @@
         "/images/projects/kashier/5.png",
         "/images/projects/kashier/6.png"
       ],
-      "languages": ["Laravel", "PHP", "MySQL", "Livewire", "HTML", "CSS", "JavaScript", "Bootstrap", "jQuery"],
+      "languages": [
+        "Laravel",
+        "PHP",
+        "MySQL",
+        "Livewire",
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "Bootstrap",
+        "jQuery"
+      ],
       "title": "KASHIER",
       "slug": "kashier",
       "description": "Kashier is a sophisticated web-based enterprise management system meticulously crafted to streamline employee operations and financial workflows within organizational environments. This comprehensive platform serves as a centralized hub for managing employee authentication, attendance tracking, billing operations, and financial transactions with remarkable efficiency. Built using Laravel and enhanced with Livewire for real-time interactions, Kashier offers a seamless user experience without page refreshes. The system implements multi-level authentication ensuring secure access control across different organizational roles including administrators, managers, and employees. Employees can clock in and out, view their work schedules, access payroll information, and submit leave requests through an intuitive interface. The billing module provides robust invoicing capabilities, expense tracking, and comprehensive financial reporting tools that help organizations maintain transparent financial records. Administrators benefit from powerful dashboard analytics that visualize key performance indicators, employee productivity metrics, and financial summaries. The application features responsive design ensuring accessibility across desktop and mobile devices, automated notification systems for important updates, and extensive reporting capabilities that generate detailed insights into organizational operations. With its focus on user experience and operational efficiency, Kashier transforms complex administrative tasks into streamlined, manageable processes that save time and reduce errors.",
@@ -73,7 +85,20 @@
         "/images/projects/btd/5.png",
         "/images/projects/btd/6.png"
       ],
-      "languages": ["Laravel", "PHP", "MySQL", "Livewire", "HTML", "CSS", "JavaScript", "Bootstrap", "jQuery", "Python", "OpenCV", "AI"],
+      "languages": [
+        "Laravel",
+        "PHP",
+        "MySQL",
+        "Livewire",
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "Bootstrap",
+        "jQuery",
+        "Python",
+        "OpenCV",
+        "AI"
+      ],
       "title": "Brain Cancer Detection",
       "slug": "brain-cancer-detection",
       "description": "BTD represents a groundbreaking fusion of healthcare technology and artificial intelligence, designed to revolutionize the way medical professionals approach brain tumor detection and patient management. This sophisticated web application leverages state-of-the-art deep learning algorithms and computer vision techniques to analyze medical imaging with unprecedented accuracy. Built on a robust Laravel foundation and integrated with Python-based AI models using OpenCV, the platform processes MRI scans and other brain imaging data to identify potential tumors, classify their types, and assess their characteristics. The system implements comprehensive multi-authentication mechanisms ensuring HIPAA-compliant security for patients, doctors, administrators, and hospital staff. Administrators wield powerful management tools to oversee multiple hospitals, coordinate medical teams, maintain extensive tumor databases, and develop standardized treatment protocols. Patients benefit from user-friendly appointment scheduling, access to their medical records, and the ability to generate detailed health reports. Doctors enjoy streamlined clinic management with integrated scheduling systems, patient record access, and AI-assisted diagnostic tools that significantly enhance their decision-making capabilities. The platform's AI engine continuously learns from new cases, improving its detection accuracy over time. With features like automated report generation, treatment tracking, and collaborative care coordination, BTD transforms brain tumor diagnosis from a time-intensive process into an efficient, accurate, and patient-centered experience.",
@@ -91,7 +116,15 @@
         "/images/projects/taleb/5.jpg",
         "/images/projects/taleb/6.jpg"
       ],
-      "languages": ["Laravel", "PHP", "MySQL", "HTML", "CSS", "Bootstrap", "jQuery"],
+      "languages": [
+        "Laravel",
+        "PHP",
+        "MySQL",
+        "HTML",
+        "CSS",
+        "Bootstrap",
+        "jQuery"
+      ],
       "title": "Taleb Management",
       "slug": "taleb-mamagement",
       "description": "Taleb Management is an innovative educational technology solution designed to transform how schools handle student attendance and academic monitoring. This intelligent web-based platform addresses the common challenges faced by educational institutions in tracking student presence, managing absences, and maintaining communication with parents. The system employs a sophisticated multi-tier architecture where super administrators oversee multiple schools and configure system-wide settings, school administrators manage their institutional data including student enrollments and teacher assignments, and teachers efficiently record daily attendance with intuitive interfaces that minimize administrative burden. Students gain autonomy by accessing their personal attendance records, viewing their academic standing, and understanding their attendance patterns. Parents receive real-time notifications about their children's attendance status, can review historical data, and communicate directly with teachers regarding attendance concerns. The platform features automated reporting that generates insightful analytics on attendance trends, identifies at-risk students, and helps administrators make data-driven decisions. Built with Laravel and enhanced with modern frontend technologies, the system provides role-based access control ensuring data privacy and security. The responsive design ensures accessibility from any device, while the intuitive interface reduces training requirements. By digitizing and streamlining attendance management, Taleb Management enhances transparency, improves parent-school communication, and allows educators to focus more on teaching rather than administrative tasks.",
@@ -108,7 +141,15 @@
         "/images/projects/dentist/4.png",
         "/images/projects/dentist/5.png"
       ],
-      "languages": ["Laravel", "PHP", "MySQL", "HTML", "CSS", "Bootstrap", "jQuery"],
+      "languages": [
+        "Laravel",
+        "PHP",
+        "MySQL",
+        "HTML",
+        "CSS",
+        "Bootstrap",
+        "jQuery"
+      ],
       "title": "Dentist Portfolio",
       "slug": "dentist-portfolio",
       "description": "This elegant and professional Laravel-based portfolio website was specifically designed for Dr. Mohammed Alkholy, showcasing his dental expertise and services with sophistication and functionality. The platform serves as a comprehensive digital presence that bridges the gap between healthcare providers and patients. Through an intuitive administrative dashboard, Dr. Alkholy can dynamically manage his service offerings, update treatment descriptions with rich media content, maintain an impressive before-and-after gallery showcasing successful cases, and keep his professional profile current. The public-facing website features a clean, modern design that instills confidence and trust, with detailed service descriptions covering various dental procedures from routine cleanings to advanced cosmetic dentistry. Visitors can browse through an organized gallery of previous work, read patient testimonials, and learn about the doctor's qualifications and experience. The integrated appointment booking system allows potential patients to schedule consultations directly through the website, selecting their preferred time slots and describing their dental concerns. The system sends automated confirmation emails and reminders, reducing no-shows and improving practice efficiency. Built with responsive design principles, the website provides optimal viewing experiences across desktops, tablets, and smartphones. Security features protect patient information, while the SEO-optimized structure ensures the practice maintains strong visibility in local search results, helping attract new patients and grow the practice.",
@@ -125,7 +166,15 @@
         "/images/projects/content_creator/4.jpg",
         "/images/projects/content_creator/5.jpg"
       ],
-      "languages": ["Laravel", "PHP", "MySQL", "HTML", "CSS", "Bootstrap", "jQuery"],
+      "languages": [
+        "Laravel",
+        "PHP",
+        "MySQL",
+        "HTML",
+        "CSS",
+        "Bootstrap",
+        "jQuery"
+      ],
       "title": "Content Creator",
       "slug": "content-creator",
       "description": "Content Creator is a dynamic, feature-rich portfolio platform built specifically for digital content creation agencies to showcase their creative prowess and attract potential clients. This sophisticated web application combines stunning visual presentation with powerful content management capabilities, allowing agencies to demonstrate their expertise across multiple creative disciplines including video production, graphic design, social media management, copywriting, and digital marketing. The platform features a beautifully designed portfolio section where completed projects are displayed with high-quality images, detailed case studies, client testimonials, and measurable results that highlight the agency's impact. Visitors can filter projects by service type, industry, or project scale, making it easy to find relevant work examples. The comprehensive admin dashboard empowers content managers to effortlessly update their portfolio, add new projects with rich media content, manage service offerings, update team member profiles, and monitor website analytics. What sets this platform apart is its robust multilingual support for both Arabic and English, automatically detecting user preferences and providing seamless language switching that maintains full functionality in both languages. This bilingual capability significantly expands the agency's market reach across Arabic-speaking regions and international markets. Built with Laravel and modern frontend technologies, the website delivers exceptional performance, implements SEO best practices for improved search visibility, and features responsive design ensuring perfect display across all devices, ultimately serving as a powerful business development tool.",
@@ -143,7 +192,17 @@
         "/images/projects/school/5.jpg",
         "/images/projects/school/6.jpg"
       ],
-      "languages": ["Laravel", "PHP", "MySQL", "Livewire", "HTML", "CSS", "Bootstrap", "JavaScript", "jQuery"],
+      "languages": [
+        "Laravel",
+        "PHP",
+        "MySQL",
+        "Livewire",
+        "HTML",
+        "CSS",
+        "Bootstrap",
+        "JavaScript",
+        "jQuery"
+      ],
       "title": "School Management System",
       "slug": "school-management-system",
       "description": "This comprehensive School Management System represents a complete digital transformation solution for educational institutions, streamlining every aspect of school operations from student enrollment to graduation. Built with Laravel and enhanced with Livewire for real-time interactivity, the platform provides an integrated ecosystem where students, teachers, guardians, and administrators can collaborate efficiently. The system implements sophisticated multi-authentication mechanisms with role-specific dashboards tailored to each user type's needs. Students access their grades, assignments, attendance records, and class schedules while communicating with teachers. Teachers manage their classes, grade assignments, record attendance, and track student progress through intuitive interfaces. Guardians monitor their children's academic performance, attendance, communicate with teachers, and receive instant notifications about important school events. Administrators wield comprehensive control over school operations including student enrollment management, teacher assignments, curriculum planning, fee collection, and generating detailed analytical reports. The platform's multilingual architecture supports Arabic and English with easy extensibility for additional languages, making it adaptable to diverse educational environments. Integration with Zoom enables seamless virtual classroom management, particularly valuable for hybrid learning scenarios. The granular permission system ensures data security while allowing flexible access control. Real-time features powered by Livewire provide instant updates without page refreshes, creating a modern, responsive user experience that enhances productivity and engagement across the entire school community.",
@@ -161,7 +220,15 @@
         "/images/projects/store_dashboard/5.png",
         "/images/projects/store_dashboard/6.png"
       ],
-      "languages": ["PHP", "MySQL", "HTML", "CSS", "Bootstrap", "JavaScript", "jQuery"],
+      "languages": [
+        "PHP",
+        "MySQL",
+        "HTML",
+        "CSS",
+        "Bootstrap",
+        "JavaScript",
+        "jQuery"
+      ],
       "title": "Store Dashboard",
       "slug": "store-dashboard",
       "description": "The Store Dashboard is a powerful, full-featured administrative platform designed specifically for online bookstore operations, providing comprehensive control over every aspect of the digital retail experience. This sophisticated management system enables bookstore owners and employees to efficiently handle their inventory, process orders, manage customer relationships, and analyze business performance from a centralized interface. The dashboard offers extensive product management capabilities allowing administrators to add new books with detailed information including titles, authors, publishers, ISBNs, descriptions, pricing, and cover images. Advanced inventory tracking monitors stock levels, sends automatic alerts for low inventory, and maintains detailed purchase and sales histories. The order management system provides real-time visibility into customer purchases, processing status, payment verification, and shipping logistics, with features for generating invoices and packing slips. Employee management tools enable role assignment, activity tracking, and performance monitoring. The platform includes a customer relationship module displaying purchase histories, preferences, and contact information to support personalized marketing efforts. Built with PHP, MySQL, and modern frontend technologies including Bootstrap and jQuery, the dashboard features responsive design for management on-the-go, implements secure authentication and authorization systems, and generates comprehensive sales reports with visual analytics showing revenue trends, bestselling titles, and customer demographics. This empowers bookstore operators to make data-driven decisions that optimize operations and drive business growth.",
@@ -179,7 +246,15 @@
         "/images/projects/nature/5.png",
         "/images/projects/nature/6.png"
       ],
-      "languages": ["Java", "MySQL", "HTML", "CSS", "Bootstrap", "JavaScript", "jQuery"],
+      "languages": [
+        "Java",
+        "MySQL",
+        "HTML",
+        "CSS",
+        "Bootstrap",
+        "JavaScript",
+        "jQuery"
+      ],
       "title": "Nature",
       "slug": "nature",
       "description": "Nature is a comprehensive full-stack eCommerce solution built with Java EE technologies, specifically designed for online grocery retail operations. This enterprise-grade application delivers both a customer-facing storefront and a powerful administrative backend, creating a complete ecosystem for modern grocery shopping experiences. The customer platform features an intuitive interface where shoppers can browse through categorized product catalogs including fresh produce, dairy, meats, pantry staples, and household items. Advanced search and filtering capabilities help customers quickly find products, while detailed product pages display nutritional information, pricing, availability, and customer reviews. The shopping cart system supports promotional codes, calculates dynamic shipping costs, and processes secure payments. Customers can create accounts to save delivery addresses, track order history, create shopping lists, and set up recurring orders for frequently purchased items. The robust admin dashboard provides store managers with comprehensive control over all operations including product catalog management with bulk upload capabilities, real-time inventory tracking with low-stock alerts, order processing and fulfillment workflows, customer management tools, and detailed sales analytics. The system generates insightful reports on bestselling products, revenue trends, customer behavior patterns, and operational efficiency metrics. Built using Java EE framework with JSP for dynamic content rendering, MySQL for reliable data storage, and responsive frontend technologies, Nature demonstrates enterprise-level architecture with scalability, security, and performance optimization suitable for high-traffic grocery retail operations.",

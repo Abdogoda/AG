@@ -38,7 +38,7 @@ export const CacheProvider = ({ children }) => {
     return {
       ...stats,
       isCached: stats.totalCacheSize > 0,
-      lastUpdated: new Date().toLocaleTimeString()
+      lastUpdated: new Date().toLocaleTimeString(),
     };
   }, []);
 
@@ -48,13 +48,11 @@ export const CacheProvider = ({ children }) => {
     clearYouTubeCache,
     clearCacheByPattern,
     getCacheStats,
-    getCacheStatus
+    getCacheStatus,
   };
 
   return (
-    <CacheContext.Provider value={value}>
-      {children}
-    </CacheContext.Provider>
+    <CacheContext.Provider value={value}>{children}</CacheContext.Provider>
   );
 };
 
