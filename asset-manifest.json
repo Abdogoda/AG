@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/AG/static/css/main.c9c146c5.css",
-    "main.js": "/AG/static/js/main.473ef5be.js",
+    "main.js": "/AG/static/js/main.da1b001d.js",
     "static/media/BlackOpsOne-Regular.ttf": "/AG/static/media/BlackOpsOne-Regular.b8437be32fe8faca71ed.ttf",
     "static/media/helvetica-neu.ttf": "/AG/static/media/helvetica-neu.8a19678078a6b21c8057.ttf",
     "static/media/CoolveticaRg-Regular.woff2": "/AG/static/media/CoolveticaRg-Regular.7d1f3b1dd46ad6557a17.woff2",
     "index.html": "/AG/index.html",
     "main.c9c146c5.css.map": "/AG/static/css/main.c9c146c5.css.map",
-    "main.473ef5be.js.map": "/AG/static/js/main.473ef5be.js.map"
+    "main.da1b001d.js.map": "/AG/static/js/main.da1b001d.js.map"
   },
   "entrypoints": [
     "static/css/main.c9c146c5.css",
-    "static/js/main.473ef5be.js"
+    "static/js/main.da1b001d.js"
   ]
 }
