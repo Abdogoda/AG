@@ -1,6 +1,7 @@
 import { Route, Routes } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 import { CacheProvider } from './contexts/CacheContext';
+import ErrorBoundary from './Components/ErrorBoundary';
 import Home from './Pages/Home';
 import About from './Pages/About';
 import Portfolio from './Pages/Portfolio';
@@ -13,27 +14,29 @@ import Particle from './Components/Particle';
 
 function App() {
   return (
-    <CacheProvider>
-      <HelmetProvider>
-        <Particle />
-        <Routes>
-          <Route path="/">
-            <Route index element={<Home />} />
-            <Route path="about" element={<About />} />
-            <Route path="projects">
-              <Route index element={<Portfolio />} />
-              <Route path=":projectSlug" element={<Project />} />
+    <ErrorBoundary>
+      <CacheProvider>
+        <HelmetProvider>
+          <Particle />
+          <Routes>
+            <Route path="/">
+              <Route index element={<Home />} />
+              <Route path="about" element={<About />} />
+              <Route path="projects">
+                <Route index element={<Portfolio />} />
+                <Route path=":projectSlug" element={<Project />} />
+              </Route>
+              <Route path="youtube">
+                <Route index element={<YouTube />} />
+                <Route path=":playlistSlug" element={<PlaylistDetail />} />
+              </Route>
+              <Route path="contact" element={<Contact />} />
+              <Route path="*" element={<Error />} />
             </Route>
-            <Route path="youtube">
-              <Route index element={<YouTube />} />
-              <Route path=":playlistSlug" element={<PlaylistDetail />} />
-            </Route>
-            <Route path="contact" element={<Contact />} />
-            <Route path="*" element={<Error />} />
-          </Route>
-        </Routes>
-      </HelmetProvider>
-    </CacheProvider>
+          </Routes>
+        </HelmetProvider>
+      </CacheProvider>
+    </ErrorBoundary>
   );
 }
 
