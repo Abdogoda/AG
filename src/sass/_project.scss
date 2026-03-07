@@ -54,6 +54,10 @@
             transform: scale(1.05);
           }
         }
+
+        @media (max-width: 778px) {
+          display: none;
+        }
       }
 
       .project__images__card {
