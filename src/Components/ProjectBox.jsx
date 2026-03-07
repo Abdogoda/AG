@@ -4,7 +4,7 @@ import { TfiMore } from 'react-icons/tfi';
 import { Link } from 'react-router-dom';
 import { getImageUrl } from '../utils/imageUrl';
 
-function ProjectBox({ project, index, delay }) {
+const ProjectBox = React.memo(function ProjectBox({ project, index, delay }) {
   const { images, title, slug, githubLink } = project;
   return (
     <div
@@ -52,6 +52,6 @@ function ProjectBox({ project, index, delay }) {
       </div>
     </div>
   );
-}
+});
 
 export default ProjectBox;

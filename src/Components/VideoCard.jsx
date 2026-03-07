@@ -1,9 +1,10 @@
+import React from 'react';
 import { FaPlay, FaClock } from 'react-icons/fa6';
 import { FaExternalLinkAlt } from 'react-icons/fa';
 import { getBestThumbnail, formatDuration } from '../utils/youtubeApi';
 import { LazyImage } from '../hooks/useLazyImage';
 
-function VideoCard({ video, index, delay }) {
+const VideoCard = React.memo(function VideoCard({ video, index, delay }) {
   const { title, description, videoUrl, thumbnails, duration, publishedAt } =
     video;
 
@@ -68,6 +69,6 @@ function VideoCard({ video, index, delay }) {
       </div>
     </div>
   );
-}
+});
 
 export default VideoCard;
