@@ -87,7 +87,7 @@ function Project() {
                   rel="noreferrer"
                   className="main__button"
                 >
-                  Github Link <FaGithub />
+                  Github <FaGithub />
                 </a>
                 {projectData.liveDemoLink && (
                   <a

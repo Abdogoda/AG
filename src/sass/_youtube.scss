@@ -51,10 +51,18 @@
 
   .playlists__grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-template-columns: 1fr 1fr 1fr;
     gap: 2rem;
     margin-bottom: 3rem;
     animation: fadeInScale 0.8s 1.8s backwards;
+
+    @media (max-width: 992px) {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr;
+    }
   }
 }
 
@@ -155,7 +163,7 @@
     padding: 1.5rem;
 
     .playlist__title {
-      font-size: 1.3rem;
+      font-size: 16px;
       font-weight: 600;
       margin-bottom: 1rem;
       color: var(--main-color);
@@ -173,7 +181,7 @@
       .playlist__meta__item {
         @include mixins.flex-gap(5px);
         color: var(--fourth-color);
-        font-size: 0.9rem;
+        font-size: 13px;
         @include mixins.transition-transform;
         cursor: default;
 
@@ -201,7 +209,7 @@
         transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
         border: none;
         cursor: pointer;
-        font-size: 0.9rem;
+        font-size: 13px;
         position: relative;
         overflow: hidden;
 

@@ -211,15 +211,6 @@
   flex-wrap: wrap;
   gap: 15px;
 
-  @media (max-width: 778px) {
-    gap: 10px;
-
-    li {
-      padding: 8px 12px;
-      font-size: 16px;
-    }
-  }
-
   li {
     user-select: none;
     font-size: 18px;
@@ -238,4 +229,14 @@
       transform: scale(1.1);
     }
   }
+  
+  @media (max-width: 778px) {
+    gap: 10px;
+
+    li {
+      padding: 8px 12px;
+      font-size: 16px;
+    }
+  }
+
 }
