@@ -12,9 +12,15 @@ function Header() {
 
   useEffect(() => {
     if (typeof window !== 'undefined') {
-      window.addEventListener('scroll', () =>
-        setActiveScroll(window.pageYOffset > 20)
-      );
+      const handleScroll = () => {
+        setActiveScroll(window.pageYOffset > 20);
+      };
+
+      window.addEventListener('scroll', handleScroll);
+
+      return () => {
+        window.removeEventListener('scroll', handleScroll);
+      };
     }
   }, []);
   useEffect(() => {
