@@ -45,7 +45,7 @@ const useYoutubeData = (fetchFunction, params = [], dependencies = []) => {
     return () => {
       isMounted = false;
     };
-  }, [fetchFunction, ...dependencies]);
+  }, [fetchFunction, params, ...dependencies]);
 
   return { data, loading, error };
 };

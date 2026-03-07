@@ -7,11 +7,6 @@ out
 coverage
 public
 *.min.js
-*.min.css
 .env
 .env.local
 .env.*.local
-.DS_Store
-*.log
-.idea/
-.vscode/
