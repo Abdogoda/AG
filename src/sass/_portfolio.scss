@@ -8,6 +8,10 @@
 // ============================================
 
 .portfolio__section {
+  .portfolio__container{
+    min-height: auto;
+  }
+  
   .projects__container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
