@@ -25,11 +25,15 @@
   overflow: hidden;
   animation: fadeIn 1s 1s backwards;
 
+  > .container {
+    min-height: calc(100vh - 8rem);
+  }
+
   @media (max-width: 772px) {
     padding-top: 0 !important;
     padding-bottom: 100px;
 
-    .container {
+    > .container {
       padding-top: calc(var(--sidebar-width) - 1rem);
     }
   }
