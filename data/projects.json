@@ -1,5 +1,5 @@
 {
-  "categories": ["All", "JavaScript", "React", "PHP", "Laravel", "Others"],
+  "categories": ["All", "Frontend", "PHP/Laravel", "Python", "Others"],
   "projects": [
     {
       "images": [
@@ -28,7 +28,7 @@
       "githubLink": "https://github.com/Abdogoda/Laravel-Authentication",
       "liveDemoLink": null,
       "youtubeLink": "https://youtube.com/playlist?list=PLBy71Vfd0SzVaLjezaxqjnSsK8_p_aTcp&si=QPHa-33NdV-MqIIe",
-      "type": "Laravel"
+      "type": "PHP/Laravel"
     },
     {
       "images": [
@@ -46,7 +46,7 @@
       "githubLink": "https://github.com/Abdogoda/Multi-vendor-Ecommerce-API",
       "liveDemoLink": null,
       "youtubeLink": null,
-      "type": "Laravel"
+      "type": "PHP/Laravel"
     },
     {
       "images": [
@@ -74,7 +74,7 @@
       "githubLink": "https://github.com/Abdogoda/kashier",
       "liveDemoLink": null,
       "youtubeLink": null,
-      "type": "Laravel"
+      "type": "PHP/Laravel"
     },
     {
       "images": [
@@ -105,7 +105,7 @@
       "githubLink": "https://github.com/Abdogoda/btd",
       "liveDemoLink": null,
       "youtubeLink": null,
-      "type": "Laravel"
+      "type": "PHP/Laravel"
     },
     {
       "images": [
@@ -131,7 +131,36 @@
       "githubLink": null,
       "liveDemoLink": "https://taleb.sitevip.org/taleb_development/public/login",
       "youtubeLink": null,
-      "type": "Laravel"
+      "type": "PHP/Laravel"
+    },
+    {
+      "images": [
+        "/images/projects/smart-dental-ai/1.png",
+        "/images/projects/smart-dental-ai/2.png",
+        "/images/projects/smart-dental-ai/3.png",
+        "/images/projects/smart-dental-ai/4.png",
+        "/images/projects/smart-dental-ai/5.jpg",
+        "/images/projects/smart-dental-ai/6.png"
+      ],
+      "languages": [
+        "NodeJs",
+        "ExpressJs",
+        "MongoDB",
+        "Python",
+        "FastAPI",
+        "Yolo",
+        "Jupyter",
+        "OpenCV",
+        "Gemini",
+        "Postman"
+      ],
+      "title": "Smart Dental AI",
+      "slug": "smart-dental-ai",
+      "description": "Smart Dental AI is a comprehensive, AI-powered dental disease detection and classification system combining advanced deep learning models with a full-stack application for automated analysis of dental pathologies. The project encompasses three integrated phases: AI training utilizing YOLOv8 for precise object detection achieving mAP of 0.78 and ResNet50 for multi-label classification with 91.06% accuracy across six dental conditions including calculus, caries, discoloration, gingivitis, hypodontia, and ulcers; a FastAPI-based AI server providing real-time inference endpoints for single-image diagnosis, batch processing of up to 10 images, and AI-powered follow-up chat using Google Gemini for generating clinical reports and answering questions; and a Node.js Express backend REST API with MongoDB integration managing patient authentication, diagnosis history, chat sessions, user profiles, and image storage. The backend implements JWT-based security, role-based access control, comprehensive error handling, and RESTful endpoints for all core functionalities. The system processes dental images through state-of-the-art deep learning pipelines, automatically detecting and classifying dental pathologies with bounding box annotations for precise lesion localization. Patients and healthcare providers access the platform through an intuitive React frontend enabling seamless image uploads, real-time diagnosis results, clinical decision support through AI-generated reports, and interactive follow-up conversations. With its modular architecture, scalable infrastructure, and production-ready deployment setup including automated setup scripts and Postman documentation, Smart Dental AI demonstrates enterprise-grade integration of computer vision, machine learning, and web technologies to deliver clinical-grade dental diagnostic assistance, reducing manual analysis time while improving diagnostic consistency and enabling high-throughput dental screening programs worldwide.",
+      "githubLink": "https://github.com/Abdogoda/smart-dental-ai",
+      "liveDemoLink": null,
+      "youtubeLink": null,
+      "type": "Python"
     },
     {
       "images": [
@@ -156,7 +185,7 @@
       "githubLink": "https://github.com/Abdogoda",
       "liveDemoLink": "http://dr-mohammed-alkholy.kesug.com/",
       "youtubeLink": null,
-      "type": "Laravel"
+      "type": "PHP/Laravel"
     },
     {
       "images": [
@@ -181,7 +210,7 @@
       "githubLink": "https://github.com/Abdogoda/content-creator",
       "liveDemoLink": null,
       "youtubeLink": null,
-      "type": "Laravel"
+      "type": "PHP/Laravel"
     },
     {
       "images": [
@@ -209,7 +238,7 @@
       "githubLink": "https://github.com/Abdogoda/laravel_school",
       "liveDemoLink": null,
       "youtubeLink": null,
-      "type": "Laravel"
+      "type": "PHP/Laravel"
     },
     {
       "images": [
@@ -235,7 +264,7 @@
       "githubLink": "https://github.com/Abdogoda/Books",
       "liveDemoLink": null,
       "youtubeLink": null,
-      "type": "PHP"
+      "type": "PHP/Laravel"
     },
     {
       "images": [
@@ -278,7 +307,7 @@
       "githubLink": "https://github.com/Abdogoda/Ramadanak",
       "liveDemoLink": "https://abdogoda.github.io/Ramadanak/",
       "youtubeLink": null,
-      "type": "JavaScript"
+      "type": "Frontend"
     },
     {
       "images": [
@@ -294,7 +323,7 @@
       "githubLink": "https://github.com/Abdogoda/eid-adha",
       "liveDemoLink": "https://abdogoda.github.io/eid-adha/",
       "youtubeLink": null,
-      "type": "JavaScript"
+      "type": "Frontend"
     },
     {
       "images": [
@@ -310,7 +339,7 @@
       "githubLink": "https://github.com/Abdogoda/URTV",
       "liveDemoLink": "https://abdogoda.github.io/URTV/",
       "youtubeLink": null,
-      "type": "React"
+      "type": "Frontend"
     },
     {
       "images": [
@@ -330,7 +359,7 @@
       "githubLink": "https://github.com/Abdogoda/game-hub",
       "liveDemoLink": "https://abdogoda.github.io/game-hub/",
       "youtubeLink": null,
-      "type": "JavaScript"
+      "type": "Frontend"
     },
     {
       "images": [
@@ -347,7 +376,7 @@
       "githubLink": "https://github.com/Abdogoda/Yolo_Store",
       "liveDemoLink": "https://abdogoda.github.io/Yolo_Store/",
       "youtubeLink": null,
-      "type": "React"
+      "type": "Frontend"
     },
     {
       "images": [
@@ -364,7 +393,7 @@
       "githubLink": "https://github.com/Abdogoda/Opencv-Toolbox",
       "liveDemoLink": null,
       "youtubeLink": null,
-      "type": "Others"
+      "type": "Python"
     }
   ]
 }

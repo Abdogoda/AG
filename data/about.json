@@ -2,7 +2,7 @@
   "skills": [
     {
       "side": "front",
-      "icon": "HTML"
+      "icon": "Docker"
     },
     {
       "side": "back",
@@ -10,7 +10,7 @@
     },
     {
       "side": "left",
-      "icon": "Angular"
+      "icon": "NodeJs"
     },
     {
       "side": "right",
