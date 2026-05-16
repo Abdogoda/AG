@@ -8,6 +8,7 @@ import { Link } from 'react-router-dom';
 import useData from '../hooks/useData';
 import languageIconMap from '../utils/languageIcons';
 import { LazyImage } from '../hooks/useLazyImage';
+import getImageUrl from '../utils/imageUrl';
 
 function About() {
   const { data: aboutData, loading, error } = useData('about');
@@ -18,6 +19,7 @@ function About() {
     setTimeout(() => {
       setLetterClass('text-animate-hover');
     }, 3000);
+    console.log('About data loaded:', aboutData);
   }, []);
 
   if (loading) return <LoadingLayout />;
@@ -72,8 +74,8 @@ function About() {
             </ul>
 
             <a
-              href={aboutData?.resumeLink}
-              download="abdogoda-resume.pdf"
+              href={getImageUrl(aboutData?.resumeLink)}
+              download
               className="main__button"
             >
               Download CV
