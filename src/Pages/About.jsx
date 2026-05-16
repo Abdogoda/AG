@@ -73,7 +73,7 @@ function About() {
 
             <a
               href={aboutData?.resumeLink}
-              download="abdo-goda-resume"
+              download="abdogoda-resume.pdf"
               className="main__button"
             >
               Download CV
