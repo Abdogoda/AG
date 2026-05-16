@@ -19,6 +19,7 @@ function About() {
     setTimeout(() => {
       setLetterClass('text-animate-hover');
     }, 3000);
+    console.log('About data loaded:', aboutData);
   }, []);
 
   if (loading) return <LoadingLayout />;
