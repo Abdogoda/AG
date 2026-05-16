@@ -71,6 +71,7 @@ function Project() {
                       style={{
                         animationDelay: `${0.2 * index + 1.5}s`,
                       }}
+                      title={language}
                     >
                       <LazyImage
                         src={languageIconMap[language]}
