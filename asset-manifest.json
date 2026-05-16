@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/AG/static/css/main.c9c146c5.css",
-    "main.js": "/AG/static/js/main.ebd5e765.js",
+    "main.js": "/AG/static/js/main.d5e35f9a.js",
     "static/js/310.fe752f2b.chunk.js": "/AG/static/js/310.fe752f2b.chunk.js",
     "static/js/483.d8b3a60c.chunk.js": "/AG/static/js/483.d8b3a60c.chunk.js",
     "static/js/378.de8d962d.chunk.js": "/AG/static/js/378.de8d962d.chunk.js",
@@ -13,7 +13,7 @@
     "static/media/CoolveticaRg-Regular.woff2": "/AG/static/media/CoolveticaRg-Regular.7d1f3b1dd46ad6557a17.woff2",
     "index.html": "/AG/index.html",
     "main.c9c146c5.css.map": "/AG/static/css/main.c9c146c5.css.map",
-    "main.ebd5e765.js.map": "/AG/static/js/main.ebd5e765.js.map",
+    "main.d5e35f9a.js.map": "/AG/static/js/main.d5e35f9a.js.map",
     "310.fe752f2b.chunk.js.map": "/AG/static/js/310.fe752f2b.chunk.js.map",
     "483.d8b3a60c.chunk.js.map": "/AG/static/js/483.d8b3a60c.chunk.js.map",
     "378.de8d962d.chunk.js.map": "/AG/static/js/378.de8d962d.chunk.js.map",
@@ -23,6 +23,6 @@
   },
   "entrypoints": [
     "static/css/main.c9c146c5.css",
-    "static/js/main.ebd5e765.js"
+    "static/js/main.d5e35f9a.js"
   ]
 }
