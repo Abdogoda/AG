@@ -20,6 +20,7 @@ const languageIconMap = {
   Postman: `${process.env.PUBLIC_URL}/images/icons/postman.jpeg`,
   Swagger: `${process.env.PUBLIC_URL}/images/icons/swagger.png`,
   jQuery: `${process.env.PUBLIC_URL}/images/icons/jquery.png`,
+  NodeJs: `${process.env.PUBLIC_URL}/images/icons/nodejs.png`,
 };
 
 export default languageIconMap;
