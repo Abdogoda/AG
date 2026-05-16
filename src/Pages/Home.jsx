@@ -58,8 +58,7 @@ function Home() {
 
               <Typewriter
                 words={[
-                  'Full Stack Developer',
-                  'Frontend Developer',
+                  'Software Engineer',
                   'Backend Developer',
                   'YouTuber',
                   'Freelancer',

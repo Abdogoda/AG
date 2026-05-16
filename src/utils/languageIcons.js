@@ -21,6 +21,7 @@ const languageIconMap = {
   Swagger: `${process.env.PUBLIC_URL}/images/icons/swagger.png`,
   jQuery: `${process.env.PUBLIC_URL}/images/icons/jquery.png`,
   NodeJs: `${process.env.PUBLIC_URL}/images/icons/nodejs.png`,
+  Docker: `${process.env.PUBLIC_URL}/images/icons/docker.png`,
 };
 
 export default languageIconMap;
