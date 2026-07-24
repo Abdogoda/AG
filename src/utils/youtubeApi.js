@@ -2,7 +2,7 @@
 import cacheService from './cacheService';
 import { getYouTubeFallback } from './fallbackData';
 
-const YOUTUBE_API_KEY = 'AIzaSyD5eOkoK_uJ53fy9jMvwxwUQ4Vtf7MG6aU';
+const YOUTUBE_API_KEY = 'AIzaSyD4ZxzMA01sr4yAkPM5xSbhqslipszCv44';
 const CHANNEL_ID = 'UCmGfAOZOAgYZZ_fj_GgzB2Q';
 const BASE_URL = 'https://www.googleapis.com/youtube/v3';
 

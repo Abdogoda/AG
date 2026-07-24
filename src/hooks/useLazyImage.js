@@ -1,6 +1,11 @@
 // useLazyImage.js - Custom hook for lazy loading images using Intersection Observer API
 import { useEffect, useRef, useState, useMemo } from 'react';
 
+const DEFAULT_PLACEHOLDER =
+  'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300"%3E%3Crect fill="%23f0f0f0" width="400" height="300"/%3E%3C/svg%3E';
+
+const DEFAULT_OPTIONS = {};
+
 /**
  * Custom hook for lazy loading images
  *
@@ -14,28 +19,37 @@ import { useEffect, useRef, useState, useMemo } from 'react';
  */
 export const useLazyImage = (
   src,
-  placeholder = 'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300"%3E%3Crect fill="%23f0f0f0" width="400" height="300"/%3E%3C/svg%3E',
-  customOptions = {}
+  placeholder = DEFAULT_PLACEHOLDER,
+  customOptions = DEFAULT_OPTIONS
 ) => {
   const ref = useRef(null);
   const [imageSrc, setImageSrc] = useState(placeholder);
   const [isLoaded, setIsLoaded] = useState(false);
   const [error, setError] = useState(null);
 
-  // Memoize options to avoid dependency issues
+  // Extract primitive properties to maintain a stable memoized options object
+  const rootMargin = customOptions?.rootMargin || '50px';
+  const threshold = customOptions?.threshold || 0;
+  const root = customOptions?.root || null;
+
   const observerOptions = useMemo(
     () => ({
-      rootMargin: '50px',
-      threshold: 0,
-      ...customOptions,
+      rootMargin,
+      threshold,
+      root,
     }),
-    [customOptions]
+    [rootMargin, threshold, root]
   );
 
   useEffect(() => {
     // Skip if no src provided
     if (!src) {
-      setError(new Error('No image source provided'));
+      if (imageSrc !== placeholder) {
+        setImageSrc(placeholder);
+      }
+      if (isLoaded) {
+        setIsLoaded(false);
+      }
       return;
     }
 
@@ -44,8 +58,15 @@ export const useLazyImage = (
       return;
     }
 
-    // Capture ref.current to use in cleanup
+    let isMounted = true;
     const currentRef = ref.current;
+
+    // Fallback if IntersectionObserver is unsupported
+    if (typeof IntersectionObserver === 'undefined') {
+      setImageSrc(src);
+      setIsLoaded(true);
+      return;
+    }
 
     // Create intersection observer
     const observer = new IntersectionObserver((entries) => {
@@ -55,17 +76,19 @@ export const useLazyImage = (
           const img = new Image();
 
           img.onload = () => {
+            if (!isMounted) return;
             setImageSrc(src);
             setIsLoaded(true);
             setError(null);
-            observer.unobserve(entry.target);
+            if (entry.target) observer.unobserve(entry.target);
           };
 
           img.onerror = () => {
+            if (!isMounted) return;
             const err = new Error(`Failed to load image: ${src}`);
             setError(err);
             setIsLoaded(false);
-            observer.unobserve(entry.target);
+            if (entry.target) observer.unobserve(entry.target);
           };
 
           img.src = src;
@@ -80,12 +103,13 @@ export const useLazyImage = (
 
     // Cleanup using captured ref value
     return () => {
+      isMounted = false;
       if (currentRef) {
         observer.unobserve(currentRef);
       }
       observer.disconnect();
     };
-  }, [src, imageSrc, isLoaded, observerOptions]);
+  }, [src, imageSrc, isLoaded, observerOptions, placeholder]);
 
   return { ref, imageSrc, isLoaded, error };
 };
@@ -133,3 +157,4 @@ export const LazyImage = ({
 };
 
 export default useLazyImage;
+
