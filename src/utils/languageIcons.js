@@ -10,7 +10,7 @@ const languageIconMap = {
   React: `${process.env.PUBLIC_URL}/images/icons/react.png`,
   Angular: `${process.env.PUBLIC_URL}/images/icons/angular.png`,
   MySQL: `${process.env.PUBLIC_URL}/images/icons/mysql.png`,
-  MongoDB: `${process.env.PUBLIC_URL}/images/icons/mongodb.png`,
+  MongoDB: `${process.env.PUBLIC_URL}/images/icons/MongoDB.png`,
   PostgreSQL: `${process.env.PUBLIC_URL}/images/icons/postgresql.png`,
   Bootstrap: `${process.env.PUBLIC_URL}/images/icons/bootstrap.png`,
   Tailwind: `${process.env.PUBLIC_URL}/images/icons/tailwind.png`,
@@ -27,7 +27,7 @@ const languageIconMap = {
   Swagger: `${process.env.PUBLIC_URL}/images/icons/swagger.png`,
   jQuery: `${process.env.PUBLIC_URL}/images/icons/jquery.png`,
   NodeJs: `${process.env.PUBLIC_URL}/images/icons/nodejs.png`,
-  ExpressJs: `${process.env.PUBLIC_URL}/images/icons/expressjs.png`,
+  ExpressJs: `${process.env.PUBLIC_URL}/images/icons/ExpressJs.png`,
   Docker: `${process.env.PUBLIC_URL}/images/icons/docker.png`,
 };
 
