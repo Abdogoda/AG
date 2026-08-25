@@ -3,6 +3,36 @@
   "projects": [
     {
       "images": [
+        "/images/projects/muslim-academy/1.png",
+        "/images/projects/muslim-academy/2.jpg",
+        "/images/projects/muslim-academy/3.jpg",
+        "/images/projects/muslim-academy/4.jpg",
+        "/images/projects/muslim-academy/5.jpg",
+        "/images/projects/muslim-academy/6.jpg",
+        "/images/projects/muslim-academy/7.jpg",
+        "/images/projects/muslim-academy/8.jpg"
+      ],
+      "languages": [
+        "Laravel",
+        "PHP",
+        "MySQL",
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "Tailwind",
+        "Livewire",
+        "jQuery"
+      ],
+      "title": "Muslim Academy",
+      "slug": "muslim-academy",
+      "description": "Muslim Academy Backend is a production-grade, enterprise-ready E-Learning and Virtual Mentorship Backend API & Administrative Platform built on Laravel 12 and Livewire 3. It powers an online educational platform specialized in Islamic studies, featuring dual-role RESTful APIs for Students and Teachers, integrated with a reactive, localized Admin Dashboard. The system facilitates live virtual video classes, assessment management (quizzes, assignments, reports), subscription billing, a digital library, real-time teacher-student chat via Firebase, and an 'Ask Scholars' Q&A mentorship engine.",
+      "githubLink": null,
+      "liveDemoLink": "https://muslim-academy.net",
+      "youtubeLink": null,
+      "type": "PHP/Laravel"
+    },
+    {
+      "images": [
         "/images/projects/authentication-system/1.png",
         "/images/projects/authentication-system/2.jpg",
         "/images/projects/authentication-system/3.jpg",
