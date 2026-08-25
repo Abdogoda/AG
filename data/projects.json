@@ -3,14 +3,14 @@
   "projects": [
     {
       "images": [
-        "/images/projects/muslim-academy/1.png",
-        "/images/projects/muslim-academy/2.jpg",
-        "/images/projects/muslim-academy/3.jpg",
-        "/images/projects/muslim-academy/4.jpg",
-        "/images/projects/muslim-academy/5.jpg",
-        "/images/projects/muslim-academy/6.jpg",
-        "/images/projects/muslim-academy/7.jpg",
-        "/images/projects/muslim-academy/8.jpg"
+        "/images/projects/muslim-academy/1.jpeg",
+        "/images/projects/muslim-academy/2.png",
+        "/images/projects/muslim-academy/3.png",
+        "/images/projects/muslim-academy/4.png",
+        "/images/projects/muslim-academy/5.png",
+        "/images/projects/muslim-academy/6.png",
+        "/images/projects/muslim-academy/7.png",
+        "/images/projects/muslim-academy/8.png"
       ],
       "languages": [
         "Laravel",
@@ -34,12 +34,12 @@
     {
       "images": [
         "/images/projects/tharaa-alelm/1.png",
-        "/images/projects/tharaa-alelm/2.jpg",
-        "/images/projects/tharaa-alelm/3.jpg",
-        "/images/projects/tharaa-alelm/4.jpg",
-        "/images/projects/tharaa-alelm/5.jpg",
-        "/images/projects/tharaa-alelm/6.jpg",
-        "/images/projects/tharaa-alelm/7.jpg"
+        "/images/projects/tharaa-alelm/2.png",
+        "/images/projects/tharaa-alelm/3.png",
+        "/images/projects/tharaa-alelm/4.png",
+        "/images/projects/tharaa-alelm/5.png",
+        "/images/projects/tharaa-alelm/6.png",
+        "/images/projects/tharaa-alelm/7.png"
       ],
       "languages": [
         "Laravel",
