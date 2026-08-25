@@ -33,6 +33,35 @@
     },
     {
       "images": [
+        "/images/projects/tharaa-alelm/1.png",
+        "/images/projects/tharaa-alelm/2.jpg",
+        "/images/projects/tharaa-alelm/3.jpg",
+        "/images/projects/tharaa-alelm/4.jpg",
+        "/images/projects/tharaa-alelm/5.jpg",
+        "/images/projects/tharaa-alelm/6.jpg",
+        "/images/projects/tharaa-alelm/7.jpg"
+      ],
+      "languages": [
+        "Laravel",
+        "PHP",
+        "MySQL",
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "Tailwind",
+        "Livewire",
+        "jQuery"
+      ],
+      "title": "Tharaa Elalm",
+      "slug": "tharaa-elalm",
+      "description": "Tharaa Elalm Multi-Vendor Marketplace is a specialized e-commerce backend subsystem integrated within an educational ecosystem, enabling vendors, merchants, and bookstores to list and sell learning supplies, books, and stationery directly to students. Built with Laravel 12 and multi-guard Sanctum authentication, it features a dedicated merchant portal for store setup, category structuring, and real-time inventory management with price and visibility controls. The platform supports merchant-driven promotional ad campaigns on the student mobile app, an end-to-end order fulfillment pipeline tracking purchases from order placement through delivery completion, and an integrated digital wallet system providing real-time financial tracking, revenue logs, and payout withdrawal management connected with Fawaterak payment webhooks.",
+      "githubLink": null,
+      "liveDemoLink": "https://play.google.com/store/apps/details?id=tech.thraa.student&pcampaignid=web_share",
+      "youtubeLink": null,
+      "type": "PHP/Laravel"
+    },
+    {
+      "images": [
         "/images/projects/authentication-system/1.png",
         "/images/projects/authentication-system/2.jpg",
         "/images/projects/authentication-system/3.jpg",
