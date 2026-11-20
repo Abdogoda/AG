@@ -37,6 +37,36 @@
     },
     {
       "images": [
+        "/images/projects/saabq-cal/1.png",
+        "/images/projects/saabq-cal/2.png",
+        "/images/projects/saabq-cal/3.png",
+        "/images/projects/saabq-cal/4.png",
+        "/images/projects/saabq-cal/5.png",
+        "/images/projects/saabq-cal/6.png",
+        "/images/projects/saabq-cal/7.png",
+        "/images/projects/saabq-cal/8.png"
+      ],
+      "languages": [
+        "Laravel",
+        "PHP",
+        "MySQL",
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "Tailwind",
+        "Livewire",
+        "jQuery"
+      ],
+      "title": "Saabq Cal",
+      "slug": "saabq-cal",
+      "description": "**Saabq** is a multi-tenant business operations and booking SaaS platform that enables service providers, clinics, consultants, and rental businesses to manage online appointment scheduling, property/unit rentals, and customer interactions in one unified bilingual system. It provides public booking and rental landing pages, real-time availability engines, recurring appointment series, and dynamic intake forms for clients, alongside dedicated team workspaces equipped with role-based access control, customer CRM records, and a built-in omnichannel live chat support hub. The platform also features automated notifications, calendar and spreadsheet integrations, and an overarching super-admin suite to manage platform subscriptions, workspace tiers, and business billing.",
+      "githubLink": null,
+      "liveDemoLink": "https://saabqcal.com",
+      "youtubeLink": null,
+      "type": "PHP/Laravel"
+    },
+    {
+      "images": [
         "/images/projects/4hand/1.png",
         "/images/projects/4hand/2.png",
         "/images/projects/4hand/3.png",
