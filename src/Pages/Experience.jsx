@@ -19,13 +19,51 @@ import {
   FaCheckCircle,
 } from 'react-icons/fa';
 
+// Animated Counter for Stats
+function AnimatedStatValue({ value }) {
+  const [displayValue, setDisplayValue] = useState(value);
+
+  useEffect(() => {
+    // Check if the value has a leading or trailing number (e.g. "20+", "2+", "5")
+    const match = value.match(/^(\D*)(\d+)(\D*)$/);
+    if (!match) {
+      setDisplayValue(value);
+      return;
+    }
+
+    const prefix = match[1] || '';
+    const targetNum = parseInt(match[2], 10);
+    const suffix = match[3] || '';
+
+    let start = 0;
+    const duration = 1200; // ms
+    const stepTime = 30;
+    const totalSteps = Math.ceil(duration / stepTime);
+    const stepIncrement = targetNum / totalSteps;
+    let currentStep = 0;
+
+    const timer = setInterval(() => {
+      currentStep++;
+      start += stepIncrement;
+      if (currentStep >= totalSteps || start >= targetNum) {
+        setDisplayValue(`${prefix}${targetNum}${suffix}`);
+        clearInterval(timer);
+      } else {
+        setDisplayValue(`${prefix}${Math.floor(start)}${suffix}`);
+      }
+    }, stepTime);
+
+    return () => clearInterval(timer);
+  }, [value]);
+
+  return <span className="stat__value">{displayValue}</span>;
+}
+
 function Experience() {
   const { data: expData, loading, error } = useData('experience');
   const { data: aboutData } = useData('about');
   const [activeCategory, setActiveCategory] = useState('All');
   const [searchQuery, setSearchQuery] = useState('');
-  const [visibleItems, setVisibleItems] = useState({});
-  const rowRefs = useRef({});
   const timelineRef = useRef(null);
 
   // Letter animation (matching other pages)
@@ -36,50 +74,6 @@ function Experience() {
     }, 3000);
     return () => clearTimeout(timer);
   }, []);
-
-  // Pre-reveal top visible items so above-the-fold content shows immediately
-  useEffect(() => {
-    if (expData?.experiences && expData.experiences.length > 0) {
-      const topItems = {};
-      expData.experiences.slice(0, 2).forEach((exp, i) => {
-        topItems[exp.id || `exp-${i}`] = true;
-      });
-      setVisibleItems((prev) => ({ ...topItems, ...prev }));
-    }
-  }, [expData]);
-
-  // IntersectionObserver for animation on scroll
-  useEffect(() => {
-    const observerCallback = (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          const id = entry.target.getAttribute('data-id');
-          if (id) {
-            setVisibleItems((prev) => ({ ...prev, [id]: true }));
-          }
-        }
-      });
-    };
-
-    const observerOptions = {
-      root: null,
-      rootMargin: '0px 0px -40px 0px',
-      threshold: 0.15,
-    };
-
-    const observer = new IntersectionObserver(observerCallback, observerOptions);
-
-    const currentRefs = rowRefs.current;
-    Object.values(currentRefs).forEach((el) => {
-      if (el) observer.observe(el);
-    });
-
-    return () => {
-      Object.values(currentRefs).forEach((el) => {
-        if (el) observer.unobserve(el);
-      });
-    };
-  }, [expData, activeCategory, searchQuery]);
 
   // Spotlight mouse effect on cards
   useEffect(() => {
@@ -186,16 +180,16 @@ function Experience() {
               to production.
             </p>
 
-            {/* Quick Metrics & Stats Grid (animated like About page) */}
+            {/* Animated Metrics & Stats Grid */}
             <div className="experience__stats__grid">
               {stats.map((stat, idx) => (
                 <div
                   className="experience__stat__card"
                   key={idx}
-                  style={{ animationDelay: `${0.12 * idx + 1.3}s` }}
+                  style={{ animationDelay: `${0.12 * idx + 0.3}s` }}
                 >
                   <div className="stat__glow"></div>
-                  <span className="stat__value">{stat.value}</span>
+                  <AnimatedStatValue value={stat.value} />
                   <span className="stat__label">{stat.label}</span>
                 </div>
               ))}
@@ -250,7 +244,7 @@ function Experience() {
             </div>
           </div>
 
-          {/* Timeline Container with Flex Layout and Scroll Reveal */}
+          {/* Timeline Container with Flex Layout (Static, No Card Animation) */}
           <div className="experience__timeline" ref={timelineRef}>
             {filteredExperiences.length === 0 ? (
               <div className="experience__empty">
@@ -270,17 +264,12 @@ function Experience() {
               filteredExperiences.map((exp, index) => {
                 const isWork = exp.category?.toLowerCase() === 'work';
                 const rowId = exp.id || `exp-${index}`;
-                const isVisible = visibleItems[rowId];
                 const isLast = index === filteredExperiences.length - 1;
 
                 return (
                   <div
-                    className={`timeline__row ${exp.current ? 'is__current' : ''} ${
-                      isVisible ? 'is__visible' : 'is__hidden'
-                    }`}
+                    className={`timeline__row ${exp.current ? 'is__current' : ''}`}
                     key={rowId}
-                    data-id={rowId}
-                    ref={(el) => (rowRefs.current[rowId] = el)}
                   >
                     {/* Reliable Flex Spine Column */}
                     <div className="timeline__spine">
@@ -296,7 +285,7 @@ function Experience() {
                       {!isLast && <div className="spine__line"></div>}
                     </div>
 
-                    {/* Creative Experience Card */}
+                    {/* Creative Experience Card (Immediately Visible, No Animation) */}
                     <div className="experience__card">
                       {/* Dynamic Spotlight Radial Gradient */}
                       <div className="card__spotlight"></div>
@@ -370,14 +359,7 @@ function Experience() {
                             </div>
                             <ul className="highlights__list">
                               {exp.highlights.map((highlight, hIdx) => (
-                                <li
-                                  key={hIdx}
-                                  style={{
-                                    transitionDelay: isVisible
-                                      ? `${0.08 * hIdx + 0.2}s`
-                                      : '0s',
-                                  }}
-                                >
+                                <li key={hIdx}>
                                   <FaCheckCircle className="check__bullet" />
                                   <span>{highlight}</span>
                                 </li>
@@ -407,11 +389,6 @@ function Experience() {
                                   }`}
                                   onClick={() => setSearchQuery(tech)}
                                   title={`Filter by ${tech}`}
-                                  style={{
-                                    transitionDelay: isVisible
-                                      ? `${0.04 * tIdx + 0.3}s`
-                                      : '0s',
-                                  }}
                                 >
                                   {tech}
                                 </span>

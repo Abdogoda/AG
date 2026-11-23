@@ -338,60 +338,6 @@
       }
 
       // ============================================
-      // SCROLL ANIMATIONS
-      // ============================================
-      &.is__hidden {
-        .spine__node {
-          opacity: 0;
-          transform: scale(0.4);
-        }
-
-        .experience__card {
-          opacity: 0;
-          transform: translateY(45px) scale(0.97);
-        }
-
-        .card__highlights .highlights__list li {
-          opacity: 0;
-          transform: translateX(-18px);
-        }
-
-        .card__tech .tech__tags .tech__tag {
-          opacity: 0;
-          transform: scale(0.8);
-        }
-      }
-
-      &.is__visible {
-        .spine__node {
-          opacity: 1;
-          transform: scale(1);
-          transition: opacity 0.5s ease, transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
-        }
-
-        .experience__card {
-          opacity: 1;
-          transform: translateY(0) scale(1);
-          transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
-            transform 0.7s cubic-bezier(0.16, 1, 0.3, 1),
-            border-color 0.3s ease,
-            box-shadow 0.3s ease;
-        }
-
-        .card__highlights .highlights__list li {
-          opacity: 1;
-          transform: translateX(0);
-          transition: opacity 0.5s ease, transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
-        }
-
-        .card__tech .tech__tags .tech__tag {
-          opacity: 1;
-          transform: scale(1);
-          transition: opacity 0.4s ease, transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), background 0.25s ease, border-color 0.25s ease;
-        }
-      }
-
-      // ============================================
       // TIMELINE SPINE (FLEX COLUMN, CANNOT OVERLAP)
       // ============================================
       .timeline__spine {
@@ -952,20 +898,6 @@
       .main__button {
         text-align: center;
         margin-left: 0 !important;
-      }
-    }
-  }
-
-  // Accessibility override for reduced motion
-  @media (prefers-reduced-motion: reduce) {
-    .timeline__row {
-      .spine__node,
-      .experience__card,
-      .card__highlights .highlights__list li,
-      .card__tech .tech__tags .tech__tag {
-        opacity: 1 !important;
-        transform: none !important;
-        transition: none !important;
       }
     }
   }
