@@ -34,25 +34,28 @@ function AnimatedStatValue({ value }) {
     const targetNum = parseInt(match[2], 10);
     const suffix = match[3] || '';
 
-    let start = 0;
-    const duration = 1200; // ms
-    const stepTime = 30;
-    const totalSteps = Math.ceil(duration / stepTime);
-    const stepIncrement = targetNum / totalSteps;
-    let currentStep = 0;
+    // Delay start until after loader finishes (1.6s)
+    const startTimer = setTimeout(() => {
+      let start = 0;
+      const duration = 1200; // ms
+      const stepTime = 30;
+      const totalSteps = Math.ceil(duration / stepTime);
+      const stepIncrement = targetNum / totalSteps;
+      let currentStep = 0;
 
-    const timer = setInterval(() => {
-      currentStep++;
-      start += stepIncrement;
-      if (currentStep >= totalSteps || start >= targetNum) {
-        setDisplayValue(`${prefix}${targetNum}${suffix}`);
-        clearInterval(timer);
-      } else {
-        setDisplayValue(`${prefix}${Math.floor(start)}${suffix}`);
-      }
-    }, stepTime);
+      const timer = setInterval(() => {
+        currentStep++;
+        start += stepIncrement;
+        if (currentStep >= totalSteps || start >= targetNum) {
+          setDisplayValue(`${prefix}${targetNum}${suffix}`);
+          clearInterval(timer);
+        } else {
+          setDisplayValue(`${prefix}${Math.floor(start)}${suffix}`);
+        }
+      }, stepTime);
+    }, 1500);
 
-    return () => clearInterval(timer);
+    return () => clearTimeout(startTimer);
   }, [value]);
 
   return <span className="stat__value">{displayValue}</span>;
@@ -63,8 +66,6 @@ function Experience() {
   const { data: aboutData } = useData('about');
   const [activeCategory, setActiveCategory] = useState('All');
   const [searchQuery, setSearchQuery] = useState('');
-  const [visibleItems, setVisibleItems] = useState({});
-  const rowRefs = useRef({});
   const timelineRef = useRef(null);
 
   // Letter animation (matching other pages)
@@ -76,38 +77,21 @@ function Experience() {
     return () => clearTimeout(timer);
   }, []);
 
-  // Animation on scroll: reliable scroll listener + IntersectionObserver
+  // Scroll listener to animate cards when scrolled into view
   useEffect(() => {
-    const checkVisibility = () => {
-      const windowHeight = window.innerHeight || document.documentElement.clientHeight;
-      const triggerThreshold = windowHeight * 0.90; // Triggers when top is in bottom 90% of screen
-
-      Object.entries(rowRefs.current).forEach(([id, el]) => {
-        if (el) {
-          const rect = el.getBoundingClientRect();
-          if (rect.top <= triggerThreshold && rect.bottom >= 0) {
-            setVisibleItems((prev) => {
-              if (prev[id]) return prev;
-              return { ...prev, [id]: true };
-            });
-          }
+    const handleScroll = () => {
+      const windowHeight = window.innerHeight;
+      document.querySelectorAll('.timeline__row').forEach((row) => {
+        const rect = row.getBoundingClientRect();
+        if (rect.top <= windowHeight * 0.88 && rect.bottom >= 0) {
+          row.classList.add('is__scrolled');
         }
       });
     };
 
-    // Run immediately and on scroll/resize
-    checkVisibility();
-    const timer = setTimeout(checkVisibility, 200);
-
-    window.addEventListener('scroll', checkVisibility, { passive: true });
-    window.addEventListener('resize', checkVisibility, { passive: true });
-
-    return () => {
-      clearTimeout(timer);
-      window.removeEventListener('scroll', checkVisibility);
-      window.removeEventListener('resize', checkVisibility);
-    };
-  }, [expData, activeCategory, searchQuery]);
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [activeCategory, searchQuery]);
 
   // Spotlight mouse effect on cards
   useEffect(() => {
@@ -217,11 +201,7 @@ function Experience() {
             {/* Animated Metrics & Stats Grid */}
             <div className="experience__stats__grid">
               {stats.map((stat, idx) => (
-                <div
-                  className="experience__stat__card"
-                  key={idx}
-                  style={{ animationDelay: `${0.12 * idx + 0.3}s` }}
-                >
+                <div className="experience__stat__card" key={idx}>
                   <div className="stat__glow"></div>
                   <AnimatedStatValue value={stat.value} />
                   <span className="stat__label">{stat.label}</span>
@@ -278,7 +258,7 @@ function Experience() {
             </div>
           </div>
 
-          {/* Timeline Container with Flex Layout and Scroll Animation */}
+          {/* Timeline Container with Flex Layout */}
           <div className="experience__timeline" ref={timelineRef}>
             {filteredExperiences.length === 0 ? (
               <div className="experience__empty">
@@ -299,15 +279,11 @@ function Experience() {
                 const isWork = exp.category?.toLowerCase() === 'work';
                 const rowId = exp.id || `exp-${index}`;
                 const isLast = index === filteredExperiences.length - 1;
-                const isInView = Boolean(visibleItems[rowId]);
 
                 return (
                   <div
-                    className={`timeline__row ${exp.current ? 'is__current' : ''} ${
-                      isInView ? 'is__in_view' : 'is__awaiting'
-                    }`}
+                    className={`timeline__row ${exp.current ? 'is__current' : ''}`}
                     key={rowId}
-                    ref={(el) => (rowRefs.current[rowId] = el)}
                   >
                     {/* Reliable Flex Spine Column */}
                     <div className="timeline__spine">
@@ -323,7 +299,7 @@ function Experience() {
                       {!isLast && <div className="spine__line"></div>}
                     </div>
 
-                    {/* Creative Experience Card (Animated on Scroll) */}
+                    {/* Creative Experience Card */}
                     <div className="experience__card">
                       {/* Dynamic Spotlight Radial Gradient */}
                       <div className="card__spotlight"></div>
