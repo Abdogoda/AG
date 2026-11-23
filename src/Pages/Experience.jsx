@@ -66,7 +66,16 @@ function Experience() {
   const { data: aboutData } = useData('about');
   const [activeCategory, setActiveCategory] = useState('All');
   const [searchQuery, setSearchQuery] = useState('');
+  const [hasInitiallyLoaded, setHasInitiallyLoaded] = useState(false);
   const timelineRef = useRef(null);
+
+  // Synchronize with loader duration on first mount
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setHasInitiallyLoaded(true);
+    }, 1600);
+    return () => clearTimeout(timer);
+  }, []);
 
   // Letter animation (matching other pages)
   const [letterClass, setLetterClass] = useState('text-animate');
@@ -77,21 +86,49 @@ function Experience() {
     return () => clearTimeout(timer);
   }, []);
 
-  // Scroll listener to animate cards when scrolled into view
+  // Animate cards on scroll: observer + viewport check
   useEffect(() => {
-    const handleScroll = () => {
-      const windowHeight = window.innerHeight;
+    if (!hasInitiallyLoaded) return;
+
+    const revealCards = () => {
+      const windowHeight =
+        window.innerHeight || document.documentElement.clientHeight;
       document.querySelectorAll('.timeline__row').forEach((row) => {
         const rect = row.getBoundingClientRect();
-        if (rect.top <= windowHeight * 0.88 && rect.bottom >= 0) {
-          row.classList.add('is__scrolled');
+        if (rect.top <= windowHeight * 0.90 && rect.bottom >= 0) {
+          row.classList.add('is__visible');
         }
       });
     };
 
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, [activeCategory, searchQuery]);
+    revealCards();
+    const immediateTimer = setTimeout(revealCards, 60);
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is__visible');
+          }
+        });
+      },
+      { threshold: 0.1, rootMargin: '0px 0px -30px 0px' }
+    );
+
+    document.querySelectorAll('.timeline__row').forEach((row) => {
+      observer.observe(row);
+    });
+
+    window.addEventListener('scroll', revealCards, { passive: true });
+    window.addEventListener('resize', revealCards, { passive: true });
+
+    return () => {
+      clearTimeout(immediateTimer);
+      observer.disconnect();
+      window.removeEventListener('scroll', revealCards);
+      window.removeEventListener('resize', revealCards);
+    };
+  }, [hasInitiallyLoaded, activeCategory, searchQuery]);
 
   // Spotlight mouse effect on cards
   useEffect(() => {
