@@ -13,6 +13,7 @@ import Error from './Pages/Error';
 import Particle from './Components/Particle';
 
 // Lazy load - heavy pages with large components/images
+const Experience = React.lazy(() => import('./Pages/Experience'));
 const Portfolio = React.lazy(() => import('./Pages/Portfolio'));
 const Project = React.lazy(() => import('./Pages/Project'));
 const YouTube = React.lazy(() => import('./Pages/YouTube'));
@@ -28,6 +29,14 @@ function App() {
             <Route path="/">
               <Route index element={<Home />} />
               <Route path="about" element={<About />} />
+              <Route
+                path="experience"
+                element={
+                  <Suspense fallback={<SuspenseFallback />}>
+                    <Experience />
+                  </Suspense>
+                }
+              />
               <Route
                 path="projects"
                 element={

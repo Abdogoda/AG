@@ -1,6 +1,8 @@
 import {
   FaHome,
   FaUser,
+  FaBriefcase,
+  FaGraduationCap,
   FaEye,
   FaYoutube,
   FaEnvelope,
@@ -13,6 +15,8 @@ import {
 const iconMap = {
   FaHome,
   FaUser,
+  FaBriefcase,
+  FaGraduationCap,
   FaEye,
   FaYoutube,
   FaEnvelope,

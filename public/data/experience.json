@@ -1,0 +1,142 @@
+{
+  "categories": ["All", "Work", "Education"],
+  "stats": [
+    { "label": "Years Experience", "value": "2+" },
+    { "label": "Client & Enterprise Projects", "value": "20+" },
+    { "label": "Companies & Roles", "value": "5" },
+    { "label": "Academic Cohort Rank", "value": "Top 4" }
+  ],
+  "experiences": [
+    {
+      "id": "exp-jt",
+      "category": "Work",
+      "role": "API Integration Specialist",
+      "company": "J&T Express",
+      "companyType": "Full-time",
+      "workplaceType": "On-site",
+      "location": "Cairo, Egypt",
+      "period": "Sep 2026 – Present",
+      "duration": "3 mos",
+      "current": true,
+      "logoColor": "#e60012",
+      "companyInitial": "J&T",
+      "description": "Leading enterprise logistics API integrations, webhook automations, and high-concurrency data exchange pipelines for international logistics operations.",
+      "highlights": [
+        "Architecting and integrating mission-critical B2B APIs for enterprise e-commerce partners and carrier systems.",
+        "Engineering reliable webhook listeners and asynchronous task queues for real-time parcel lifecycle tracking and status sync.",
+        "Optimizing payload processing, automated reconciliation, and error recovery protocols ensuring zero data loss across high-volume pipelines.",
+        "Partnering with technical operations and cross-functional engineering teams to maintain seamless system uptime and compliance."
+      ],
+      "technologies": ["RESTful APIs", "API Architecture", "Webhooks", "JSON/XML", "Postman", "System Integration", "Data Reconciliation", "Queue Workers"]
+    },
+    {
+      "id": "exp-brmja",
+      "category": "Work",
+      "role": "Back End Developer",
+      "company": "Brmja Tech",
+      "companyType": "Full-time",
+      "workplaceType": "Hybrid",
+      "location": "Cairo, Egypt",
+      "period": "Jul 2026 – Sep 2026",
+      "duration": "3 mos",
+      "current": false,
+      "logoColor": "#ff9800",
+      "companyInitial": "BT",
+      "description": "Built resilient backend architectures, scalable microservices, and database optimization strategies for client web solutions.",
+      "highlights": [
+        "Engineered scalable RESTful API services following MVC patterns, SOLID principles, and clean architecture standards.",
+        "Modeled efficient relational schemas in MySQL/PostgreSQL, reducing execution bottlenecks and query latencies.",
+        "Implemented robust authentication & authorization layers (JWT, OAuth2, RBAC) for role-sensitive applications.",
+        "Collaborated with frontend and product teams in an agile setting, accelerating release cadences."
+      ],
+      "technologies": ["PHP", "Laravel", "MySQL", "RESTful APIs", "JWT / RBAC", "Git", "Postman", "Redis"]
+    },
+    {
+      "id": "exp-freelance",
+      "category": "Work",
+      "role": "Software Engineer",
+      "company": "Freelancer",
+      "companyType": "Freelance",
+      "workplaceType": "Remote",
+      "location": "Remote",
+      "period": "Jul 2025 – Jun 2026",
+      "duration": "1 yr",
+      "current": false,
+      "logoColor": "#45f3ff",
+      "companyInitial": "AG",
+      "description": "Delivered end-to-end full-stack web applications, custom management dashboards, and AI-integrated platforms for international businesses.",
+      "highlights": [
+        "Delivered 15+ production-grade web applications using Laravel, PHP, MySQL, and modern JavaScript/React.",
+        "Engineered custom admin dashboards, automated payment gateway integrations (Paymob, Stripe), and notification engines.",
+        "Integrated AI-assisted development tools and intelligent APIs to accelerate delivery speed and elevate code reliability.",
+        "Handled direct client discovery, requirement specifications, architecture design, and cloud deployments."
+      ],
+      "technologies": ["Laravel", "PHP", "React", "JavaScript", "REST APIs", "MySQL", "Docker", "HTML5", "CSS3", "Payment Gateways", "AI Integration"]
+    },
+    {
+      "id": "exp-teradeveloper",
+      "category": "Work",
+      "role": "Web Developer",
+      "company": "Teradeveloper",
+      "companyType": "Full-time",
+      "workplaceType": "Remote",
+      "location": "Alexandria, Egypt",
+      "period": "Nov 2024 – Feb 2025",
+      "duration": "4 mos",
+      "current": false,
+      "logoColor": "#00d2d3",
+      "companyInitial": "TD",
+      "description": "Developed and maintained high-performance backend systems in Laravel, integrating seamless data contracts with Angular frontend clients.",
+      "highlights": [
+        "Developed and maintained scalable backend systems and services using Laravel framework.",
+        "Designed and standardized RESTful APIs for efficient, type-safe client-server communication with Angular frontend.",
+        "Refactored legacy endpoints, cutting payload sizes and improving response times by over 30%.",
+        "Collaborated on code reviews, continuous integration workflows, and production deployments."
+      ],
+      "technologies": ["Laravel", "PHP", "Angular", "RESTful APIs", "MySQL", "HTML5", "CSS3", "Postman", "Git"]
+    },
+    {
+      "id": "exp-heda",
+      "category": "Work",
+      "role": "Full Stack Web Developer",
+      "company": "Heda.firm",
+      "companyType": "Full-time",
+      "workplaceType": "Hybrid",
+      "location": "Cairo, Egypt",
+      "period": "Sep 2024 – Jan 2025",
+      "duration": "5 mos",
+      "current": false,
+      "logoColor": "#2980b9",
+      "companyInitial": "HF",
+      "description": "Updated, secured, and maintained enterprise web applications, resolving critical production issues and optimizing core database performance.",
+      "highlights": [
+        "Updated and maintained enterprise web applications, ensuring continuous uptime and smooth operational functionality.",
+        "Identified database bottlenecks and optimized complex relational queries, reducing server overhead during peak traffic.",
+        "Diagnosed and resolved critical software bugs and performance regressions in live production environments.",
+        "Implemented full-stack feature enhancements spanning PHP backend logic and responsive frontend user interfaces."
+      ],
+      "technologies": ["PHP", "Laravel", "MySQL", "Query Optimization", "JavaScript", "HTML5", "CSS3", "Full Stack Development"]
+    },
+    {
+      "id": "exp-education",
+      "category": "Education",
+      "role": "Bachelor in Computer Engineering",
+      "company": "Modern Academy for Engineering & Technology",
+      "companyType": "Higher Education",
+      "workplaceType": "On-site",
+      "location": "Cairo, Egypt",
+      "period": "2019 – 2024",
+      "duration": "5 yrs",
+      "current": false,
+      "logoColor": "#9b59b6",
+      "companyInitial": "MA",
+      "description": "5-year intensive engineering degree specializing in Software Engineering, Computer Vision, Distributed Systems, and Advanced Algorithms.",
+      "highlights": [
+        "Cumulative GPA: 3.41 — Ranked 4th in Cohort.",
+        "Graduation Project: Grade A+ (Deep Learning and Computer Vision Dental Diagnostic System using YOLOv8, ResNet-50, and OpenCV).",
+        "Core competencies: Data Structures, Algorithms, Object-Oriented Programming (OOP), SOLID Principles, System Architecture, Operating Systems."
+      ],
+      "technologies": ["Software Architecture", "Algorithms", "Data Structures", "Computer Vision", "Python", "C++", "OOP", "Database Design"]
+    }
+  ]
+}
