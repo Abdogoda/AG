@@ -24,9 +24,11 @@ function Experience() {
   const { data: aboutData } = useData('about');
   const [activeCategory, setActiveCategory] = useState('All');
   const [searchQuery, setSearchQuery] = useState('');
+  const [visibleItems, setVisibleItems] = useState({});
+  const rowRefs = useRef({});
   const timelineRef = useRef(null);
 
-  // Letter animation
+  // Letter animation (matching other pages)
   const [letterClass, setLetterClass] = useState('text-animate');
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -34,6 +36,50 @@ function Experience() {
     }, 3000);
     return () => clearTimeout(timer);
   }, []);
+
+  // Pre-reveal top visible items so above-the-fold content shows immediately
+  useEffect(() => {
+    if (expData?.experiences && expData.experiences.length > 0) {
+      const topItems = {};
+      expData.experiences.slice(0, 2).forEach((exp, i) => {
+        topItems[exp.id || `exp-${i}`] = true;
+      });
+      setVisibleItems((prev) => ({ ...topItems, ...prev }));
+    }
+  }, [expData]);
+
+  // IntersectionObserver for animation on scroll
+  useEffect(() => {
+    const observerCallback = (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const id = entry.target.getAttribute('data-id');
+          if (id) {
+            setVisibleItems((prev) => ({ ...prev, [id]: true }));
+          }
+        }
+      });
+    };
+
+    const observerOptions = {
+      root: null,
+      rootMargin: '0px 0px -40px 0px',
+      threshold: 0.15,
+    };
+
+    const observer = new IntersectionObserver(observerCallback, observerOptions);
+
+    const currentRefs = rowRefs.current;
+    Object.values(currentRefs).forEach((el) => {
+      if (el) observer.observe(el);
+    });
+
+    return () => {
+      Object.values(currentRefs).forEach((el) => {
+        if (el) observer.unobserve(el);
+      });
+    };
+  }, [expData, activeCategory, searchQuery]);
 
   // Spotlight mouse effect on cards
   useEffect(() => {
@@ -62,9 +108,9 @@ function Experience() {
     return (
       expData?.stats || [
         { label: 'Years Experience', value: '2+' },
-        { label: 'Delivered Projects', value: '20+' },
+        { label: 'Client & Enterprise Projects', value: '20+' },
         { label: 'Companies & Roles', value: '5' },
-        { label: 'Cohort Rank', value: 'Top 4' },
+        { label: 'Academic Cohort Rank', value: 'Top 4' },
       ]
     );
   }, [expData]);
@@ -140,13 +186,13 @@ function Experience() {
               to production.
             </p>
 
-            {/* Quick Metrics & Stats Grid */}
+            {/* Quick Metrics & Stats Grid (animated like About page) */}
             <div className="experience__stats__grid">
               {stats.map((stat, idx) => (
                 <div
                   className="experience__stat__card"
                   key={idx}
-                  style={{ animationDelay: `${0.1 * idx + 0.2}s` }}
+                  style={{ animationDelay: `${0.12 * idx + 1.3}s` }}
                 >
                   <div className="stat__glow"></div>
                   <span className="stat__value">{stat.value}</span>
@@ -204,7 +250,7 @@ function Experience() {
             </div>
           </div>
 
-          {/* Interactive Timeline Container */}
+          {/* Timeline Container with Flex Layout and Scroll Reveal */}
           <div className="experience__timeline" ref={timelineRef}>
             {filteredExperiences.length === 0 ? (
               <div className="experience__empty">
@@ -223,13 +269,20 @@ function Experience() {
             ) : (
               filteredExperiences.map((exp, index) => {
                 const isWork = exp.category?.toLowerCase() === 'work';
+                const rowId = exp.id || `exp-${index}`;
+                const isVisible = visibleItems[rowId];
+                const isLast = index === filteredExperiences.length - 1;
+
                 return (
                   <div
-                    className={`timeline__row ${exp.current ? 'is__current' : ''}`}
-                    key={exp.id || index}
-                    style={{ animationDelay: `${0.15 * index + 0.3}s` }}
+                    className={`timeline__row ${exp.current ? 'is__current' : ''} ${
+                      isVisible ? 'is__visible' : 'is__hidden'
+                    }`}
+                    key={rowId}
+                    data-id={rowId}
+                    ref={(el) => (rowRefs.current[rowId] = el)}
                   >
-                    {/* Glowing Left Node & Spine Dot */}
+                    {/* Reliable Flex Spine Column */}
                     <div className="timeline__spine">
                       <div
                         className={`spine__node ${
@@ -240,15 +293,16 @@ function Experience() {
                         {isWork ? <FaBriefcase /> : <FaGraduationCap />}
                         {exp.current && <span className="pulse__wave"></span>}
                       </div>
+                      {!isLast && <div className="spine__line"></div>}
                     </div>
 
                     {/* Creative Experience Card */}
                     <div className="experience__card">
-                      {/* Spotlight Radial Hover Gradient */}
+                      {/* Dynamic Spotlight Radial Gradient */}
                       <div className="card__spotlight"></div>
 
                       <div className="card__inner">
-                        {/* Top Meta Header: Company Avatar + Titles + Badges */}
+                        {/* Header: Company Avatar + Role + Badges */}
                         <div className="card__header">
                           <div className="company__brand">
                             <div
@@ -304,7 +358,7 @@ function Experience() {
                           </div>
                         </div>
 
-                        {/* Executive Summary */}
+                        {/* Summary Description */}
                         <p className="card__description">{exp.description}</p>
 
                         {/* Accomplishments & Responsibilities */}
@@ -316,7 +370,14 @@ function Experience() {
                             </div>
                             <ul className="highlights__list">
                               {exp.highlights.map((highlight, hIdx) => (
-                                <li key={hIdx}>
+                                <li
+                                  key={hIdx}
+                                  style={{
+                                    transitionDelay: isVisible
+                                      ? `${0.08 * hIdx + 0.2}s`
+                                      : '0s',
+                                  }}
+                                >
                                   <FaCheckCircle className="check__bullet" />
                                   <span>{highlight}</span>
                                 </li>
@@ -346,6 +407,11 @@ function Experience() {
                                   }`}
                                   onClick={() => setSearchQuery(tech)}
                                   title={`Filter by ${tech}`}
+                                  style={{
+                                    transitionDelay: isVisible
+                                      ? `${0.04 * tIdx + 0.3}s`
+                                      : '0s',
+                                  }}
                                 >
                                   {tech}
                                 </span>
@@ -361,7 +427,7 @@ function Experience() {
             )}
           </div>
 
-          {/* Action Call-to-Actions */}
+          {/* Action CTAs */}
           <div className="experience__actions">
             <a href={resumeUrl} download className="main__button">
               Download Full Resume (CV)
