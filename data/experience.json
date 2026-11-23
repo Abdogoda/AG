@@ -1,10 +1,21 @@
 {
-  "categories": ["All", "Work", "Education"],
   "stats": [
-    { "label": "Years Experience", "value": "2+" },
-    { "label": "Client & Enterprise Projects", "value": "20+" },
-    { "label": "Companies & Roles", "value": "5" },
-    { "label": "Academic Cohort Rank", "value": "Top 4" }
+    {
+      "label": "Years Experience",
+      "value": "2+"
+    },
+    {
+      "label": "Client & Enterprise Projects",
+      "value": "20+"
+    },
+    {
+      "label": "Companies & Roles",
+      "value": "5"
+    },
+    {
+      "label": "Academic Cohort Rank",
+      "value": "Top 4"
+    }
   ],
   "experiences": [
     {
@@ -19,7 +30,7 @@
       "duration": "3 mos",
       "current": true,
       "logoColor": "#e60012",
-      "companyInitial": "J&T",
+      "companyLogo": "images/companies/jt-express.png",
       "description": "Leading enterprise logistics API integrations, webhook automations, and high-concurrency data exchange pipelines for international logistics operations.",
       "highlights": [
         "Architecting and integrating mission-critical B2B APIs for enterprise e-commerce partners and carrier systems.",
@@ -27,7 +38,16 @@
         "Optimizing payload processing, automated reconciliation, and error recovery protocols ensuring zero data loss across high-volume pipelines.",
         "Partnering with technical operations and cross-functional engineering teams to maintain seamless system uptime and compliance."
       ],
-      "technologies": ["RESTful APIs", "API Architecture", "Webhooks", "JSON/XML", "Postman", "System Integration", "Data Reconciliation", "Queue Workers"]
+      "technologies": [
+        "RESTful APIs",
+        "API Architecture",
+        "Webhooks",
+        "JSON/XML",
+        "Postman",
+        "System Integration",
+        "Data Reconciliation",
+        "Queue Workers"
+      ]
     },
     {
       "id": "exp-brmja",
@@ -41,7 +61,7 @@
       "duration": "3 mos",
       "current": false,
       "logoColor": "#ff9800",
-      "companyInitial": "BT",
+      "companyLogo": "images/companies/brmja-tech.png",
       "description": "Built resilient backend architectures, scalable microservices, and database optimization strategies for client web solutions.",
       "highlights": [
         "Engineered scalable RESTful API services following MVC patterns, SOLID principles, and clean architecture standards.",
@@ -49,7 +69,16 @@
         "Implemented robust authentication & authorization layers (JWT, OAuth2, RBAC) for role-sensitive applications.",
         "Collaborated with frontend and product teams in an agile setting, accelerating release cadences."
       ],
-      "technologies": ["PHP", "Laravel", "MySQL", "RESTful APIs", "JWT / RBAC", "Git", "Postman", "Redis"]
+      "technologies": [
+        "PHP",
+        "Laravel",
+        "MySQL",
+        "RESTful APIs",
+        "JWT / RBAC",
+        "Git",
+        "Postman",
+        "Redis"
+      ]
     },
     {
       "id": "exp-freelance",
@@ -63,7 +92,7 @@
       "duration": "1 yr",
       "current": false,
       "logoColor": "#45f3ff",
-      "companyInitial": "AG",
+      "companyLogo": "images/companies/freelancer.svg",
       "description": "Delivered end-to-end full-stack web applications, custom management dashboards, and AI-integrated platforms for international businesses.",
       "highlights": [
         "Delivered 15+ production-grade web applications using Laravel, PHP, MySQL, and modern JavaScript/React.",
@@ -71,7 +100,19 @@
         "Integrated AI-assisted development tools and intelligent APIs to accelerate delivery speed and elevate code reliability.",
         "Handled direct client discovery, requirement specifications, architecture design, and cloud deployments."
       ],
-      "technologies": ["Laravel", "PHP", "React", "JavaScript", "REST APIs", "MySQL", "Docker", "HTML5", "CSS3", "Payment Gateways", "AI Integration"]
+      "technologies": [
+        "Laravel",
+        "PHP",
+        "React",
+        "JavaScript",
+        "REST APIs",
+        "MySQL",
+        "Docker",
+        "HTML5",
+        "CSS3",
+        "Payment Gateways",
+        "AI Integration"
+      ]
     },
     {
       "id": "exp-teradeveloper",
@@ -85,7 +126,7 @@
       "duration": "4 mos",
       "current": false,
       "logoColor": "#00d2d3",
-      "companyInitial": "TD",
+      "companyLogo": "images/companies/teradeveloper.png",
       "description": "Developed and maintained high-performance backend systems in Laravel, integrating seamless data contracts with Angular frontend clients.",
       "highlights": [
         "Developed and maintained scalable backend systems and services using Laravel framework.",
@@ -93,7 +134,17 @@
         "Refactored legacy endpoints, cutting payload sizes and improving response times by over 30%.",
         "Collaborated on code reviews, continuous integration workflows, and production deployments."
       ],
-      "technologies": ["Laravel", "PHP", "Angular", "RESTful APIs", "MySQL", "HTML5", "CSS3", "Postman", "Git"]
+      "technologies": [
+        "Laravel",
+        "PHP",
+        "Angular",
+        "RESTful APIs",
+        "MySQL",
+        "HTML5",
+        "CSS3",
+        "Postman",
+        "Git"
+      ]
     },
     {
       "id": "exp-heda",
@@ -107,7 +158,7 @@
       "duration": "5 mos",
       "current": false,
       "logoColor": "#2980b9",
-      "companyInitial": "HF",
+      "companyLogo": "images/companies/heda-firm.png",
       "description": "Updated, secured, and maintained enterprise web applications, resolving critical production issues and optimizing core database performance.",
       "highlights": [
         "Updated and maintained enterprise web applications, ensuring continuous uptime and smooth operational functionality.",
@@ -115,7 +166,16 @@
         "Diagnosed and resolved critical software bugs and performance regressions in live production environments.",
         "Implemented full-stack feature enhancements spanning PHP backend logic and responsive frontend user interfaces."
       ],
-      "technologies": ["PHP", "Laravel", "MySQL", "Query Optimization", "JavaScript", "HTML5", "CSS3", "Full Stack Development"]
+      "technologies": [
+        "PHP",
+        "Laravel",
+        "MySQL",
+        "Query Optimization",
+        "JavaScript",
+        "HTML5",
+        "CSS3",
+        "Full Stack Development"
+      ]
     },
     {
       "id": "exp-education",
@@ -129,14 +189,23 @@
       "duration": "5 yrs",
       "current": false,
       "logoColor": "#9b59b6",
-      "companyInitial": "MA",
+      "companyLogo": "images/companies/modern-academy.png",
       "description": "5-year intensive engineering degree specializing in Software Engineering, Computer Vision, Distributed Systems, and Advanced Algorithms.",
       "highlights": [
         "Cumulative GPA: 3.41 — Ranked 4th in Cohort.",
-        "Graduation Project: Grade A+ (Deep Learning and Computer Vision Dental Diagnostic System using YOLOv8, ResNet-50, and OpenCV).",
+        "Graduation Project: Grade A+ (AI-powered Computer Vision & Diagnostic System).",
         "Core competencies: Data Structures, Algorithms, Object-Oriented Programming (OOP), SOLID Principles, System Architecture, Operating Systems."
       ],
-      "technologies": ["Software Architecture", "Algorithms", "Data Structures", "Computer Vision", "Python", "C++", "OOP", "Database Design"]
+      "technologies": [
+        "Software Architecture",
+        "Algorithms",
+        "Data Structures",
+        "Computer Vision",
+        "Python",
+        "C++",
+        "OOP",
+        "Database Design"
+      ]
     }
   ]
 }
