@@ -17,7 +17,6 @@ export const fallbackDataMap = {
   },
 
   experience: {
-    categories: ['All', 'Work', 'Education'],
     stats: [
       { label: 'Years Experience', value: '2+' },
       { label: 'Client & Enterprise Projects', value: '20+' },
@@ -37,7 +36,7 @@ export const fallbackDataMap = {
         duration: '3 mos',
         current: true,
         logoColor: '#e60012',
-        companyInitial: 'J&T',
+        companyLogo: 'images/companies/jt-express.png',
         description:
           'Leading enterprise logistics API integrations, webhook automations, and high-concurrency data exchange pipelines for international logistics operations.',
         highlights: [
@@ -69,7 +68,7 @@ export const fallbackDataMap = {
         duration: '3 mos',
         current: false,
         logoColor: '#ff9800',
-        companyInitial: 'BT',
+        companyLogo: 'images/companies/brmja-tech.png',
         description:
           'Built resilient backend architectures, scalable microservices, and database optimization strategies for client web solutions.',
         highlights: [
@@ -101,7 +100,7 @@ export const fallbackDataMap = {
         duration: '1 yr',
         current: false,
         logoColor: '#45f3ff',
-        companyInitial: 'AG',
+        companyLogo: 'images/companies/freelancer.svg',
         description:
           'Delivered end-to-end full-stack web applications, custom management dashboards, and AI-integrated platforms for international businesses.',
         highlights: [
@@ -136,7 +135,7 @@ export const fallbackDataMap = {
         duration: '4 mos',
         current: false,
         logoColor: '#00d2d3',
-        companyInitial: 'TD',
+        companyLogo: 'images/companies/teradeveloper.png',
         description:
           'Developed and maintained high-performance backend systems in Laravel, integrating seamless data contracts with Angular frontend clients.',
         highlights: [
@@ -169,7 +168,7 @@ export const fallbackDataMap = {
         duration: '5 mos',
         current: false,
         logoColor: '#2980b9',
-        companyInitial: 'HF',
+        companyLogo: 'images/companies/heda-firm.png',
         description:
           'Updated, secured, and maintained enterprise web applications, resolving critical production issues and optimizing core database performance.',
         highlights: [
@@ -201,7 +200,7 @@ export const fallbackDataMap = {
         duration: '5 yrs',
         current: false,
         logoColor: '#9b59b6',
-        companyInitial: 'MA',
+        companyLogo: 'images/companies/modern-academy.png',
         description:
           '5-year intensive engineering degree specializing in Software Engineering, Computer Vision, Distributed Systems, and Advanced Algorithms.',
         highlights: [

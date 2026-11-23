@@ -14,8 +14,6 @@ import {
   FaMapMarkerAlt,
   FaLaptopCode,
   FaAward,
-  FaSearch,
-  FaBolt,
   FaCheckCircle,
 } from 'react-icons/fa';
 
@@ -64,8 +62,6 @@ function AnimatedStatValue({ value }) {
 function Experience() {
   const { data: expData, loading, error } = useData('experience');
   const { data: aboutData } = useData('about');
-  const [activeCategory, setActiveCategory] = useState('All');
-  const [searchQuery, setSearchQuery] = useState('');
   const [hasInitiallyLoaded, setHasInitiallyLoaded] = useState(false);
   const timelineRef = useRef(null);
 
@@ -86,23 +82,25 @@ function Experience() {
     return () => clearTimeout(timer);
   }, []);
 
-  // Animate cards on scroll: observer + viewport check
+  // Animate cards on scroll: IntersectionObserver + Window scroll listener
   useEffect(() => {
     if (!hasInitiallyLoaded) return;
 
-    const revealCards = () => {
-      const windowHeight =
-        window.innerHeight || document.documentElement.clientHeight;
-      document.querySelectorAll('.timeline__row').forEach((row) => {
-        const rect = row.getBoundingClientRect();
-        if (rect.top <= windowHeight * 0.90 && rect.bottom >= 0) {
+    const handleScrollReveal = () => {
+      const rows = document.querySelectorAll('.timeline__row');
+      const triggerBottom = (window.innerHeight || document.documentElement.clientHeight) * 0.92;
+
+      rows.forEach((row) => {
+        const rowTop = row.getBoundingClientRect().top;
+        if (rowTop < triggerBottom) {
           row.classList.add('is__visible');
         }
       });
     };
 
-    revealCards();
-    const immediateTimer = setTimeout(revealCards, 60);
+    // Immediate check
+    handleScrollReveal();
+    const rafId = requestAnimationFrame(handleScrollReveal);
 
     const observer = new IntersectionObserver(
       (entries) => {
@@ -112,23 +110,26 @@ function Experience() {
           }
         });
       },
-      { threshold: 0.1, rootMargin: '0px 0px -30px 0px' }
+      {
+        root: null,
+        rootMargin: '0px 0px -40px 0px',
+        threshold: 0.05,
+      }
     );
 
-    document.querySelectorAll('.timeline__row').forEach((row) => {
-      observer.observe(row);
-    });
+    const rows = document.querySelectorAll('.timeline__row');
+    rows.forEach((row) => observer.observe(row));
 
-    window.addEventListener('scroll', revealCards, { passive: true });
-    window.addEventListener('resize', revealCards, { passive: true });
+    window.addEventListener('scroll', handleScrollReveal, { passive: true });
+    window.addEventListener('resize', handleScrollReveal, { passive: true });
 
     return () => {
-      clearTimeout(immediateTimer);
+      cancelAnimationFrame(rafId);
       observer.disconnect();
-      window.removeEventListener('scroll', revealCards);
-      window.removeEventListener('resize', revealCards);
+      window.removeEventListener('scroll', handleScrollReveal);
+      window.removeEventListener('resize', handleScrollReveal);
     };
-  }, [hasInitiallyLoaded, activeCategory, searchQuery]);
+  }, [hasInitiallyLoaded, expData]);
 
   // Spotlight mouse effect on cards
   useEffect(() => {
@@ -145,12 +146,8 @@ function Experience() {
       });
     };
 
-    window.addEventListener('mousemove', handleMouseMove);
+    window.addEventListener('mousemove', handleMouseMove, { passive: true });
     return () => window.removeEventListener('mousemove', handleMouseMove);
-  }, [expData, activeCategory, searchQuery]);
-
-  const categories = useMemo(() => {
-    return expData?.categories || ['All', 'Work', 'Education'];
   }, [expData]);
 
   const stats = useMemo(() => {
@@ -164,39 +161,9 @@ function Experience() {
     );
   }, [expData]);
 
-  const categoryCounts = useMemo(() => {
-    const counts = { All: expData?.experiences?.length || 0 };
-    if (expData?.experiences) {
-      expData.experiences.forEach((item) => {
-        const cat = item.category || 'Work';
-        counts[cat] = (counts[cat] || 0) + 1;
-      });
-    }
-    return counts;
+  const experiences = useMemo(() => {
+    return expData?.experiences || [];
   }, [expData]);
-
-  const filteredExperiences = useMemo(() => {
-    if (!expData?.experiences) return [];
-    return expData.experiences.filter((item) => {
-      const matchesCategory =
-        activeCategory === 'All' ||
-        item.category?.toLowerCase() === activeCategory.toLowerCase();
-
-      if (!matchesCategory) return false;
-
-      if (!searchQuery.trim()) return true;
-
-      const q = searchQuery.toLowerCase();
-      const roleMatch = item.role?.toLowerCase().includes(q);
-      const companyMatch = item.company?.toLowerCase().includes(q);
-      const techMatch = item.technologies?.some((t) =>
-        t.toLowerCase().includes(q)
-      );
-      const descMatch = item.description?.toLowerCase().includes(q);
-
-      return roleMatch || companyMatch || techMatch || descMatch;
-    });
-  }, [expData, activeCategory, searchQuery]);
 
   if (loading) return <LoadingLayout />;
   if (error && !expData) {
@@ -245,214 +212,143 @@ function Experience() {
                 </div>
               ))}
             </div>
-
-            {/* Search & Category Filter Controls */}
-            <div className="experience__controls">
-              <div className="experience__filters">
-                {categories.map((cat, idx) => (
-                  <button
-                    key={idx}
-                    type="button"
-                    className={`experience__filter__btn ${
-                      activeCategory === cat ? 'active' : ''
-                    }`}
-                    onClick={() => setActiveCategory(cat)}
-                  >
-                    {cat === 'Work' && <FaBriefcase className="filter__icon" />}
-                    {cat === 'Education' && (
-                      <FaGraduationCap className="filter__icon" />
-                    )}
-                    {cat === 'All' && <FaBolt className="filter__icon" />}
-                    <span className="btn__text">{cat}</span>
-                    <span className="btn__count">
-                      {categoryCounts[cat] || 0}
-                    </span>
-                  </button>
-                ))}
-              </div>
-
-              <div className="experience__search__wrap">
-                <FaSearch className="search__icon" />
-                <input
-                  type="text"
-                  placeholder="Filter by role, company, or tech..."
-                  value={searchQuery}
-                  onChange={(e) => setSearchQuery(e.target.value)}
-                  className="experience__search__input"
-                  aria-label="Filter experience"
-                />
-                {searchQuery && (
-                  <button
-                    type="button"
-                    className="search__clear"
-                    onClick={() => setSearchQuery('')}
-                    aria-label="Clear search"
-                  >
-                    ×
-                  </button>
-                )}
-              </div>
-            </div>
           </div>
 
           {/* Timeline Container with Flex Layout */}
           <div className="experience__timeline" ref={timelineRef}>
-            {filteredExperiences.length === 0 ? (
-              <div className="experience__empty">
-                <p>No experiences match "{searchQuery}".</p>
-                <button
-                  type="button"
-                  className="main__button"
-                  onClick={() => {
-                    setSearchQuery('');
-                    setActiveCategory('All');
-                  }}
+            {experiences.map((exp, index) => {
+              const isWork = exp.category?.toLowerCase() === 'work';
+              const rowId = exp.id || `exp-${index}`;
+              const isLast = index === experiences.length - 1;
+
+              return (
+                <div
+                  className={`timeline__row ${exp.current ? 'is__current' : ''}`}
+                  key={rowId}
                 >
-                  Reset Filters
-                </button>
-              </div>
-            ) : (
-              filteredExperiences.map((exp, index) => {
-                const isWork = exp.category?.toLowerCase() === 'work';
-                const rowId = exp.id || `exp-${index}`;
-                const isLast = index === filteredExperiences.length - 1;
-
-                return (
-                  <div
-                    className={`timeline__row ${exp.current ? 'is__current' : ''}`}
-                    key={rowId}
-                  >
-                    {/* Reliable Flex Spine Column */}
-                    <div className="timeline__spine">
-                      <div
-                        className={`spine__node ${
-                          exp.current ? 'spine__node--current' : ''
-                        }`}
-                        title={exp.period}
-                      >
-                        {isWork ? <FaBriefcase /> : <FaGraduationCap />}
-                        {exp.current && <span className="pulse__wave"></span>}
-                      </div>
-                      {!isLast && <div className="spine__line"></div>}
+                  {/* Reliable Flex Spine Column */}
+                  <div className="timeline__spine">
+                    <div
+                      className={`spine__node ${
+                        exp.current ? 'spine__node--current' : ''
+                      }`}
+                      title={exp.period}
+                    >
+                      {isWork ? <FaBriefcase /> : <FaGraduationCap />}
+                      {exp.current && <span className="pulse__wave"></span>}
                     </div>
+                    {!isLast && <div className="spine__line"></div>}
+                  </div>
 
-                    {/* Creative Experience Card */}
-                    <div className="experience__card">
-                      {/* Dynamic Spotlight Radial Gradient */}
-                      <div className="card__spotlight"></div>
+                  {/* Creative Experience Card */}
+                  <div className="experience__card">
+                    {/* Dynamic Spotlight Radial Gradient */}
+                    <div className="card__spotlight"></div>
 
-                      <div className="card__inner">
-                        {/* Header: Company Avatar + Role + Badges */}
-                        <div className="card__header">
-                          <div className="company__brand">
-                            <div
-                              className="company__logo__badge"
-                              style={{
-                                '--brand-color': exp.logoColor || '#45f3ff',
-                              }}
-                            >
-                              <span>{exp.companyInitial || 'AG'}</span>
-                            </div>
-                            <div className="role__meta">
-                              <h2 className="role__title">{exp.role}</h2>
-                              <div className="company__row">
-                                <span className="company__name">
-                                  {exp.company}
-                                </span>
-                                {exp.companyType && (
-                                  <span className="badge badge--type">
-                                    {exp.companyType}
-                                  </span>
-                                )}
-                                {exp.workplaceType && (
-                                  <span className="badge badge--mode">
-                                    {exp.workplaceType}
-                                  </span>
-                                )}
-                              </div>
-                            </div>
+                    <div className="card__inner">
+                      {/* Header: Real Company Logo + Role + Badges */}
+                      <div className="card__header">
+                        <div className="company__brand">
+                          <div
+                            className="company__logo__badge"
+                            style={{
+                              '--brand-color': exp.logoColor || '#45f3ff',
+                            }}
+                          >
+                            <img
+                              src={getImageUrl(exp.companyLogo)}
+                              alt={exp.company}
+                              className="company__logo__img"
+                              loading="lazy"
+                            />
                           </div>
-
-                          {/* Time & Location Metadata */}
-                          <div className="period__meta">
-                            {exp.current && (
-                              <span className="badge badge--present">
-                                <span className="live__dot"></span> Present
+                          <div className="role__meta">
+                            <h2 className="role__title">{exp.role}</h2>
+                            <div className="company__row">
+                              <span className="company__name">
+                                {exp.company}
                               </span>
-                            )}
-                            <div className="period__badge">
-                              <FaCalendarAlt className="meta__icon" />
-                              <span>{exp.period}</span>
-                              {exp.duration && (
-                                <span className="duration__tag">
-                                  · {exp.duration}
+                              {exp.companyType && (
+                                <span className="badge badge--type">
+                                  {exp.companyType}
+                                </span>
+                              )}
+                              {exp.workplaceType && (
+                                <span className="badge badge--mode">
+                                  {exp.workplaceType}
                                 </span>
                               )}
                             </div>
-                            {exp.location && (
-                              <div className="location__badge">
-                                <FaMapMarkerAlt className="meta__icon" />
-                                <span>{exp.location}</span>
-                              </div>
-                            )}
                           </div>
                         </div>
 
-                        {/* Summary Description */}
-                        <p className="card__description">{exp.description}</p>
-
-                        {/* Accomplishments & Responsibilities */}
-                        {exp.highlights && exp.highlights.length > 0 && (
-                          <div className="card__highlights">
-                            <div className="highlights__title">
-                              <FaAward className="highlight__icon" />
-                              <span>Key Impact & Accomplishments:</span>
-                            </div>
-                            <ul className="highlights__list">
-                              {exp.highlights.map((highlight, hIdx) => (
-                                <li key={hIdx}>
-                                  <FaCheckCircle className="check__bullet" />
-                                  <span>{highlight}</span>
-                                </li>
-                              ))}
-                            </ul>
+                        {/* Time & Location Metadata */}
+                        <div className="period__meta">
+                          {exp.current && (
+                            <span className="badge badge--present">
+                              <span className="live__dot"></span> Present
+                            </span>
+                          )}
+                          <div className="period__badge">
+                            <FaCalendarAlt className="meta__icon" />
+                            <span>{exp.period}</span>
+                            {exp.duration && (
+                              <span className="duration__tag">
+                                · {exp.duration}
+                              </span>
+                            )}
                           </div>
-                        )}
-
-                        {/* Tech Stack Chips */}
-                        {exp.technologies && exp.technologies.length > 0 && (
-                          <div className="card__tech">
-                            <div className="tech__label">
-                              <FaLaptopCode className="tech__icon" />
-                              <span>Skills & Technologies:</span>
+                          {exp.location && (
+                            <div className="location__badge">
+                              <FaMapMarkerAlt className="meta__icon" />
+                              <span>{exp.location}</span>
                             </div>
-                            <div className="tech__tags">
-                              {exp.technologies.map((tech, tIdx) => (
-                                <span
-                                  key={tIdx}
-                                  className={`tech__tag ${
-                                    searchQuery &&
-                                    tech
-                                      .toLowerCase()
-                                      .includes(searchQuery.toLowerCase())
-                                      ? 'matched'
-                                      : ''
-                                  }`}
-                                  onClick={() => setSearchQuery(tech)}
-                                  title={`Filter by ${tech}`}
-                                >
-                                  {tech}
-                                </span>
-                              ))}
-                            </div>
-                          </div>
-                        )}
+                          )}
+                        </div>
                       </div>
+
+                      {/* Summary Description */}
+                      <p className="card__description">{exp.description}</p>
+
+                      {/* Accomplishments & Responsibilities */}
+                      {exp.highlights && exp.highlights.length > 0 && (
+                        <div className="card__highlights">
+                          <div className="highlights__title">
+                            <FaAward className="highlight__icon" />
+                            <span>Key Impact & Accomplishments:</span>
+                          </div>
+                          <ul className="highlights__list">
+                            {exp.highlights.map((highlight, hIdx) => (
+                              <li key={hIdx}>
+                                <FaCheckCircle className="check__bullet" />
+                                <span>{highlight}</span>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      )}
+
+                      {/* Tech Stack Chips */}
+                      {exp.technologies && exp.technologies.length > 0 && (
+                        <div className="card__tech">
+                          <div className="tech__label">
+                            <FaLaptopCode className="tech__icon" />
+                            <span>Skills & Technologies:</span>
+                          </div>
+                          <div className="tech__tags">
+                            {exp.technologies.map((tech, tIdx) => (
+                              <span key={tIdx} className="tech__tag">
+                                {tech}
+                              </span>
+                            ))}
+                          </div>
+                        </div>
+                      )}
                     </div>
                   </div>
-                );
-              })
-            )}
+                </div>
+              );
+            })}
           </div>
 
           {/* Action CTAs */}
