@@ -338,6 +338,58 @@
       }
 
       // ============================================
+      // SCROLL ENTRANCE ANIMATIONS
+      // ============================================
+      &.is__awaiting {
+        opacity: 0;
+        transform: translateY(35px);
+        transition: opacity 0.5s ease, transform 0.5s ease;
+
+        .spine__node {
+          opacity: 0;
+          transform: scale(0.3);
+        }
+
+        .experience__card {
+          opacity: 0;
+          transform: translateY(35px);
+        }
+      }
+
+      &.is__in_view {
+        opacity: 1;
+        transform: translateY(0);
+
+        .spine__node {
+          animation: nodePopIn 0.65s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+        }
+
+        .experience__card {
+          animation: cardSlideUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+
+          .company__logo__badge {
+            animation: logoBadgeBounce 0.6s 0.2s cubic-bezier(0.34, 1.56, 0.64, 1) backwards;
+          }
+
+          .card__highlights .highlights__list li {
+            @for $i from 1 through 8 {
+              &:nth-child(#{$i}) {
+                animation: bulletSlideIn 0.5s #{0.15 + $i * 0.07}s backwards;
+              }
+            }
+          }
+
+          .card__tech .tech__tags .tech__tag {
+            @for $j from 1 through 12 {
+              &:nth-child(#{$j}) {
+                animation: tagPopIn 0.4s #{0.3 + $j * 0.035}s backwards;
+              }
+            }
+          }
+        }
+      }
+
+      // ============================================
       // TIMELINE SPINE (FLEX COLUMN, CANNOT OVERLAP)
       // ============================================
       .timeline__spine {
@@ -902,3 +954,71 @@
     }
   }
 }
+
+// ============================================
+// KEYFRAME ANIMATIONS FOR EXPERIENCE CARDS
+// ============================================
+@keyframes cardSlideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(45px) scale(0.97);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes nodePopIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.3) rotate(-25deg);
+    box-shadow: 0 0 0 rgba(69, 243, 255, 0);
+  }
+  65% {
+    transform: scale(1.15) rotate(6deg);
+    box-shadow: 0 0 25px rgba(69, 243, 255, 0.85);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) rotate(0deg);
+    box-shadow: 0 0 16px rgba(69, 243, 255, 0.4);
+  }
+}
+
+@keyframes logoBadgeBounce {
+  0% {
+    opacity: 0;
+    transform: scale(0.4);
+  }
+  70% {
+    transform: scale(1.18);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes bulletSlideIn {
+  0% {
+    opacity: 0;
+    transform: translateX(-18px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes tagPopIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.65) translateY(8px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+

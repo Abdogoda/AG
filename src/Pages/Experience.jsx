@@ -24,7 +24,6 @@ function AnimatedStatValue({ value }) {
   const [displayValue, setDisplayValue] = useState(value);
 
   useEffect(() => {
-    // Check if the value has a leading or trailing number (e.g. "20+", "2+", "5")
     const match = value.match(/^(\D*)(\d+)(\D*)$/);
     if (!match) {
       setDisplayValue(value);
@@ -64,6 +63,8 @@ function Experience() {
   const { data: aboutData } = useData('about');
   const [activeCategory, setActiveCategory] = useState('All');
   const [searchQuery, setSearchQuery] = useState('');
+  const [visibleItems, setVisibleItems] = useState({});
+  const rowRefs = useRef({});
   const timelineRef = useRef(null);
 
   // Letter animation (matching other pages)
@@ -74,6 +75,39 @@ function Experience() {
     }, 3000);
     return () => clearTimeout(timer);
   }, []);
+
+  // Animation on scroll: reliable scroll listener + IntersectionObserver
+  useEffect(() => {
+    const checkVisibility = () => {
+      const windowHeight = window.innerHeight || document.documentElement.clientHeight;
+      const triggerThreshold = windowHeight * 0.90; // Triggers when top is in bottom 90% of screen
+
+      Object.entries(rowRefs.current).forEach(([id, el]) => {
+        if (el) {
+          const rect = el.getBoundingClientRect();
+          if (rect.top <= triggerThreshold && rect.bottom >= 0) {
+            setVisibleItems((prev) => {
+              if (prev[id]) return prev;
+              return { ...prev, [id]: true };
+            });
+          }
+        }
+      });
+    };
+
+    // Run immediately and on scroll/resize
+    checkVisibility();
+    const timer = setTimeout(checkVisibility, 200);
+
+    window.addEventListener('scroll', checkVisibility, { passive: true });
+    window.addEventListener('resize', checkVisibility, { passive: true });
+
+    return () => {
+      clearTimeout(timer);
+      window.removeEventListener('scroll', checkVisibility);
+      window.removeEventListener('resize', checkVisibility);
+    };
+  }, [expData, activeCategory, searchQuery]);
 
   // Spotlight mouse effect on cards
   useEffect(() => {
@@ -244,7 +278,7 @@ function Experience() {
             </div>
           </div>
 
-          {/* Timeline Container with Flex Layout (Static, No Card Animation) */}
+          {/* Timeline Container with Flex Layout and Scroll Animation */}
           <div className="experience__timeline" ref={timelineRef}>
             {filteredExperiences.length === 0 ? (
               <div className="experience__empty">
@@ -265,11 +299,15 @@ function Experience() {
                 const isWork = exp.category?.toLowerCase() === 'work';
                 const rowId = exp.id || `exp-${index}`;
                 const isLast = index === filteredExperiences.length - 1;
+                const isInView = Boolean(visibleItems[rowId]);
 
                 return (
                   <div
-                    className={`timeline__row ${exp.current ? 'is__current' : ''}`}
+                    className={`timeline__row ${exp.current ? 'is__current' : ''} ${
+                      isInView ? 'is__in_view' : 'is__awaiting'
+                    }`}
                     key={rowId}
+                    ref={(el) => (rowRefs.current[rowId] = el)}
                   >
                     {/* Reliable Flex Spine Column */}
                     <div className="timeline__spine">
@@ -285,7 +323,7 @@ function Experience() {
                       {!isLast && <div className="spine__line"></div>}
                     </div>
 
-                    {/* Creative Experience Card (Immediately Visible, No Animation) */}
+                    {/* Creative Experience Card (Animated on Scroll) */}
                     <div className="experience__card">
                       {/* Dynamic Spotlight Radial Gradient */}
                       <div className="card__spotlight"></div>
